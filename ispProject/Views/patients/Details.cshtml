@@ -1,0 +1,1332 @@
+
+@{
+    ViewBag.Title = "Details";
+    ispProject.Models.AdminModel am = new ispProject.Models.AdminModel();
+    ispProject.Models.patient patient = am.getPatientByMRN(ViewBag.patientId);
+    List<ispProject.Models.patient_address> address = am.getPatientAddressById(patient.patient_id);
+    List<ispProject.Models.patient_name> names = am.getPatientNamesById(patient.patient_id);
+    ispProject.Models.patient_birth_information birthInfo = am.getPatientBirthInfoById(patient.patient_id);
+    List<ispProject.Models.patient_family> family = am.getPatientFamilyById(patient.patient_id);
+    ispProject.Models.patient_name patientPrimary = am.getPatientPrimaryName(names);
+    int age = am.getPatientAge(birthInfo.birth_date.GetValueOrDefault());
+    am.setMRN(patient.medical_record_number);
+    am.setPatientLName(patientPrimary.last_name);
+    am.setPatientFName(patientPrimary.first_name);
+    ispProject.Models.patient_address primaryAddress = am.getPrimaryAddress(address);
+    ispProject.Models.patient_address billingAddress = am.getBillingAddress(address);
+    List<ispProject.Models.patient_insurance> patientInsurance = am.getInsuranceList(patient.patient_id);
+
+
+
+}
+
+<div class="container">
+
+    <div class="tabs">
+
+        <ul class="tab-links">
+            <li><a id="tab1" href="#tab1" onclick="return false;">General</a></li>
+            <li class="active"><a href="#tab2" onclick="return false;">Extended</a></li>
+            <li><a href="#tab3" onclick="return false;">Employment</a></li>
+            <li><a href="#tab4" onclick="return false;">Insurance</a></li>
+            <li><a href="#tab5" onclick="return false;">Emergency Contacts</a></li>
+            <li><a href="../PatientEncounters?mrn=@patient.medical_record_number">Encounters</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!-----------------------TAB 1 GENERAL-------------------------->
+
+            <div id="tab1" class="tab">
+                <div class="container">
+                    <form method="POST" action="../DetailsUpdateAll" style="margin-bottom: 100px;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Patient Information</div>
+                            <div class="panel-body">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="mrn">MRN</label>
+                                        @if (am.getMRN().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" name="mrn" value="@am.getMRN()" readonly>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        @if (am.getLName().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getLName()" disabled>
+                                        }
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        @if (am.getFName().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getFName()" disabled>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Names</div>
+                            <div class="panel-body">
+
+                                <div class="col-sm-6">
+
+                                    <h3>Full Name</h3>
+                                    <div class="form-group">
+
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" value="@patientPrimary.first_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="middleName">Middle Initial</label>
+                                        <input type="text" class="form-control" id="middleName" name="middleName" value="@patientPrimary.middle_name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" value="@patientPrimary.last_name">
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            @if (age < 18)
+                                            {
+                                                <label>AGE: @age</label>
+                                                    <input type="checkbox" class="form-check-input" checked>
+
+                                            }
+                                            else {
+                                                <label>AGE: @age</label>
+                                                    <input type="checkbox" class="form-check-input">
+
+                                            }
+
+
+                                            Patient is a MINOR
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3> Add an Alias </h3>
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" name="AfirstName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="middleName">Middle Initial</label>
+                                        <input type="text" class="form-control" id="middleName" name="AmiddleName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" name="AlastName">
+                                    </div>
+                                </div>
+                                @if (names.Count < 2) { }
+                                else {
+                                    <div class="col-sm-12">
+                                        <div class="panel">
+                                            <div class="panel-body">
+                                                <h2>Alias Archive for @patientPrimary.last_name, @patientPrimary.first_name @patientPrimary.middle_name</h2>
+                                                <table class="table table-striped">
+                                                    <tr>
+                                                        <th>
+                                                            First
+                                                        </th>
+                                                        <th>
+                                                            Middle
+                                                        </th>
+                                                        <th>
+                                                            Last
+                                                        </th>
+                                                    </tr>
+                                                    @foreach (ispProject.Models.patient_name pn in names)
+                                                    {
+                                                        if (pn.patient_name_id == patientPrimary.patient_name_id) { }
+                                                        else {
+
+                                                            <tr>
+                                                                <td>
+                                                                    @pn.first_name
+                                                                </td>
+                                                                <td>
+                                                                    @pn.middle_name
+                                                                </td>
+                                                                <td>
+                                                                    @pn.last_name
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                            </div>
+
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Other Identifiers</div>
+                            <div class="panel-body">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="mothersMaidenName">Mother's Maiden Name</label>
+                                        <input type="text" class="form-control" id="mothersMaidenName" name="mothersMaidenName" value="@patient.mother_maiden_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dob">DOB</label>
+                                        <input type="text" class="form-control" id="dob" name="dob" value="@String.Format("{0:d}", birthInfo.birth_date)" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ssn">SSN</label>
+                                        <input type="text" class="form-control" id="ssn" name="ssn" value="@patient.social_security_number" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Sex</label>
+                                        <select class="form-control form-control-sm" name="sex">
+                                            @foreach (ispProject.Models.aadmin_data_patient_gender gender in am.getGenders())
+                                            {
+                                                if (patient.gender_id == gender.gender_id)
+                                                {
+
+                                                    <option value="@gender.gender_id" selected>@gender.description</option>
+                                                }
+                                                else {
+
+                                                    <option value="@gender.gender_id">@gender.description</option>
+                                                }
+                                            }
+
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <select class="form-control form-control-sm" name="gender">
+                                            @foreach (ispProject.Models.aadmin_data_patient_gender gender in am.getGenders())
+                                            {
+                                                if (patient.gender_id == gender.gender_id)
+                                                {
+
+                                                    <option value="@gender.gender_id" selected>@gender.description</option>
+                                                }
+                                                else {
+
+                                                    <option value="@gender.gender_id">@gender.description</option>
+                                                }
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-sm-4">
+                                    <label>Marital Status</label>
+                                    <select class="form-control form-control-sm" name="maritalStatus">
+                                        @foreach (ispProject.Models.aadmin_data_marital_status mstat in am.getMaritalStatus())
+            {
+                                            <option value="@mstat.marital_status_id">@mstat.description</option>
+                                        }
+
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-sm-4">
+                                    <label>Race</label>
+                                    <select class="form-control form-control-sm" name="race">
+                                        @foreach (ispProject.Models.aadmin_data_patient_race race in am.getRace())
+            {
+                                            <option value="@race.patient_race_id">@race.description</option>
+                                        }
+
+
+                                    </select>
+                                    <div class="form-group">
+                                        <label>Ethnicity</label>
+                                        <select class="form-control form-control-sm" name="ethnicity">
+                                            @foreach (ispProject.Models.aadmin_data_patient_ethnicity ethnicity in am.getEthnicity())
+            {
+                                                <option value="@ethnicity.patient_ethnicity_id">@ethnicity.description</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+            <!-----------------------TAB 2 EXTENDED------------------------->
+
+
+            <div id="tab2" class="tab active">
+                <div class="container">
+                    <form method="POST" action="../DetailsUpdateAll" style="margin-bottom: 100px;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Patient Information</div>
+                            <div class="panel-body">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="mrn">MRN</label>
+                                        @if (am.getMRN().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getMRN()" disabled>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        @if (am.getLName().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getLName()" disabled>
+                                        }
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        @if (am.getFName().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getFName()" disabled>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Address</div>
+                            <div class="panel-body">
+                                <div class="col-sm-6">
+
+                                    <h3>Address Residence</h3>
+                                    <div class="form-group">
+                                        <label for="address">Address 1</label>
+                                        @if (primaryAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="address" name="address" value="@primaryAddress.street_address_one">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="address" name="address" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address2">Address 2</label>
+                                        @if (primaryAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="address2" name="address2" value="@primaryAddress.street_address_two">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="address2" name="address2" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        @if (primaryAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="city" name="city" value="@primaryAddress.city">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="city" name="city" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        @if (primaryAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="state" name="state" value="@primaryAddress.state">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="state" name="state" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zip">Zip</label>
+                                        @if (primaryAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="zip" name="zip" value="@primaryAddress.zip">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="zip" name="zip" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="county">County</label>
+                                        <input type="text" class="form-control" id="county" value="DEVNOTE ADD COUNTY COLUMN">
+                                    </div>
+
+
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <h3>Address Billing</h3>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            @if (primaryAddress != null && billingAddress != null)
+                                            {
+                                                if (primaryAddress.street_address_one == billingAddress.street_address_one && primaryAddress.street_address_two == billingAddress.street_address_two)
+                                                {
+
+                                                    <input type="checkbox" class="form-check-input" checked>
+
+                                                }
+                                                else {
+                                                    <input type="checkbox" class="form-check-input">
+                                                }
+                                            }
+                                            else {
+                                                <input type="checkbox" class="form-check-input">
+                                            }
+
+
+                                            Same As Residence
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Address 1</label>
+                                        @if (billingAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="addressBilling" name="addressBilling" value="@billingAddress.street_address_one">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="addressBilling" name="addressBilling" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address2">Address 2</label>
+                                        @if (billingAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="address2Billing" name="address2Billing" value="@billingAddress.street_address_two">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="address2Billing" name="address2Billing" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        @if (billingAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="cityBilling" name="cityBilling" value="@billingAddress.city">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="cityBilling" name="cityBilling" value="">
+                                        }
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        @if (billingAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="stateBilling" name="stateBilling" value="@billingAddress.state">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="stateBilling" name="stateBilling" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zip">Zip</label>
+                                        @if (billingAddress != null)
+                                        {
+                                            <input type="text" class="form-control" id="zipBilling" name="zipBilling" value="@billingAddress.zip">
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" id="zipBilling" name="zipBilling" value="">
+                                        }
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="county">County</label>
+                                        <input type="text" class="form-control" id="county" value="DEVNOTE ADD COUNTY COLUMN">
+                                    </div>
+
+
+
+                                    <p>***DEVNOTE: ADD a new Form Group to add a different type of address. i.e work, residence2 etc. ***</p>
+                                </div>
+
+                                @if (names.Count < 2) { }
+                                else {
+                                    <div class="col-sm-12">
+                                        <div class="panel">
+                                            <div class="panel-body">
+                                                <h2>Other Addresses</h2>
+                                                <table class="table table-striped">
+                                                    <tr>
+                                                        <th>
+                                                            Address 1
+                                                        </th>
+                                                        <th>
+                                                            Address 2
+                                                        </th>
+                                                        <th>
+                                                            City
+                                                        </th>
+                                                        <th>
+                                                            State
+                                                        </th>
+                                                        <th>
+                                                            Zip
+                                                        </th>
+                                                        <th>
+                                                            County
+                                                        </th>
+                                                    </tr>
+                                                    @foreach (ispProject.Models.patient_address pn in address)
+                                                    {
+                                                        if (pn.address_id == primaryAddress.address_id || pn.address_id == billingAddress.address_id) { }
+                                                        else {
+
+                                                            <tr>
+                                                                <td>
+                                                                    @pn.street_address_one
+                                                                </td>
+                                                                <td>
+                                                                    @pn.street_address_two
+                                                                </td>
+                                                                <td>
+                                                                    @pn.city
+                                                                </td>
+                                                                <td>
+                                                                    @pn.state
+                                                                </td>
+                                                                <td>
+                                                                    @pn.zip
+                                                                </td>
+                                                                <td>
+                                                                    Add County Column
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Contact >> WILL ADD THIS AREA IN FUTURE NEEDS Tables and Controllers</div>
+                            <div class="panel-body">
+                                <div class="col-sm-4">
+                                    <h3> Phone</h3>
+                                    <div class="form-group">
+                                        <label for="homePhone">Home</label>
+                                        <input type="text" class="form-control" id="homePhone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mobilePhone">Mobile</label>
+                                        <input type="text" class="form-control" id="mobilePhone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="workPhone">Work</label>
+                                        <input type="text" class="form-control" id="workPhone">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3> Email</h3>
+                                    <div class="form-group">
+                                        <label for="primaryEmail">Primary Email</label>
+                                        <input type="text" class="form-control" id="primaryEmail">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3> Communication Preference</h3>
+                                    <div class="form-group">
+                                        <label>Preffered Form</label>
+                                        <select class="form-control form-control-sm">
+                                            <option>Home Phone</option>
+                                            <option>Cell Phone</option>
+                                            <option>Work Phone</option>
+                                            <option>Email</option>
+                                            <option>Standard Mail</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time of Day</label>
+                                        <select class="form-control form-control-sm">
+                                            <option>Morning</option>
+                                            <option>Afternoon</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Individual Status</div>
+                                <div class="panel-body">
+                                    <p>***DEVNOTE: jQuery this based on minor check box. i.e hide/Show ***</p>
+                                    @foreach (ispProject.Models.patient_family f in family)
+                                    {
+
+                                        if (f.relation_id == 1)
+                                        {
+
+                                            <div class="col-sm-4">
+                                                <h3> Minor (If Applicable) MOTHER</h3>
+
+                                                <div class="form-group">
+                                                    <label for="firstName">First Name</label>
+                                                    <input type="text" class="form-control" id="firstName" value="@f.first_name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="middleName">Middle Initial</label>
+                                                    <input type="text" class="form-control" id="middleName" value="@f.middle_name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="lastName">Last Name</label>
+                                                    <input type="text" class="form-control" id="lastName" value="@f.last_name">
+                                                </div>
+                                            </div>
+
+
+                                        }
+                                        if (f.relation_id == 2)
+                                        {
+
+                                            <div class="col-sm-4">
+                                                <h3> Minor (If Applicable) Father</h3>
+
+                                                <div class="form-group">
+                                                    <label for="firstName">First Name</label>
+                                                    <input type="text" class="form-control" id="firstName" value="@f.first_name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="middleName">Middle Initial</label>
+                                                    <input type="text" class="form-control" id="middleName" value="@f.middle_name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="lastName">Last Name</label>
+                                                    <input type="text" class="form-control" id="lastName" value="@f.last_name">
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+
+                                    <div class="col-sm-4">
+
+                                        <div class="form-group">
+                                            <label>Expected Payment Method *** Table or Column for this ***</label>
+                                            <select class="form-control form-control-sm">
+                                                <option>Self-Pay</option>
+                                                <option>Medicare</option>
+                                                <option>Medicade</option>
+                                                <option>Insurance</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Religion Preference *** Table for options, column for patient***</label>
+                                            <select class="form-control form-control-sm">
+                                                <option>No Preference</option>
+                                                <option>Christianity</option>
+                                                <option>Nonreligious/Secular</option>
+                                                <option>Judaism</option>
+                                                <option>Islam</option>
+                                                <option>Buddhism</option>
+                                                <option>Agnostic</option>
+                                                <option>Atheist </option>
+                                                <option>Hinduism</option>
+                                                <option>Unitarian Universalist</option>
+                                                <option>Wiccan/Pagan/Druid</option>
+                                                <option>Spiritualist</option>
+                                                <option>Native American Religion</option>
+                                                <option>Baha'i</option>
+                                                <option>New Age</option>
+                                                <option>Sikhism</option>
+                                                <option>Scientology</option>
+                                                <option>Humanist</option>
+                                                <option>Deity (Deist)</option>
+                                                <option>Taoist</option>
+                                                <option>Eckankar</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">MISC *** Bit Column in patient for this. ***</div>
+                                <div class="panel-body">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Facility Registry</label>
+                                            <select class="form-control form-control-sm">
+                                                <option>Opt-In</option>
+                                                <option>Opt-Out</option>
+
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Veteran Status *** table for this ***</div>
+                                <div class="panel-body">
+                                    <div class="col-sm-4">
+
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                Is a Veteran
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Last Service Branch</label>
+                                            <select class="form-control form-control-sm">
+                                                <option>Army</option>
+                                                <option>Air Force</option>
+                                                <option>Navy</option>
+                                                <option>ETC</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Current Status</label>
+                                            <select class="form-control form-control-sm">
+                                                <option>Discharged</option>
+                                                <option>Retired</option>
+                                                <option>Active</option>
+                                                <option>Reserve</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-----------------------TAB 3 Employment------------------------->
+
+            <div id="tab3" class="tab">
+                <div class="container">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Patient Information</div>
+                        <div class="panel-body">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="mrn">MRN</label>
+                                    @if (am.getMRN().Equals(""))
+                                    {
+                                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                    }
+                                    else {
+                                        <input type="text" class="form-control" value="@am.getMRN()" disabled>
+                                    }
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    @if (am.getLName().Equals(""))
+                                    {
+                                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                    }
+                                    else {
+                                        <input type="text" class="form-control" value="@am.getLName()" disabled>
+                                    }
+
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    @if (am.getFName().Equals(""))
+                                    {
+                                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                    }
+                                    else {
+                                        <input type="text" class="form-control" value="@am.getFName()" disabled>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Company Information - Employment 1 *** Will need Tables For this ***</div>
+                        <div class="panel-body">
+                            <div class="col-sm-4">
+
+                                <div class="form-group">
+                                    <label for="companyName">Company Name</label>
+                                    <input type="text" class="form-control" id="companyName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pointOfContact">Point of Contact (POC)</label>
+                                    <input type="text" class="form-control" id="pointOfContact">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pocPhoneNumber">POC Phone Number</label>
+                                    <input type="text" class="form-control" id="pocPhoneNumber">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pocExtension">POC Extension</label>
+                                    <input type="text" class="form-control" id="pocExtension">
+                                </div>
+
+
+                            </div>
+                            <div class="col-sm-4">
+
+                                <div class="form-check">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address 1</label>
+                                    <input type="text" class="form-control" id="address"><!--FIX ID's ADD Names these id's were already taken-->
+                                </div>
+                                <div class="form-group">
+                                    <label for="address2">Address 2</label>
+                                    <input type="text" class="form-control" id="address2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" class="form-control" id="state">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" class="form-control" id="zip">
+                                </div>
+                                <div class="form-group">
+                                    <label for="county">County</label>
+                                    <input type="text" class="form-control" id="county">
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                        Insurance Covered by this Employer
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Company Information - Employment 2</div>
+                        <div class="panel-body">
+                            <div class="col-sm-4">
+
+                                <div class="form-group">
+                                    <label for="companyName">Company Name</label>
+                                    <input type="text" class="form-control" id="companyName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pointOfContact">Point of Contact (POC)</label>
+                                    <input type="text" class="form-control" id="pointOfContact">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber">POC Phone Number</label>
+                                    <input type="text" class="form-control" id="phoneNumber">
+                                </div>
+                                <div class="form-group">
+                                    <label for="extension">POC Extension</label>
+                                    <input type="text" class="form-control" id="extension">
+                                </div>
+
+
+                            </div>
+                            <div class="col-sm-4">
+
+                                <div class="form-check">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address 1</label>
+                                    <input type="text" class="form-control" id="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address2">Address 2</label>
+                                    <input type="text" class="form-control" id="address2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" class="form-control" id="state">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" class="form-control" id="zip">
+                                </div>
+                                <div class="form-group">
+                                    <label for="county">County</label>
+                                    <input type="text" class="form-control" id="county">
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                        Insurance Covered by this Employer
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+
+                </div>
+            </div>
+
+
+            <!-----------------------TAB 4 INSURANCE------------------------->
+
+
+            <div id="tab4" class="tab">
+                <div class="container">
+                    <form action="../AddInsurance" method="POST" id="addInsurance">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Patient Information</div>
+                            <div class="panel-body">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="mrn">MRN</label>
+                                        @if (am.getMRN().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getMRN()" disabled>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        @if (am.getLName().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getLName()" disabled>
+                                        }
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        @if (am.getFName().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getFName()" disabled>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Insurance Primary</div>
+                            <div class="panel-body">
+                                <div class="col-sm-6">
+
+                                    <div class="form-group">
+                                        <input type="hidden" name="patientID" value="@patient.patient_id" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subscriberNumber">Individual Subscriber #</label>
+                                        <input type="text" class="form-control" id="subscriberNumber" name="subscriberNumber">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Insurance Provider</label>
+                                        <select class="form-control form-control-sm" name="insuranceCompany">
+                                            @foreach (ispProject.Models.aadmin_data_insurance insurance in am.getInsuranceOptions())
+                                            {
+
+
+
+                                                <option value="@insurance.Insurance_id">@insurance.company_name</option>
+
+                                            }
+
+                                        </select>
+                                    </div>
+                                   
+
+
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <div class="form-check">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Address 1</label>
+                                        <input type="text" class="form-control" id="address" name="address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address2">Address 2</label>
+                                        <input type="text" class="form-control" id="address2" name="address2">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" name="city">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="text" class="form-control" id="state" name="state">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zip">Zip</label>
+                                        <input type="text" class="form-control" id="zip" name="zip">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                    </form>
+                    <div class="col-sm-12">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <h2>Insurance Records</h2>
+                                @if (patientInsurance.Any())
+                                {
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th>
+                                            Insurance Provider
+                                        </th>
+                                        <th>
+                                            Individual Insurance ID
+                                        </th>
+
+                                    </tr>
+
+                                    @foreach (ispProject.Models.patient_insurance pn in patientInsurance)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @pn.insurance_id This will be changed to insurance company name in future
+                                            </td>
+                                            <td>
+                                                @pn.individual_insurance_id
+                                            </td>
+                                        </tr>
+                                    }
+                                </table>
+                                }
+                                else {
+
+                                    <p>No insurance records added</p>
+                                }
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <!-----------------------TAB 5 EMERGENCY CONTACT------------------------->
+
+
+            <div id="tab5" class="tab">
+                <div class="container">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Patient Information</div>
+                        <div class="panel-body">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="mrn">MRN</label>
+                                    @if (am.getMRN().Equals(""))
+                                    {
+                                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                    }
+                                    else {
+                                        <input type="text" class="form-control" value="@am.getMRN()" disabled>
+                                    }
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    @if (am.getLName().Equals(""))
+                                    {
+                                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                    }
+                                    else {
+                                        <input type="text" class="form-control" value="@am.getLName()" disabled>
+                                    }
+
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    @if (am.getFName().Equals(""))
+                                    {
+                                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                                    }
+                                    else {
+                                        <input type="text" class="form-control" value="@am.getFName()" disabled>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Emergency Contact 1</div>
+                        <div class="panel-body">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="middleName">Middle Name</label>
+                                    <input type="text" class="form-control" id="middleName">
+                                </div>
+                                <div class="form-group">
+
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Relation</label>
+                                    <select class="form-control form-control-sm">
+                                        <option>Parent</option>
+                                        <option>Sibling</option>
+                                        <option>Extended Relative</option>
+                                        <option>Friend</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-check">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address 1</label>
+                                    <input type="text" class="form-control" id="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address2">Address 2</label>
+                                    <input type="text" class="form-control" id="address2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" class="form-control" id="state">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" class="form-control" id="zip">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">County</label>
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-check">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="homePhone">Home Phone</label>
+                                    <input type="text" class="form-control" id="homePhone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cellPhone">Cell Phone</label>
+                                    <input type="text" class="form-control" id="cellPhone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="workPhone">Work Phone</label>
+                                    <input type="text" class="form-control" id="workPhone">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Emergency Contact 2</div>
+                        <div class="panel-body">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="middleName">Middle Name</label>
+                                    <input type="text" class="form-control" id="middleName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName">
+                                </div>
+                                <div class="form-group">
+                                    <label>Relation</label>
+                                    <select class="form-control form-control-sm">
+                                        <option>Parent</option>
+                                        <option>Sibling</option>
+                                        <option>Extended Relative</option>
+                                        <option>Friend</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-check">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address 1</label>
+                                    <input type="text" class="form-control" id="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address2">Address 2</label>
+                                    <input type="text" class="form-control" id="address2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" class="form-control" id="state">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" class="form-control" id="zip">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">County</label>
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-check">
+                                </div>
+                                <div class="form-group">
+                                    <label for="homePhone">Home Phone</label>
+                                    <input type="text" class="form-control" id="homePhone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cellPhone">Cell Phone</label>
+                                    <input type="text" class="form-control" id="cellPhone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="workPhone">Work Phone</label>
+                                    <input type="text" class="form-control" id="workPhone">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+

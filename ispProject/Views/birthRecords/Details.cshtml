@@ -1,0 +1,370 @@
+﻿@model ispProject.Models.zz_birthRecord
+@using ispProject.Models
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>Record Details</h2>
+        </div>
+        <br />
+        <br />
+        <h4 class="col-md-offset-1">Patients</h4>
+        @using (HITProjectDataEntities db = new HITProjectDataEntities())
+        {
+            try
+            {
+                List<record> r = db.records.Where(rec => rec.birthRecordId == Model.birthRecordId).ToList();
+                patient p1 = r[0].patient;
+                patient p2 = r[1].patient;
+                if (r.Count == 3)
+                {
+                    patient p3 = r[2].patient;
+                    if (p1.birthDate > p2.birthDate)
+                    {
+                        if (p1.birthDate > p3.birthDate)
+                        {
+                            <label class="col-md-offset-2">Child</label>
+                            <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                            if (p2.gender == "Female")
+                            {
+                                <label class="col-md-offset-2">Mother</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                                <label class="col-md-offset-2">Father</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p3.firstName + " " + @p3.lastName + "", "details", "patients", new { id = p3.patientId }, new { @class = "" })</p>
+                            }
+                            else
+                            {
+                                <label class="col-md-offset-2">Mother</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p3.firstName + " " + @p3.lastName + "", "details", "patients", new { id = p3.patientId }, new { @class = "" })</p>
+                                <label class="col-md-offset-2">Father</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                            }
+                        }
+                        else
+                        {
+                            <label class="col-md-offset-2">Child</label>
+                            <p class="col-md-offset-2">@Html.ActionLink("" + @p3.firstName + " " + @p3.lastName + "", "details", "patients", new { id = p3.patientId }, new { @class = "" })</p>
+                            if (p2.gender == "Female")
+                            {
+                                <label class="col-md-offset-2">Mother</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                                <label class="col-md-offset-2">Father</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                            }
+                            else
+                            {
+                                <label class="col-md-offset-2">Mother</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                                <label class="col-md-offset-2">Father</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (p2.birthDate > p3.birthDate)
+                        {
+                            <label class="col-md-offset-2">Child</label>
+                            <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                            if (p3.gender == "Female")
+                            {
+                                <label class="col-md-offset-2">Mother</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p3.firstName + " " + @p3.lastName + "", "details", "patients", new { id = p3.patientId }, new { @class = "" })</p>
+                                <label class="col-md-offset-2">Father</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                            }
+                            else
+                            {
+                                <label class="col-md-offset-2">Mother</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                                <label class="col-md-offset-2">Father</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p3.firstName + " " + @p3.lastName + "", "details", "patients", new { id = p3.patientId }, new { @class = "" })</p>
+                            }
+                        }
+                        else
+                        {
+                            <label class="col-md-offset-2">Child</label>
+                            <p class="col-md-offset-2">@Html.ActionLink("" + @p3.firstName + " " + @p3.lastName + "", "details", "patients", new { id = p3.patientId }, new { @class = "" })</p>
+                            if (p2.gender == "Female")
+                            {
+                                <label class="col-md-offset-2">Mother</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                                <label class="col-md-offset-2">Father</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                            }
+                            else
+                            {
+                                <label class="col-md-offset-2">Mother</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                                <label class="col-md-offset-2">Father</label>
+                                <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    if (p1.birthDate > p2.birthDate)
+                    {
+                        <label class="col-md-offset-2">Child</label>
+                        <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                        <label class="col-md-offset-2">Mother</label>
+                        <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                    }
+                    else
+                    {
+                        <label class="col-md-offset-2">Child</label>
+                        <p class="col-md-offset-2">@Html.ActionLink("" + @p1.firstName + " " + @p1.lastName + "", "details", "patients", new { id = p1.patientId }, new { @class = "" })</p>
+                        <label class="col-md-offset-2">Mother</label>
+                        <p class="col-md-offset-2">@Html.ActionLink("" + @p2.firstName + " " + @p2.lastName + "", "details", "patients", new { id = p2.patientId }, new { @class = "" })</p>
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
+        <br />
+        <br />
+        <h4 class="col-md-offset-1">Certifier Information</h4>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.certiferName)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.certiferName)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.certiferTitle)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.certiferTitle)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.certiferDate)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.certiferDate)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.filedDate)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.filedDate)</p>
+        <br />
+        <br />
+        <h4 class="col-md-offset-1">Birth Details</h4>
+        <label class="col-md-offset-2">If the mother is not married, was a paternity acknowledgement signed?</label>
+        <p class="col-md-offset-2">@(Model.paternityAck ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">Was a Social Security Number requested for the child?</label>
+        <p class="col-md-offset-2">@(Model.ssnRequested ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.facilityId)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.facilityId)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.birthFacility)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.birthFacility)</p>
+        <label class="col-md-offset-2">Was this a home birth?</label>
+        <p class="col-md-offset-2">@(Model.homebirth ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.attendantName)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.attendantName)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.attendantNpi)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.attendantNpi)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.attendantTitle)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.attendantTitle)</p>
+        <label class="col-md-offset-2">Was the mother transferred for maternal, medical or fetal indications for this delivery?</label>
+        <p class="col-md-offset-2">@(Model.motherTransferred ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">Name of the facility transferred to?</label>
+        <p class="col-md-offset-2">@(Model.transferFacility != null ? Model.transferFacility : "N/A")</p>
+        <br />
+        <br />
+        <h4 class="col-md-offset-1">Pregnancy Information</h4>
+        <label class="col-md-offset-2">Date of first prenatal care visit</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.firstPrenatal)</p>
+        <label class="col-md-offset-2">Date of last prenatal care visit</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.lastPrenatal)</p>
+        <label class="col-md-offset-2">Total number of prenatal visits this pregnancy</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.totalPrenatal)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.motherPreWeight)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.motherPreWeight)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.motherPostWeight)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.motherPostWeight)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.motherDeliveryWeight)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.motherDeliveryWeight)</p>
+        <label class="col-md-offset-2">Did the mother recieve WIC during pregnancy?</label>
+        <p class="col-md-offset-2">@(Model.hadWic ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.previousBirthLiving)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.previousBirthLiving)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.previousBirthDead)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.previousBirthDead)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.lastLiveBirth)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.lastLiveBirth)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.otherBirthOutcomes)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.otherBirthOutcomes)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.lastOtherOutcome)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.lastOtherOutcome)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cigThreeBefore)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.cigThreeBefore)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.packThreeBefore)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.packThreeBefore)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cigFirstThree)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.cigFirstThree)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.packFirstThree)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.packFirstThree)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cigSecondThree)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.cigSecondThree)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.packSecondThree)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.packSecondThree)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cigThirdTri)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.cigThirdTri)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.packThirdTri)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.packThirdTri)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.dateLastMenses)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.dateLastMenses)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.diabetesPrepregnancy)</label>
+        <p class="col-md-offset-2">@(Model.diabetesPrepregnancy ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.diabetesGestational)</label>
+        <p class="col-md-offset-2">@(Model.diabetesGestational ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.hyperTensionPrepregnancy)</label>
+        <p class="col-md-offset-2">@(Model.hyperTensionPrepregnancy ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.hyperTensionGestational)</label>
+        <p class="col-md-offset-2">@(Model.hyperTensionGestational ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.hyperTensionEclampsia)</label>
+        <p class="col-md-offset-2">@(Model.hyperTensionEclampsia ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.prePreTerm)</label>
+        <p class="col-md-offset-2">@(Model.prePreTerm ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.prePoorOutcome)</label>
+        <p class="col-md-offset-2">@(Model.prePoorOutcome ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.resultInfertility)</label>
+        <p class="col-md-offset-2">@(Model.resultInfertility ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.fertilityDrug)</label>
+        <p class="col-md-offset-2">@(Model.fertilityDrug ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.assistedTech)</label>
+        <p class="col-md-offset-2">@(Model.assistedTech ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.previousCesarean)</label>
+        <p class="col-md-offset-2">@(Model.previousCesarean ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.previousCesareanAmount)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.previousCesareanAmount)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.gonorrhea)</label>
+        <p class="col-md-offset-2">@(Model.gonorrhea ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.syphilis)</label>
+        <p class="col-md-offset-2">@(Model.syphilis ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.chlamydia)</label>
+        <p class="col-md-offset-2">@(Model.chlamydia ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.hepB)</label>
+        <p class="col-md-offset-2">@(Model.hepB ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.hepC)</label>
+        <p class="col-md-offset-2">@(Model.hepC ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cervicalCerclage)</label>
+        <p class="col-md-offset-2">@(Model.cervicalCerclage ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.tocolysis)</label>
+        <p class="col-md-offset-2">@(Model.tocolysis ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.externalCephalic)</label>
+        <p class="col-md-offset-2">@(Model.externalCephalic ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.preRuptureMembrane)</label>
+        <p class="col-md-offset-2">@(Model.preRuptureMembrane ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.preLabor)</label>
+        <p class="col-md-offset-2">@(Model.preLabor ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.proLabor)</label>
+        <p class="col-md-offset-2">@(Model.proLabor ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.inductionLabor)</label>
+        <p class="col-md-offset-2">@(Model.inductionLabor ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.augmentationLabor)</label>
+        <p class="col-md-offset-2">@(Model.augmentationLabor ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.nonvertex)</label>
+        <p class="col-md-offset-2">@(Model.nonvertex ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.antibotics)</label>
+        <p class="col-md-offset-2">@(Model.antibotics ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.chorioamnionitis)</label>
+        <p class="col-md-offset-2">@(Model.chorioamnionitis ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.meconium)</label>
+        <p class="col-md-offset-2">@(Model.meconium ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.fetalIntolerance)</label>
+        <p class="col-md-offset-2">@(Model.fetalIntolerance ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.epidural)</label>
+        <p class="col-md-offset-2">@(Model.epidural ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.unsuccessfulForceps)</label>
+        <p class="col-md-offset-2">@(Model.unsuccessfulForceps ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.unsuccessfulVacuum)</label>
+        <p class="col-md-offset-2">@(Model.unsuccessfulVacuum ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cephalic)</label>
+        <p class="col-md-offset-2">@(Model.cephalic ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.breech)</label>
+        <p class="col-md-offset-2">@(Model.breech ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.otherFetalPresentation)</label>
+        <p class="col-md-offset-2">@(Model.otherFetalPresentation ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.finalSpontaneous)</label>
+        <p class="col-md-offset-2">@(Model.finalSpontaneous ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.finalForceps)</label>
+        <p class="col-md-offset-2">@(Model.finalForceps ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.finalVacuum)</label>
+        <p class="col-md-offset-2">@(Model.finalVacuum ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.finalCesarean)</label>
+        <p class="col-md-offset-2">@(Model.finalCesarean ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.finalTrialOfLabor)</label>
+        <p class="col-md-offset-2">@(Model.finalTrialOfLabor ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.maternalTransfusion)</label>
+        <p class="col-md-offset-2">@(Model.maternalTransfusion ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.perinealLaceration)</label>
+        <p class="col-md-offset-2">@(Model.perinealLaceration ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.rupturedUterus)</label>
+        <p class="col-md-offset-2">@(Model.rupturedUterus ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.hysterectomy)</label>
+        <p class="col-md-offset-2">@(Model.hysterectomy ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.admitICU)</label>
+        <p class="col-md-offset-2">@(Model.admitICU ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.unplannedOperating)</label>
+        <p class="col-md-offset-2">@(Model.unplannedOperating ? "Yes" : "No")</p>
+        <br />
+        <br />
+        <h4 class="col-md-offset-1">Infant Information</h4>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.fiveMinAgpar)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.fiveMinAgpar)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.tenMinAgpar)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.tenMinAgpar)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.plurality)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.plurality)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.birthOrder)</label>
+        <p class="col-md-offset-2">@(Model.birthOrder != null ? Model.birthOrder : "N/A")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.ventImmedite)</label>
+        <p class="col-md-offset-2">@(Model.ventImmedite ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.ventSixHours)</label>
+        <p class="col-md-offset-2">@(Model.ventSixHours ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.nicu)</label>
+        <p class="col-md-offset-2">@(Model.nicu ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.surfactant)</label>
+        <p class="col-md-offset-2">@(Model.surfactant ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.neoNatalAntibotics)</label>
+        <p class="col-md-offset-2">@(Model.neoNatalAntibotics ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.seizureDysfunction)</label>
+        <p class="col-md-offset-2">@(Model.seizureDysfunction ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.birthInjury)</label>
+        <p class="col-md-offset-2">@(Model.birthInjury ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.anencephaly)</label>
+        <p class="col-md-offset-2">@(Model.anencephaly ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.meningomyelocele)</label>
+        <p class="col-md-offset-2">@(Model.meningomyelocele ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cyanotic)</label>
+        <p class="col-md-offset-2">@(Model.cyanotic ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cogenital)</label>
+        <p class="col-md-offset-2">@(Model.cogenital ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.omphalocele)</label>
+        <p class="col-md-offset-2">@(Model.omphalocele ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.gastroschisis)</label>
+        <p class="col-md-offset-2">@(Model.gastroschisis ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.limbReduction)</label>
+        <p class="col-md-offset-2">@(Model.limbReduction ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cleftLip)</label>
+        <p class="col-md-offset-2">@(Model.cleftLip ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.cleftPalate)</label>
+        <p class="col-md-offset-2">@(Model.cleftPalate ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.downConfirmed)</label>
+        <p class="col-md-offset-2">@(Model.downConfirmed ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.downPending)</label>
+        <p class="col-md-offset-2">@(Model.downPending ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.suspectedConfirmed)</label>
+        <p class="col-md-offset-2">@(Model.suspectedConfirmed ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.suspectedPending)</label>
+        <p class="col-md-offset-2">@(Model.suspectedPending ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.hypospadias)</label>
+        <p class="col-md-offset-2">@(Model.hypospadias ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.infantTransferred)</label>
+        <p class="col-md-offset-2">@(Model.infantTransferred ? "Yes" : "No")</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.infantLiving)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.infantLiving)</p>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.breastFed)</label>
+        <p class="col-md-offset-2">@(Model.breastFed ? "Yes" : "No")</p>
+        <br />
+        <br />
+        <h4 class="col-md-offset-1">Misc Information</h4>
+        <label class="col-md-offset-2">@Html.DisplayNameFor(model => model.paymentSource)</label>
+        <p class="col-md-offset-2">@Html.DisplayFor(model => model.paymentSource)</p>
+    </div>
+</div>

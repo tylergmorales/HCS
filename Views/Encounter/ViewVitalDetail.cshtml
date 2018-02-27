@@ -1,0 +1,136 @@
+﻿@model ispProject.Models.PCADetail @{ ViewBag.Title = "ViewVitalDetail"; }
+
+<div class="container">
+    <div class="panel col-md-10 col-md-offset-1">
+        <div class="panel-body">
+            <div class="underline-Heading">
+                <h1 style="padding-top: 50px;">Patient Care Assessment</h1>
+            </div>
+            <div>
+                <h3>
+                    <i> Vitals Record Detail</i>
+
+                </h3>
+
+            </div>
+
+            @using (Html.BeginForm())
+            {@Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <br />
+                <div class="row">
+                    <div class="col-sm-3" for="datetime"><strong>Date Time Added</strong></div>
+                    <div class="col-sm-4">@Html.DisplayFor(model => model.datetime)</div>
+                </div>
+                <br />
+                <div class="well">
+                    <div class="row">
+                        <div class="col-sm-2" for="temperature"><strong>Temperature</strong></div>
+                        <div class="col-sm-1">@Html.DisplayFor(model => model.temperature)</div>
+                        <div class="col-sm-1"><strong>Route</strong></div>
+                        <div class="col-sm-2">@Html.DisplayFor(model => model.temp_route_type)</div>
+                        <div class="col-sm-1" for="pulse"><strong>Pulse</strong></div>
+                        <div class="col-sm-1">@Html.DisplayFor(model => model.pulse)</div>
+                        <div class="col-sm-1" for="pulse"><strong>Route</strong></div>
+                        <div class="col-sm-3">@Html.DisplayFor(model => model.pulse_route_type)</div>
+                    </div>
+                    @*
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-2" for="pulse"><strong>Pulse</strong></div>
+                            <div class="col-sm-4">@Html.DisplayFor(model => model.pulse)</div>
+                            <div class="col-sm-2" for="pulse"><strong>Route</strong></div>
+                            <div class="col-sm-4">@Html.DisplayFor(model => model.pulse_route_type)</div>
+                        </div>*@
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-3" for="pulseOximetry"><strong>Pulse Oximetry</strong></div>
+                        <div class="col-xs-1">@Html.DisplayFor(model => model.pulse_oximetry)</div>
+                        <div class="col-sm-2" for="respirations"><strong>Respirations</strong></div>
+                        <div class="col-xs-1">@Html.DisplayFor(model => model.respirations)</div>
+                        <div class="col-sm-3" for="oxygenFlow"><strong>Oxygen Flow</strong></div>
+                        <div class="col-xs-1">@Html.DisplayFor(model => model.oxygen_flow)</div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-3"><strong>O2 Delivery Method</strong></div>
+                        <div class="col-sm-4">@Html.DisplayFor(model => model.o2_dev_type)</div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-4" for="systolicBloodPressure"><strong>Systolic Blood Pressure</strong></div>
+                        <div class="col-sm-1">@Html.DisplayFor(model => model.systolic_b_pressure)</div>
+                        <div class="col-sm-4" for="diastolicBloodPressure"><strong>Diastolic Blood Pressure</strong></div>
+                        <div class="col-sm-1">@Html.DisplayFor(model => model.diastolic_b_pressure)</div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-4" for="comment"><strong>Vitals Comments Added</strong></div>
+                        <div class="col-sm-8">@Html.DisplayFor(model => model.pcaComment)</div>
+                    </div>
+                </div>
+                <br />
+                <div class="well">
+                    <div class="row">
+                        <div class="col-sm-3"><strong>Pain/Comfort/Coping (WDL_EX)</strong></div>
+                        @*
+                            <div class="col-sm-offset-1">@Html.DisplayFor(model => model.wdl)</div>*@
+                        <label class="form-check-label col-sm-offset-1">
+                            @Html.RadioButtonFor(x => x.wdl, "true", new { disabled = "disabled" }) WDL
+                        </label>
+                        <label class="form-check-label col-sm-offset-1">
+                            @Html.RadioButtonFor(x => x.wdl, "false", new { disabled = "disabled" }) WDL Ex
+                        </label>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-3" for="pain_scale"><strong>Pain Scale Type:</strong></div>
+                        <div class="col-sm-3">@Html.DisplayFor(model => model.pain_scale_type)</div>
+                    </div>
+                    <br />
+                    <div class="row" id="pain_scale_level">
+                        <div class="col-sm-3"><strong>Pain Level Actual:</strong> </div>
+                        <div class="col-sm-1">@Html.DisplayFor(model => model.pain_level_actual)</div>
+                        <div class="col-sm-3" for="painGoal"><strong>Pain Level Goal</strong></div>
+                        <div class="col-sm-1">@Html.DisplayFor(model => model.pain_level_goal)</div>
+                    </div>
+                    <br />
+                    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#wdlPainDefinitionsModal">
+                        <span class="glyphicon glyphicon-info-sign"></span> WDL Definitions
+                    </button>
+                    <div id="wdlPainDefinitionsModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modalDes">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">WDL Definitions</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><b>WDL:</b> no Pain (score of 0 on pain scale or no non-verbal pain behaviors noted), able to sleep/rest; verbalizes/demonstrates emotional comfort/well-being and/or effectively manages stressors (mood, affect and emotion).</p>
+                                    <p><b>Pediatric:</b> rests within adult arms and self pacifies (pacifier, appropriate play).</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-4" for="wdlExceptionInfo"><strong>Pain Comment Added</strong></div>
+                        <div class="col-sm-8">@Html.DisplayFor(model => model.painComment)</div>
+                    </div>
+                </div>
+                <br />
+                <button type="button" class="btn btn-default">@Html.ActionLink("Back To PcaList", "IndividualEncounter", new { id = Model.encounterId })</button>
+                <button type="button" class="btn btn-default">@Html.ActionLink("View Bodysystems Detail", "Details", "BodySystems", new { pcaID = Model.pcaId, typeID = 2 }, null)</button>
+
+            </div>
+
+        }
+        </div>
+    </div>
+</div>

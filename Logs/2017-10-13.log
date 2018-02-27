@@ -1,0 +1,7 @@
+2017-10-13 19:55:44.8830 INFO User jsantorelli@my.wctc.edu created 
+2017-10-13 19:57:16.4277 INFO User tried to create an account with already registered email: jsantorelli@my.wctc.edu 
+2017-10-13 20:14:53.0071 INFO Error in userAccount/Users table 75
+2017-10-13 20:15:18.4751 INFO Error in userAccount/Users table 75
+2017-10-13 20:16:12.3329 INFO Error in userAccount/Users table 75
+2017-10-13 20:19:40.0948 INFO Error in userAccount/Users table 75
+2017-10-13 20:20:46.6218 INFO User Jeremy Santorelli deleted user 71 75

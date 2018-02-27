@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ebe205f04ddd43d99b34e6af6b4daf22" Name="Diagram1">
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_address_type" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_admission_type" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_family_relation_type" Width="1.5" PointX="6" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_insurance" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_marital_status" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_patient_ethnicity" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_patient_gender" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_patient_name_type" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.aadmin_data_patient_race" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.encounter" Width="1.5" PointX="10.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.hospital" Width="1.5" PointX="20.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.hospital_doctor" Width="1.5" PointX="23" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.hospital_facility" Width="1.5" PointX="8.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_care_system_assessment" Width="1.5" PointX="15" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_care_system_assessment_history" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_care_system_assessment_type" Width="1.5" PointX="12.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_o_two_delivery_type" Width="1.5" PointX="10.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_pain_scale_type" Width="1.5" PointX="10.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_pca_comment" Width="1.5" PointX="18" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_pca_comment_type" Width="1.5" PointX="15.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_pca_record" Width="2.125" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_pca_record_history" Width="2.125" PointX="17.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_pulse_route_type" Width="1.5" PointX="10.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_temp_route_type" Width="1.5" PointX="10.5" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient_address" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient_birth_information" Width="1.5" PointX="5.25" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient_family" Width="1.5" PointX="8.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient_insurance" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient_name" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.Log" Width="1.5" PointX="2.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.role" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.sysdiagram" Width="1.5" PointX="14.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.userAccount" Width="1.5" PointX="28.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.user" Width="1.5" PointX="26" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.zz_birthRecord" Width="1.5" PointX="15.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.zz_hospital" Width="1.5" PointX="15.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.zz_patient" Width="1.5" PointX="12.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.zz_patientRace" Width="1.5" PointX="15" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.zz_record" Width="1.5" PointX="18" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.encounter_main" Width="1.5" PointX="16.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient_family_list" Width="1.5" PointX="18.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient_general_info" Width="1.5" PointX="2.75" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.patient_name_list" Width="1.5" PointX="20.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_a__addre__5F492382" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__encounter__admis__4C0144E4" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_f__relat__477199F1" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_i__insur__63A3C44B" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient__marital__2704CA5F" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient__patient__28ED12D1" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient__gender___2610A626" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_n__patie__2DB1C7EE" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient__patient__27F8EE98" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__encounter__facil__4CF5691D" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__encounter__patie__4DE98D56" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_p__encou__4242D080" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__hospital___hospi__60C757A0" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__users__hospitalI__0E04126B" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_c__care___546180BB" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_c__pca_i__5555A4F4" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_p__o_two__451F3D2B" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_p__pain___46136164" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_p__pca_c__5832119F" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_p__pca_i__592635D8" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_p__pulse__442B18F2" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__nursing_p__temp___4336F4B9" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_a__patie__61316BF4" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_b__patie__20E1DCB5" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_f__patie__467D75B8" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_i__patie__6497E884" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patient_n__patie__2CBDA3B5" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__users__roleId__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__userAccou__userI__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__record__birthRec__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__record__hospital__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__patientRa__patie__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="HITProjectData_Fall17Model.FK__record__patientI__2C3393D0" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HITProjectData_Fall17Model.nursing_pca_comment_history" Width="1.5" PointX="5.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

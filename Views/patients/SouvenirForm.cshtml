@@ -1,0 +1,41 @@
+@model ispProject.Models.zz_patient
+
+@{
+    ViewBag.Title = "SouvenirForm";
+}
+
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two:700|Open+Sans:600" rel="stylesheet">
+<link href="~/Content/SouvinerStyling.css" rel="stylesheet" />
+
+<div id="outerWrapper">
+    <div id="upper_left">
+        <img src="~/Content/images/blocks.png" />
+    </div>
+    <div id="upper_right">
+        <img src="~/Content/images/rattle.jpeg" />
+    </div>
+    <div id="lower_left">
+    </div>
+    <div id="lower_right">
+        <img src="~/Content/images/footprint.png" />
+    </div>
+
+    <div id="certificate">
+        <h1>Birth Certificate</h1>
+        <h3>This is to Certify that</h3><br />
+        <h4> 
+@*  THIS WILL NEED TO GET UPDATED   @Html.DisplayFor(model => model.firstName) @Html.DisplayFor(model => model.middleName) @Html.DisplayFor(model => model.lastName)*@ 
+            
+
+        </h4>
+        <p>Weighing: </p><p id="weightPounds">@ViewBag.weight</p>
+        <p>Was Born On: </p>
+        <p id="date">@ViewBag.birthDate</p>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        window.print();
+    });
+</script>
+

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Adminstration Panel";
+}
+
+<div class="panel">
+	<div class="panel-body">
+        <div class="underline-Heading">
+            <h2>Adminstration Panel</h2>
+        </div>
+        <div class="col-md-offset-1">
+            <br>
+            <label>@Html.ActionLink("Manage Users", "index", "users")</label>
+            <br />
+            <label>@Html.ActionLink("Manage Hospitals", "index", "hospitals")</label>
+            <br />
+            <label>@Html.ActionLink("View Roles", "index", "roles")</label>
+            <br />
+            <label>@Html.ActionLink("Manage Patients", "index", "patients")</label>
+            <br />
+            <label><a href="~/Logs/Index">View Log</a></label>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,27 @@
+﻿@model ispProject.Models.zz_hospital
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>Manage Hospitals</h2>
+        </div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+        </dl>
+    </div>
+    <p class="col-md-12">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.hospitalId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
+</div>

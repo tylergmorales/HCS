@@ -1,0 +1,29 @@
+﻿@model PagedList.IPagedList<ispProject.Models.PCAHistoryDetail>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "ListOfHistoryRecords";
+}
+<div class="container">
+    <h2 style="padding-top: 50px;">List of Edited History Records</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+
+                <th class="text-center">PCA History ID #: </th>
+                <th>PCA ID#: </th>
+                <th class="text-center">Date Edited: </th>
+                <th class="text-center">See Detail of History Record</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">@item.pcaHistoryId</td>
+                    <td>@item.pcaId</td>
+                    <td class="text-center">@item.datetime</td>
+                    <td class="text-center">@Html.ActionLink("Detail", "IndividualHistoryRecord", new { id = item.pcaHistoryId })</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <button type="button" class="btn btn-default">@Html.ActionLink("Back To PCA Records List", "IndividualEncounter", new { id = ViewBag.encounterId })</button>
+</div>

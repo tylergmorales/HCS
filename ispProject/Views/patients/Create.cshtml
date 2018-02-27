@@ -1,0 +1,253 @@
+﻿
+@{
+
+    ViewBag.Title = "Create";
+    ispProject.Models.AdminModel am = new ispProject.Models.AdminModel();
+    am.setMRN(ViewBag.mrn);
+    ispProject.Models.patient newPatient;
+
+    if (ViewBag.mrn == "" || ViewBag.mrn == null)
+    {
+
+        newPatient = am.getPatientInfoBySSN(ViewBag.ssn);
+
+    }
+    else {
+
+        newPatient = am.getPatientInfoByMRN(ViewBag.mrn);
+
+    }
+
+
+    if (newPatient == null)
+    {
+
+    }
+    else {
+
+        ViewBag.patient = newPatient.social_security_number;
+        ViewBag.message = "This patient's ssn was saved, and mrn was created, but no other information was ever added.";
+    }
+}
+
+<div class="container">
+    <div class="col-sm-12">@ViewBag.message</div>
+    <div class="tabs">
+        <ul class="tab-links">
+            <li class="active"><a id="tab1" href="#tab1" onclick="return false;">General</a></li>
+
+        </ul>
+
+        <div class="tab-content">
+
+            <!-----------------------TAB 1 GENERAL-------------------------->
+
+
+            <div id="tab1" class="tab active">
+                <div class="container">
+                    <form method="post" action="CreateGeneral" style="margin-bottom: 100px;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Patient Information</div>
+                            <div class="panel-body">
+                                <div class="col-sm-4">
+
+                                    <div class="form-group">
+                                        <label for="mrn">MRN</label>
+                                        @if (am.getMRN().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" readonly>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" name="mrn" value="@am.getMRN()" readonly>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        @if (am.getLName().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" readonly>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getLName()" readonly>
+                                        }
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        @if (am.getFName().Equals(""))
+                                        {
+                                            <input type="text" class="form-control" value="Patient Was Not Set" readonly>
+                                        }
+                                        else {
+                                            <input type="text" class="form-control" value="@am.getFName()" readonly>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">Names</div>
+                            <div class="panel-body">
+
+                                <div class="col-sm-6">
+
+                                    <h3>Full Name</h3>
+                                    <div class="form-group">
+                                        <--! This cant be null, free text -->
+                                            <label for="firstName">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" name="firstName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="middleName">Middle Initial</label>
+                                        <input type="text" class="form-control" id="middleName" name="middleName">
+                                    </div>
+                                    <--! This cant be null, free text -->
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" name="lastName">
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                Patient is a MINOR
+                                            </label>
+                                        </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <h3> Other Alias </h3>
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" name="AfirstName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="middleName">Middle Initial</label>
+                                        <input type="text" class="form-control" id="middleName" name="AmiddleName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" name="AlastName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mothersMaidenName">Mother's Maiden Name</label>
+                                        <input type="text" class="form-control" id="mothersMaidenName" name="mothersMaidenName">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Other Identifiers</div>
+                            <div class="panel-body">
+                                <div class="col-sm-4">
+
+                                    <h3> DOB/SSN/AGE </h3>
+
+                                    <div class="form-group">
+                                        <label for="dob">DOB</label>
+                                        <input type="text" class="form-control" id="dob" name="dob" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ssn">SSN</label>
+                                        <input type="text" class="form-control" id="ssn" name="ssn" value="@ViewBag.patient" readonly>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label>Sex</label>
+                                        <select class="form-control form-control-sm" name="sex" id="sex">
+                                            @foreach (ispProject.Models.aadmin_data_patient_gender gender in am.getGenders())
+                                            {
+                                                <option value="@gender.gender_id">@gender.description</option>
+                                            }
+
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <select class="form-control form-control-sm" name="gender" id="gender">
+                                            @foreach (ispProject.Models.aadmin_data_patient_gender gender in am.getGenders())
+                                            {
+                                                <option value="@gender.gender_id">@gender.description</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-sm-4">
+                                    <label>Marital Status</label>
+                                    <select class="form-control form-control-sm" name="maritalStatus">
+                                        @foreach (ispProject.Models.aadmin_data_marital_status mstat in am.getMaritalStatus())
+            {
+                                            <option value="@mstat.marital_status_id">@mstat.description</option>
+                                        }
+
+
+                                    </select>
+                                    <label>Alergies</label>
+                                    <select class="form-control form-control-sm" name="allergy">
+                                        <option value="" selected>No Known Allegies</option>
+                                        <option value="">Dust</option>
+                                        <option value="">Insect Sting</option>
+                                        <option value="">Pet Allergies</option>
+                                        <option value="">Allergic Rhinitis</option>
+                                        <option value="">Drug</option>
+                                        <option value="">Latex</option>
+                                        <option value="">Mold</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-sm-4">
+                                    <label>Race</label>
+                                    <select class="form-control form-control-sm" name="race">
+                                        @foreach (ispProject.Models.aadmin_data_patient_race race in am.getRace())
+            {
+                                            <option value="@race.patient_race_id">@race.description</option>
+                                        }
+
+
+                                    </select>
+                                    <div class="form-group">
+                                        <label>Ethnicity</label>
+                                        <select class="form-control form-control-sm" name="ethnicity">
+                                            @foreach (ispProject.Models.aadmin_data_patient_ethnicity ethnicity in am.getEthnicity())
+            {
+                                                <option value="@ethnicity.patient_ethnicity_id">@ethnicity.description</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                               
+
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+

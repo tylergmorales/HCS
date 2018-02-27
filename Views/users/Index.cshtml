@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ispProject.Models.user>
+@using ispProject.Models
+@using ispProject.Security
+@using NLog
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>Manage Users</h2>
+        </div>
+        <br />
+        <p>@Html.ActionLink("Create New", "Create")</p>
+        <br />
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>UserName</th>
+                <th>Hospital</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.firstName) @Html.DisplayFor(modelItem => item.lastName)
+                    </td>
+                    <td>
+                        @using (HITProjectData_Fall17Entities1 db = new HITProjectData_Fall17Entities1())
+                        {
+                            try
+                            {
+                                userAccount u = db.userAccounts.Where(i => i.userId == item.userId).First();
+                                @u.userName
+                            }
+                            catch (Exception e)
+                            {
+                                Logger logger = LogManager.GetCurrentClassLogger();
+                                //logger.Info("Error in userAccount/Users table");
+                                @Html.DisplayFor(modelItem => item.userId)
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.hospital.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.role.title)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.userId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.userId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

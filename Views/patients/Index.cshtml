@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ispProject.Models.zz_patient>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="panel">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>View all patients</h2>
+        </div>
+        <br />
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    MRN
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Date Of Birth
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.medicalRecordNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.firstName) @Html.DisplayFor(modelItem => item.middleName) @Html.DisplayFor(modelItem => item.lastName) @Html.DisplayFor(modelItem => item.suffix)
+                    </td>
+                    <td>
+                        @item.birthDate.Value.ToString("MM/dd/yyyy")
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Edit", "Edit", new { id=item.patientId }) |*@
+                        @Html.ActionLink("View", "Details", new { id = item.patientId }) @*|
+                            @Html.ActionLink("Delete", "Delete", new { id=item.patientId })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+</div>

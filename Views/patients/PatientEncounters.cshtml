@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ispProject.Models.encounter_main>
+@{
+    ViewBag.Title = "Patient Encounters";
+}
+<h2>@ViewBag.mrn >><a href="Details/@ViewBag.mrn"> @ViewBag.last , @ViewBag.first </a></h2>
+
+<div class="panel">
+    <div class="panel-body">
+        <p>
+            At some point this will be added to. This shows all of the
+            patients that have not been discharged.
+        </p>
+        <a href="../Encounter/AddEncounter/@ViewBag.id" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Encounter</a>
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    Encounter ID
+                </th>
+                <th>
+                    Department
+                </th>
+                <th>
+                    Chief Complaint
+                </th>
+                <th>
+                    Insurance Used
+                </th>
+                <th>
+                    Admitted At
+                </th>
+
+            </tr>
+            @foreach (var enc in Model)
+            {
+                <tr>
+                    <td>
+                       <a href="../Encounter/IndividualEncounter/@enc.encounter_id"> @enc.encounter_id.ToString()</a>
+                    </td>
+                    <td>
+                        @enc.hospital_facility.ToString()
+                    </td>
+                    <td>
+                        @enc.chief_complaint.ToString()
+                    </td>
+                    <td>
+                        @enc.individual_insurance_id
+                    </td>
+                    <td>
+                        @enc.admission_date.ToString()
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

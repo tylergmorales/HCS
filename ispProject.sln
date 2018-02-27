@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ispProject", "ispProject\ispProject.csproj", "{5D30F904-D2A7-490B-88F7-BC90A19FD4C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		LetsDoThis|Any CPU = LetsDoThis|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D30F904-D2A7-490B-88F7-BC90A19FD4C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D30F904-D2A7-490B-88F7-BC90A19FD4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D30F904-D2A7-490B-88F7-BC90A19FD4C6}.LetsDoThis|Any CPU.ActiveCfg = LetsDoThis|Any CPU
+		{5D30F904-D2A7-490B-88F7-BC90A19FD4C6}.LetsDoThis|Any CPU.Build.0 = LetsDoThis|Any CPU
+		{5D30F904-D2A7-490B-88F7-BC90A19FD4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D30F904-D2A7-490B-88F7-BC90A19FD4C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

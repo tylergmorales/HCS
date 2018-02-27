@@ -1,0 +1,113 @@
+﻿@model ispProject.Models.nursing_care_system_assessment_type
+@using ispProject.Models
+@{
+    ViewBag.Title = Model.care_system_assessment_type_name;
+}
+<div class="panel col-sm-3 tableOfContents">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h4>Table of Contents</h4>
+        </div>
+        <ul>
+            <li>
+                @Html.ActionLink("Vitals", "../Encounter/UpdateVital", new { id = ViewBag.pcaID })
+            </li>
+            @foreach (var item in ViewBag.CareSystems) {
+                if (item.care_system_assessment_type_id != 1) {
+                    if (Model.care_system_assessment_type_id == item.care_system_assessment_type_id) {
+                        <li class="bg-success">
+                            <a href='@Url.Action("CreateOrEdit", "BodySystems", new { pcaID = ViewBag.pcaID, typeID = item.care_system_assessment_type_id })'>@item.care_system_assessment_type_name</a>
+                        </li>
+                    }
+                    else {
+                        <li>
+                            <a href='@Url.Action("CreateOrEdit", "BodySystems", new { pcaID = ViewBag.pcaID, typeID = item.care_system_assessment_type_id })'>@item.care_system_assessment_type_name</a>
+                        </li>
+                    }
+                }
+            }
+            @foreach (var item in ViewBag.PCAComments) {
+                if (item.pca_comment_type_id != 1) {
+                    <li>
+                        <a href='@Url.Action("CreateOrEdit", "PCAComments", new { pcaID = ViewBag.pcaID, typeID = item.pca_comment_type_id })'>@item.pca_comment_type_name</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+<div class="panel col-sm-8">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>@Html.DisplayFor(modelItem => modelItem.care_system_assessment_type_name) Body System</h2>
+        </div>
+        @using (Html.BeginForm("Create", "BodySystems", FormMethod.Post)) {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.care_system_assessment_type_id)
+            @Html.Hidden("pcaID", (int)ViewBag.pcaID)
+
+            <div class="form-horizontal">
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <fieldset class="form-group">
+                    <div class="form-check col-sm-offset-3">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="wdlRadios" id="wdl" value="wdl" checked>
+                            WDL
+                        </label>
+                    </div>
+                    <div class="form-check col-sm-offset-3">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="wdlRadios" id="wdlEx" value="wdlEx">
+                            WDL Ex
+                        </label>
+                    </div>
+                </fieldset>
+
+                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#wdlPainDefinitionsModal">
+                    <span class="glyphicon glyphicon-info-sign"></span> WDL Definitions
+                </button>
+                <div id="wdlPainDefinitionsModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modalDes">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">WDL Definitions</h4>
+                            </div>
+                            <div class="modal-body">
+                                @Html.DisplayFor(modelItem => modelItem.wdl_description)
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><br /><br />
+                <div class="form-group">
+                    <label class="control-label" for="wdlExceptionInfo">Add comment</label>
+                    <textarea class="form-control col-sm-8" name="wdlExceptionInfo" placeholder="Enter findings for any WDL Ex..."></textarea>
+                </div>
+                <button class="btn btn-success" type="submit" name="formButton" value="Save">Save</button>
+                <button class="btn btn-primary" type="submit" name="formButton" value="SaveContinue">Save and Continue</button>
+                <button class="btn btn-danger" type="submit" name="formButton" value="Exit">Exit Without Saving</button>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(window).keydown(function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+            }
+        });
+    });
+
+</script>

@@ -1,0 +1,717 @@
+﻿@model IEnumerable<ispProject.Models.zz_birthRecord>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.certiferName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.certiferTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.certiferDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.filedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.paternityAck)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ssnRequested)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.facilityId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.birthFacility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.homebirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attendantName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attendantNpi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attendantTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motherTransferred)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.transferFacility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.firstPrenatal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastPrenatal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.totalPrenatal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motherPreWeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motherPostWeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motherDeliveryWeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hadWic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.previousBirthLiving)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.previousBirthDead)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastLiveBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.otherBirthOutcomes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastOtherOutcome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cigThreeBefore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.packThreeBefore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cigFirstThree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.packFirstThree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cigSecondThree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.packSecondThree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cigThirdTri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.packThirdTri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.paymentSource)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateLastMenses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diabetesPrepregnancy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diabetesGestational)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hyperTensionPrepregnancy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hyperTensionGestational)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hyperTensionEclampsia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prePreTerm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prePoorOutcome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resultInfertility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fertilityDrug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assistedTech)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.previousCesarean)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.previousCesareanAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gonorrhea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.syphilis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chlamydia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hepB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hepC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cervicalCerclage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tocolysis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.externalCephalic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.preRuptureMembrane)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.preLabor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proLabor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inductionLabor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.augmentationLabor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nonvertex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.steroids)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.antibotics)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chorioamnionitis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.meconium)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fetalIntolerance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.epidural)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.unsuccessfulForceps)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.unsuccessfulVacuum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cephalic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.breech)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.otherFetalPresentation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.finalSpontaneous)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.finalForceps)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.finalVacuum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.finalCesarean)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.finalTrialOfLabor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maternalTransfusion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.perinealLaceration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rupturedUterus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hysterectomy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.admitICU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.unplannedOperating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fiveMinAgpar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenMinAgpar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plurality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.birthOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ventImmedite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ventSixHours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nicu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.surfactant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.neoNatalAntibotics)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seizureDysfunction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.birthInjury)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.anencephaly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.meningomyelocele)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cyanotic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cogenital)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.omphalocele)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gastroschisis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.limbReduction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cleftLip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cleftPalate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.downConfirmed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.downPending)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.suspectedConfirmed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.suspectedPending)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hypospadias)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.infantTransferred)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.infantLiving)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.breastFed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateEdited)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.editedBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.certiferName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.certiferTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.certiferDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.filedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.paternityAck)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ssnRequested)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.facilityId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birthFacility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.homebirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attendantName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attendantNpi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attendantTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motherTransferred)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.transferFacility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstPrenatal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastPrenatal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.totalPrenatal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motherPreWeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motherPostWeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motherDeliveryWeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hadWic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.previousBirthLiving)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.previousBirthDead)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastLiveBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otherBirthOutcomes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastOtherOutcome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cigThreeBefore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.packThreeBefore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cigFirstThree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.packFirstThree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cigSecondThree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.packSecondThree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cigThirdTri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.packThirdTri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.paymentSource)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateLastMenses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diabetesPrepregnancy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diabetesGestational)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hyperTensionPrepregnancy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hyperTensionGestational)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hyperTensionEclampsia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prePreTerm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prePoorOutcome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resultInfertility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fertilityDrug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assistedTech)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.previousCesarean)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.previousCesareanAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gonorrhea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.syphilis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chlamydia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hepB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hepC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cervicalCerclage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tocolysis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.externalCephalic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.preRuptureMembrane)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.preLabor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proLabor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inductionLabor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.augmentationLabor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nonvertex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.steroids)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.antibotics)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chorioamnionitis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.meconium)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fetalIntolerance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.epidural)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.unsuccessfulForceps)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.unsuccessfulVacuum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cephalic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.breech)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otherFetalPresentation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.finalSpontaneous)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.finalForceps)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.finalVacuum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.finalCesarean)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.finalTrialOfLabor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maternalTransfusion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.perinealLaceration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rupturedUterus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hysterectomy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.admitICU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.unplannedOperating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fiveMinAgpar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenMinAgpar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plurality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birthOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ventImmedite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ventSixHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nicu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.surfactant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.neoNatalAntibotics)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seizureDysfunction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birthInjury)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.anencephaly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.meningomyelocele)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cyanotic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cogenital)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.omphalocele)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gastroschisis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.limbReduction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cleftLip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cleftPalate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.downConfirmed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.downPending)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.suspectedConfirmed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.suspectedPending)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hypospadias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.infantTransferred)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.infantLiving)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.breastFed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateEdited)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.editedBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.birthRecordId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.birthRecordId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.birthRecordId })
+        </td>
+    </tr>
+}
+
+</table>

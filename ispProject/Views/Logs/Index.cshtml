@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ispProject.Models.Log>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>Log</h2>
+        </div>
+        <br />
+        <table class="table table-striped">
+            <tr>
+                <th>Time</th>
+                <th>Level</th>
+                <th>User ID</th>
+                <th>Message</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventLevel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @if (item.ErrorMessage == "")
+                        {
+                            @Html.DisplayFor(modelItem => item.EventMessage)
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.ErrorMessage)
+                        }
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

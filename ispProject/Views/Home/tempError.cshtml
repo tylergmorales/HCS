@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <h4 style="color:red;">Sorry, you do not have permissions to do that. Please contact the system administrator if you believe this was in error.</h4>
+    <br />
+</div>
+@if (Request.IsAuthenticated)
+{
+    <div class="row">
+        <div class="panel panel-default mainPanels col-md-5">
+            <a href="~/patients/create">
+                <div class="panel-body centerText">
+                    <h1>
+                        <i class="fa fa-user-plus fa-5x" aria-hidden="true"></i>
+                    </h1>
+                    <h3>Add A New Patient</h3>
+                </div>
+            </a>
+        </div>
+        <div class="panel panel-default mainPanels col-md-offset-1 col-md-5">
+            <a href="~/patients/PatientLookup">
+                <div class="panel-body centerText">
+                    <h1>
+                        <i class="fa fa-search fa-5x" aria-hidden="true"></i>
+                    </h1>
+                    <h3>Lookup Patient</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+}
+
+@if (!Request.IsAuthenticated)
+{
+    using (Html.BeginForm("SignIn", "users"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="panel">
+            <div class="panel-body">
+                <h3>Welcome to BRIT Systems. Please log in</h3>
+                <br />
+                <h4 style="color:red;">@TempData["error"]</h4>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email Address" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Sign In" class="btn btn-default" />
+                            @Html.ActionLink("Don't have an account?", "create", "users")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,261 @@
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\ApplicationInsights.config
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\csc.exe
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\vbc.exe
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\NLog.config
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\ispProject.dll.config
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\ispProject.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Antlr3.Runtime.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\EntityFramework.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\EntityFramework.SqlServer.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.Web.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.ApplicationInsights.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Newtonsoft.Json.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\NLog.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\NLog.Extended.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\NLog.Web.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.Helpers.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.Mvc.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.Optimization.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.Razor.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.WebPages.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\WebGrease.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\EntityFramework.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\EntityFramework.SqlServer.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.Web.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.ApplicationInsights.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\NLog.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\NLog.Extended.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\NLog.Web.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.Helpers.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.Mvc.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.Optimization.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.Razor.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.WebPages.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Antlr3.Runtime.pdb
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\bin\Newtonsoft.Json.xml
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\obj\LetsDoThis\ispProject.dll
+C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\obj\LetsDoThis\ispProject.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\ApplicationInsights.config
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\csc.exe
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\vbc.exe
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\NLog.config
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\ispProject.dll.config
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\ispProject.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Antlr3.Runtime.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\EntityFramework.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.Web.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Newtonsoft.Json.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\NLog.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\NLog.Extended.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\NLog.Web.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.Helpers.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.Mvc.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.Optimization.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.Razor.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.WebPages.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\WebGrease.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\EntityFramework.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.Web.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\NLog.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\NLog.Extended.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\NLog.Web.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.Helpers.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.Mvc.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.Optimization.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.Razor.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.WebPages.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Antlr3.Runtime.pdb
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\Newtonsoft.Json.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\obj\LetsDoThis\ispProject.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\obj\LetsDoThis\ispProject.csproj.CoreCompileInputs.cache
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\obj\LetsDoThis\ispProject.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\PagedList.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\PagedList.xml
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\PagedList.Mvc.dll
+C:\Users\Matt\Downloads\HIT-Project-master\ispProject\bin\PagedList.Mvc.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\ApplicationInsights.config
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\csc.exe
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\vbc.exe
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\NLog.config
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\ispProject.dll.config
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\ispProject.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Antlr3.Runtime.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\EntityFramework.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.Web.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Newtonsoft.Json.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\NLog.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\NLog.Extended.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\NLog.Web.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\PagedList.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\PagedList.Mvc.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Helpers.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Mvc.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Optimization.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Razor.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\WebGrease.dll
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\EntityFramework.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.Web.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\NLog.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\NLog.Extended.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\NLog.Web.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\PagedList.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\PagedList.Mvc.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Helpers.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Mvc.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Optimization.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Razor.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Antlr3.Runtime.pdb
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\bin\Newtonsoft.Json.xml
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\obj\LetsDoThis\ispProject.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\obj\LetsDoThis\ispProject.csproj.CoreCompileInputs.cache
+C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\obj\LetsDoThis\ispProject.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\ApplicationInsights.config
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\csc.exe
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\System.Collections.Immutable.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\System.Reflection.Metadata.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\vbc.exe
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\VBCSCompiler.exe
+E:\Downloads\HIT-Project-Linh\ispProject\bin\roslyn\VBCSCompiler.exe.config
+E:\Downloads\HIT-Project-Linh\ispProject\bin\NLog.config
+E:\Downloads\HIT-Project-Linh\ispProject\bin\ispProject.dll.config
+E:\Downloads\HIT-Project-Linh\ispProject\bin\ispProject.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Antlr3.Runtime.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\EntityFramework.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\EntityFramework.SqlServer.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.DependencyCollector.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.Web.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.WindowsServer.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.ApplicationInsights.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.Web.Infrastructure.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Newtonsoft.Json.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\NLog.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\NLog.Extended.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\NLog.Web.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\PagedList.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\PagedList.Mvc.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Helpers.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Mvc.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Optimization.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Razor.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.Deployment.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.Razor.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\WebGrease.dll
+E:\Downloads\HIT-Project-Linh\ispProject\bin\EntityFramework.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\EntityFramework.SqlServer.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.DependencyCollector.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.Web.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.AI.WindowsServer.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.ApplicationInsights.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\NLog.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\NLog.Extended.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\NLog.Web.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\PagedList.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\PagedList.Mvc.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Helpers.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Mvc.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Optimization.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.Razor.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.Deployment.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\System.Web.WebPages.Razor.xml
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Antlr3.Runtime.pdb
+E:\Downloads\HIT-Project-Linh\ispProject\bin\Newtonsoft.Json.xml
+E:\Downloads\HIT-Project-Linh\ispProject\obj\LetsDoThis\ispProject.dll

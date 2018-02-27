@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ispProject.Models.role>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>View Roles</h2>
+        </div>
+        <br />
+
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    Role Title
+                </th>
+                <th>
+                    Date Added
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dateCreated)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

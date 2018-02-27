@@ -1,0 +1,2138 @@
+﻿@model ispProject.Models.zz_birthRecord
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="panel">
+    <div class="panel-body">
+
+        <div class="tab">
+            <button class="tablinks" id="childTab" onclick="openSection(event, 'child')"><h4>Newborn</h4><h6>Newborn information</h6></button>
+            <button class="tablinks" id="motherTab" disabled="disabled" onclick="openSection(event, 'mother1')"><h4>Mother</h4><h6>Demographics</h6></button>
+            <button class="tablinks" id="fatherTab" disabled="disabled" onclick="openSection(event, 'father')"><h4>Father</h4><h6>Demographics</h6></button>
+            <button class="tablinks" id="certifierTab" disabled="disabled" onclick="openSection(event, 'certifer')"><h4>Certifier</h4><h6> </h6></button>
+            <button class="tablinks" id="mother2Tab" disabled="disabled" onclick="openSection(event, 'mother2')"><h4>Mother</h4><h6>Other information</h6></button>
+            <button class="tablinks" id="mother3Tab" disabled="disabled" onclick="openSection(event, 'mother3')"><h4>Mother</h4><h6>Education/Ethnicity</h6></button>
+            <button class="tablinks" id="father2Tab" disabled="disabled" onclick="openSection(event, 'father2')"><h4>Father</h4><h6>Education/Ethnicity</h6></button>
+            <button class="tablinks" id="mother4Tab" disabled="disabled" onclick="openSection(event, 'mother4')"><h4>Mother</h4><h6>Pregnancy information</h6></button>
+            <button class="tablinks" id="medicalTab" disabled="disabled" onclick="openSection(event, 'medical')"><h4>Medical and Health Information</h4><h6>Mother's Information</h6></button>
+            <button class="tablinks" id="newbornTab" disabled="disabled" onclick="openSection(event, 'newborn')"><h4>Newborn</h4><h6>Birth Information</h6></button>
+        </div>
+
+        @using (Html.BeginForm("Create", "birthRecords", FormMethod.Post, new { id = "birthForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+
+            <div class="form-horizontal">
+                <input type="text" name="motherId" id="motherId" value="@ViewBag.patientId" hidden="hidden" />
+                <div id="child" class="tabcontent">
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-12">Child's Name</label>
+                        <div class="col-md-3">
+                            @Html.TextBox("childFirstName", null, new { @class = "form-control", placeholder = "First", required = "required" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("childMiddleName", null, new { @class = "form-control", placeholder = "Middle"})
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("childLastName", null, new { @class = "form-control", placeholder = "Last", required = "required" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("childSuffix", null, new { @class = "form-control", placeholder = "Suffix" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="timeOfBirth">Time of Birth</label>
+                        <div class="col-md-12">
+                            <input type="time" class="form-control" name="timeOfBirth" placeholder="Time of Birth" value="@ViewBag.childTime">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="genderList">Gender</label>
+                        <div class="col-md-12">
+                            <select id="genderList" class="form-control" name="genderList">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Unknown">Unknown</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="childBirthDate">Date of Birth (Mo/Day/Yr)</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="childBirthDate" value="@ViewBag.childDOB" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="facilityName">Facility Name</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("facilityName", null, new { @class = "form-control", title = "If not institution, give street and number", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="childBirthLocation">City, Town, or Location of Birth</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("childBirthLocation", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="childBirthCounty">County of Birth</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("childBirthCounty", null, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <br />
+                    <input type="button" class="btn btn-primary col-md-12" id="button1" value="Next">
+                </div>
+
+                <div id="mother1" class="tabcontent">
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-12">Mother's Name</label>
+                        <div class="col-md-3">
+                            @Html.TextBox("motherFirstName", (string)@ViewBag.motherFirstName, new { @class = "form-control", placeholder = "First" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("motherMiddleName", (string)@ViewBag.motherMiddleName, new { @class = "form-control", placeholder = "Middle" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("motherLastName", (string)@ViewBag.motherLastName, new { @class = "form-control", placeholder = "Last" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("motherSuffix", (string)@ViewBag.motherSuffix, new { @class = "form-control", placeholder = "Suffix" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="motherDOB">Date of Birth (Mo/Day/Yr)</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="motherDOB" value="@ViewBag.motherDOB">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Mother's Name Prior to First Marriage</label>
+                        <div class="col-md-3">
+                            @Html.TextBox("motherPriorFirstName", null, new { @class = "form-control", placeholder = "First" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("motherPriorMiddleName", null, new { @class = "form-control", placeholder = "Middle" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("motherPriorLastName", null, new { @class = "form-control", placeholder = "Last" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("motherPriorSuffix", null, new { @class = "form-control", placeholder = "Suffix" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="motherBirthplace">Birthplace (State, Territory, or Foreign Country)</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherBirthplace", null, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="state">Residence of Mother - State</label>
+                        <div class="col-md-12">
+                            <select id="state" class="form-control" name="state">
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="motherCounty">County</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherCountry", null, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="motherCity">City, Town, or Location</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherCity", null, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="motherAddress">Street and Number</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherAddress", null, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="motherAptNo">Apt. No.</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherAptNo", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="motherZip">Zip Code</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherZip", null, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("inCity")
+                        </div>
+                        @Html.Label("inCity", "Is this address inside of the city limits?", htmlAttributes: new { @class = "checkbox-custom-label" })
+                    </div>
+                    <br />
+                    <input type="button" class="btn btn-primary col-md-12" id="button2" value="Next">
+                </div>
+
+                <div id="father" class="tabcontent">
+                    <br />
+                    @*<a href="#" name="hasFather" id="hasFather">hasFather? </a>*@
+                    <div class="form-group">
+                        <label class="col-md-12">Father's Name</label>
+                        <div class="col-md-3">
+                            @Html.TextBox("fatherFirstName", null, new { @class = "form-control", placeholder = "First Name" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("fatherMiddleName", null, new { @class = "form-control", placeholder = "Middle Name" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("fatherLastName", null, new { @class = "form-control", placeholder = "Last Name" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("fatherSuffix", null, new { @class = "form-control", placeholder = "Suffix" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Date of Birth (Mo/Day/Yr)</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="fatherDOB" value="0001-01-01">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Birthplace (State, Territory, or Foreign Country)</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("fatherBirthplace", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <input type="button" class="btn btn-primary col-md-12" id="button3" onclick="openSection(event, 'certifer')" value="Next">
+                </div>
+
+                <div id="certifer" class="tabcontent">
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-12">Certifier's Name</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("certifierName", null, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Title</label>
+                        <div class="col-md-12">
+                            <select id="certifierTitleList" class="form-control" name="certifierTitleList">
+                                <option value="MD">MD</option>
+                                <option value="DO">DO</option>
+                                <option value="Hospital Admin.">Hospital Admin.</option>
+                                <option value="CNM/CM">CNM/CM</option>
+                                <option value="Other Midwife">Other Midwife</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="certifierTitleOtherDiv" hidden="hidden">
+                        <label class="col-md-12">(Specify)</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("certifierTitleOther", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="dateCertified">Date Certified</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="dateCertified" required="required" value="0001-01-01">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="datedFiled">Date Filed By Registrar</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="datedFiled" required="required" value="0001-01-01">
+                        </div>
+                    </div>
+                    <input type="button" class="btn btn-primary col-md-12" id="button4" value="Next">
+                </div>
+
+                <div id="mother2" class="tabcontent">
+                    <br />
+                    <div class="form-group">
+                        <label for="sameAsHome" class="col-md-12">Mailing address same as home?</label>
+                        <div class="col-md-12">
+                            <select id="sameAsHome" name="sameAsHome" class="form-control">
+                                <option value="N">No</option>
+                                <option value="Y">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("mailingStateList", "State", htmlAttributes: new { @class = "col-md-12" })
+                        <div class="col-md-12">
+                            <select id="stateList" name="stateList" class="form-control">
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">City, Town, or Location</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherMailingCity", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Street and Number</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherMailingAddress", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Apt. No.</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherMailingAptNo", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Zip Code</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherMailingZip", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("isMarried")
+                        </div>
+                        @Html.Label("isMarried", "Mother Married?", htmlAttributes: new { @class = "control -label col-md-10", Style = "text-align:left", title= "At birth, conception, or any time between" })
+                    </div>
+                    <div class="form-group" id="paternityAckDiv">
+                        <div class="col-md-offset-2 col-md-1">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.paternityAck)
+                                @Html.ValidationMessageFor(model => model.paternityAck, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @Html.LabelFor(model => model.paternityAck, "If no, has paternity acknowledgement been signed in the hospital?", htmlAttributes: new { @class = "control-label col-md-9", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.ssnRequested)
+                                @Html.ValidationMessageFor(model => model.ssnRequested, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @Html.LabelFor(model => model.ssnRequested, "Social security number requested for child?", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Facility Id. (NPI)</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.facilityId, new { htmlAttributes = new { @class = "form-control", @id = "facilityId", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.facilityId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="motherSSN">Mother’s Social Security Number</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherSSN", null, new { @class = "form-control", @id = "motherSSN", required = "required", title = "Enter SSN without dashes" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="fatherSSN">Father’s Social Security Number</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("fatherSSN", null, new { @class = "form-control", title = "Enter SSN without dashes" })
+                        </div>
+                    </div>
+                    <input type="button" class="btn btn-primary col-md-12" id="button5" value="Next">
+                </div>
+
+                <div id="mother3" class="tabcontent">
+                    <br />
+                    <h4>Mother's Education</h4>
+                    <div class="form-group">
+                        <label class="col-md-12">(Check the box that best describes the highest degree or level of school completed at the time of delivery)</label>
+                        <div class="col-md-12">
+                            <select id="motherEducation" class="form-control" name="motherEducation">
+                                <option value="8th grade or less">8th grade or less</option>
+                                <option value="9th - 12th grade, no diploma">9th - 12th grade, no diploma</option>
+                                <option value="9th - 12th grade, no diploma">9th - 12th grade, no diploma</option>
+                                <option value="High school graduate or GED completed">High school graduate or GED completed</option>
+                                <option value="Some college credit but no degree">Some college credit but no degree</option>
+                                <option value="Associate degree (e.g., AA, AS)">Associate degree (e.g., AA, AS)</option>
+                                <option value="Bachelor’s degree (e.g., BA, AB, BS)">Bachelor’s degree (e.g., BA, AB, BS)</option>
+                                <option value="Master’s degree (e.g., MA, MS, MEng, MEd, MSW, MBA)">Master’s degree (e.g., MA, MS, MEng, MEd, MSW, MBA)</option>
+                                <option value="Doctorate (e.g., PhD, EdD) or Professional degree (e.g., MD, DDS, DVM, LLB, JD)">Doctorate (e.g., PhD, EdD) or Professional degree (e.g., MD, DDS, DVM, LLB, JD)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <h4>Mother of Hispanic Origin?</h4>
+                    <div class="form-group">
+                        <label class="col-md-12">(Check the box that best describes whether the mother is Spanish/Hispanic/Latina. Check the “No” box if mother is not Spanish/Hispanic/Latina)</label>
+                        <div class="col-md-12">
+                            <select id="motherHispanic" class="form-control" name="motherHispanic">
+                                <option value="No, not Spanish/Hispanic/Latina">No, not Spanish/Hispanic/Latina</option>
+                                <option value="Yes, Mexican, Mexican American, Chicana">Yes, Mexican, Mexican American, Chicana</option>
+                                <option value="Yes, Puerto Rican">Yes, Puerto Rican</option>
+                                <option value="Yes, Cuban">Yes, Cuban</option>
+                                <option value="Yes, other Spanish/Hispanic/Latina">Yes, other Spanish/Hispanic/Latina</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="motherOtherHispanic" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("motherHispanicOther", null, new { @class = "form-control", title = "Please Specify" })
+                        </div>
+                    </div>
+                    <br />
+                    <h4>Mother's Race </h4>
+                    <div class="form-group">
+                        <label class="col-md-12">(Check one or more races to indicate what the mother considers herself to be)</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherWhite")
+                        </div>
+                        @Html.Label("motherWhite", "White", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherBlack")
+                        </div>
+                        @Html.Label("motherBlack", "Black or African American", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherHasTribe")
+                        </div>
+                        @Html.Label("motherHasTribe", "American Indian or Alaska Native", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="motherTribeDiv" hidden="hidden">
+                        <label class="col-md-12">(Name of the enrolled or principal tribe)</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherTribe", null, new { @class = "form-control"})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherAsianIndian")
+                        </div>
+                        @Html.Label("motherAsianIndian", "Asian Indian", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherChinese")
+                        </div>
+                        @Html.Label("motherChinese", "Chinese", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherFilipino")
+                        </div>
+                        @Html.Label("motherFilipino", "Filipino", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherJapanese")
+                        </div>
+                        @Html.Label("motherJapanese", "Japanese", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherKorean")
+                        </div>
+                        @Html.Label("motherKorean", "Korean", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherVietnamese")
+                        </div>
+                        @Html.Label("motherVietnamese", "Vietnamese", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherIsAsian")
+                        </div>
+                        @Html.Label("motherIsAsian", "Other Asian", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="motherAsianDiv" hidden="hidden">
+                            <div class="col-md-12">
+                                @Html.TextBox("motherOtherAsian", null, new { @class = "form-control", title = "Please Specify" })
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherHawaiian")
+                        </div>
+                        @Html.Label("motherHawaiian", "Hawaiian", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherGuamanian")
+                        </div>
+                        @Html.Label("motherGuamanian", "Guamanian", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherSamoan")
+                        </div>
+                        @Html.Label("motherSamoan", "Samoan", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherIsIslander")
+                        </div>
+                        @Html.Label("motherIsIslander", "Other Pacific Islander", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="motherIslanderDiv" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("motherOtherIslander", null, new { @class = "form-control", title = "Please Specify" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("motherIsOther")
+                        </div>
+                        @Html.Label("motherIsOther", "Other", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="motherOtherDiv" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("motherOtherRace", null, new { @class = "form-control", title = "Please Specify" })
+                        </div>
+                    </div>
+                    <input type="button" class="btn btn-primary col-md-12" id="button6" value="Next">
+                </div>
+
+                <div id="father2" class="tabcontent">
+                    <br />
+                    <h4>Father's Education</h4>
+                    <div class="form-group">
+                        <label class="col-md-12">(Check the box that best describes the highest degree or level of school completed at the time of delivery)</label>
+                        <div class="col-md-12">
+                            <select id="fatherEducation" class="form-control" name="fatherEducation">
+                                <option value="8th grade or less">8th grade or less</option>
+                                <option value="9th - 12th grade, no diploma">9th - 12th grade, no diploma</option>
+                                <option value="9th - 12th grade, no diploma">9th - 12th grade, no diploma</option>
+                                <option value="High school graduate or GED completed">High school graduate or GED completed</option>
+                                <option value="Some college credit but no degree">Some college credit but no degree</option>
+                                <option value="Associate degree (e.g., AA, AS)">Associate degree (e.g., AA, AS)</option>
+                                <option value="Bachelor’s degree (e.g., BA, AB, BS)">Bachelor’s degree (e.g., BA, AB, BS)</option>
+                                <option value="Master’s degree (e.g., MA, MS, MEng, MEd, MSW, MBA)">Master’s degree (e.g., MA, MS, MEng, MEd, MSW, MBA)</option>
+                                <option value="Doctorate (e.g., PhD, EdD) or Professional degree (e.g., MD, DDS, DVM, LLB, JD)">Doctorate (e.g., PhD, EdD) or Professional degree (e.g., MD, DDS, DVM, LLB, JD)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <h4>Father of Hispanic Origin?</h4>
+                    <div class="form-group">
+                        <label class="col-md-12">(Check the box that best describes whether the mother is Spanish/Hispanic/Latina. Check the “No” box if mother is not Spanish/Hispanic/Latina)</label>
+                        <div class="col-md-12">
+                            <select id="fatherHispanic" class="form-control" name="fatherHispanic">
+                                <option value="No, not Spanish/Hispanic/Latina">No, not Spanish/Hispanic/Latina</option>
+                                <option value="Yes, Mexican, Mexican American, Chicana">Yes, Mexican, Mexican American, Chicana</option>
+                                <option value="Yes, Puerto Rican">Yes, Puerto Rican</option>
+                                <option value="Yes, Cuban">Yes, Cuban</option>
+                                <option value="Yes, other Spanish/Hispanic/Latina">Yes, other Spanish/Hispanic/Latina</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="fatherOtherHispanic" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("fatherHispanicOther", null, new { @class = "form-control", title="Please Specify" })
+                        </div>
+                    </div>
+                    <br />
+                    <h4>Father's Race </h4>
+                    <div class="form-group">
+                        <label class="col-md-12">(Check one or more races to indicate what the father considers herself to be)</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherWhite")
+                        </div>
+                        @Html.Label("fatherWhite", "White", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherBlack")
+                        </div>
+                        @Html.Label("fatherBlack", "Black or African American", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherHasTribe")
+                        </div>
+                        @Html.Label("fatherHasTribe", "American Indian or Alaska Native", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="fatherTribeDiv" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("fatherTribe", null, new { @class = "form-control", title = "Name of the enrolled or principal tribe" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherAsianIndian")
+                        </div>
+                        @Html.Label("fatherAsianIndian", "Asian Indian", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherChinese")
+                        </div>
+                        @Html.Label("fatherChinese", "Chinese", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherFilipino")
+                        </div>
+                        @Html.Label("fatherFilipino", "Filipino", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherJapanese")
+                        </div>
+                        @Html.Label("fatherJapanese", "Japanese", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherKorean")
+                        </div>
+                        @Html.Label("fatherKorean", "Korean", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherVietnamese")
+                        </div>
+                        @Html.Label("fatherVietnamese", "Vietnamese", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherIsAsian")
+                        </div>
+                        @Html.Label("fatherIsAsian", "Other Asian", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="fatherAsianDiv" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("fatherOtherAsian", null, new { @class = "form-control", title = "Please Specify" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherHawaiian")
+                        </div>
+                        @Html.Label("fatherHawaiian", "Hawaiian", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherGuamanian")
+                        </div>
+                        @Html.Label("fatherGuamanian", "Guamanian", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherSamoan")
+                        </div>
+                        @Html.Label("fatherSamoan", "Samoan", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherIsIslander")
+                        </div>
+                        @Html.Label("fatherIsIslander", "Other Pacific Islander", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="fatherIslanderDiv" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("fatherOtherIslander", null, new { @class = "form-control", title = "Please Specify" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("fatherIsOther")
+                        </div>
+                        @Html.Label("fatherIsOther", "Other", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="fatherOtherDiv" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("fatherOtherRace", null, new { @class = "form-control", title = "Please Specify" })
+                        </div>
+                    </div>
+
+                    <br />
+                    <h4>Place Where Birth Occured (Check one)</h4>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <select id="birthOccuredPlace" class="form-control" name="birthOccuredPlace">
+                                <option value="Hospital">Hospital</option>
+                                <option value="Freestanding birthing center">Freestanding birthing center</option>
+                                <option value="Home Birth">Home Birth</option>
+                                <option value="Clinic/Doctor’s office">Clinic/Doctor’s office</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="plannedAtHome" hidden="hidden">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.homebirth)
+                            @Html.ValidationMessageFor(model => model.homebirth, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.homebirth, "Planned to deliver at home?", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="birthPlaceDiv" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("birthOccuredPlaceOther", null, new { @class = "form-control", title = "Please Specify" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-12">Attendant Name</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.attendantName, new { htmlAttributes = new { @class = "form-control", @id = "attendantName", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.attendantName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-12">Attendant NPI</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.attendantNpi, new { htmlAttributes = new { @class = "form-control", @id = "attendantNpi", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.attendantNpi, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="certifierTitleList">Attendant Title</label>
+                        <div class="col-md-12">
+                            <select id="attendantTitleList" class="form-control" name="attendantTitleList">
+                                <option value="MD">MD</option>
+                                <option value="DO">DO</option>
+                                <option value="Hospital Admin.">Hospital Admin.</option>
+                                <option value="CNM/CM">CNM/CM</option>
+                                <option value="Other Midwife">Other Midwife</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="attendantOther" hidden="hidden">
+                        <div class="col-md-12">
+                            @Html.TextBox("attendantNPIOther", null, new { @class = "form-control", title = "Please Specify" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.motherTransferred, new { htmlAttributes = new { @id = "motherTransferred" } })
+                            @Html.ValidationMessageFor(model => model.motherTransferred, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.motherTransferred, "Mother Transferred For Maternal Medical Or Fetal Indications For Delivery?", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="motherTransferredDiv" hidden="hidden">
+                        <label class="col-md-12">If Yes, Enter Name Of Facility Mother Transferred From:</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.transferFacility, new { htmlAttributes = new { @class = "form-control"} })
+                            @Html.ValidationMessageFor(model => model.transferFacility, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <input type="button" class="btn btn-primary col-md-12" id="button7" value="Next">
+                </div>
+
+                <div id="mother4" class="tabcontent">
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.CheckBox("noPrenatal", new { htmlAttributes = new { @id = "noPrenatal" } })
+                        </div>
+                        @Html.Label("noPrenatal", "No Prenatal Care", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="firstPrenatal">
+                        <label class="col-md-12" for="firstPrenatal">Date of First Prenatal Care Visit (Mo/Day/Yr)</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="firstPrenatal" required="required" value="0001-01-01">
+                        </div>
+                    </div>
+                    <div class="form-group" id="lastPrenatal">
+                        <label class="col-md-12" for="lastPrenatal">Date of Last Prenatal Care Visit (Mo/Day/Yr)</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="lastPrenatal" required="required" value="0001-01-01">
+                        </div>
+                    </div>
+                    <div class="form-group" id="totalPrenatalDiv">
+                        <label class="col-md-12">Total Number of Prenatal Visits for this Pregnancy</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.totalPrenatal, new { htmlAttributes = new { @class = "form-control", @id = "totalPrenatal", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.totalPrenatal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Mother's Height (inches)</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("motherHeight", null, new { @class = "form-control", @id = "motherHeight", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Mother's Prepregnancy Weight (pounds)</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.motherPreWeight, new { htmlAttributes = new { @class = "form-control", @id = "motherPreWeight", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.motherPreWeight, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Mother's Weight at Delivery (pounds)</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.motherDeliveryWeight, new { htmlAttributes = new { @class = "form-control", @id = "motherDeliveryWeight", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.motherDeliveryWeight, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.hadWic)
+                            @Html.ValidationMessageFor(model => model.hadWic, "", new { @class = "text-danger" })
+                        </div>
+                            @Html.LabelFor(model => model.hadWic, "Did Mother Get Wic Food For Herself During This Pregnancy?", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Number Of Previous Live Births Still Living</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.previousBirthLiving, new { htmlAttributes = new { @class = "form-control", @id = "previousBirthLiving", title="Do not include this child.", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.previousBirthLiving, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Number Of Previous Live Births Now Dead</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.previousBirthDead, new { htmlAttributes = new { @class = "form-control", @id = "previousBirthDead", title = "Do not include this child.", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.previousBirthDead, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="lastLiveBirth">Date of Last Live Birth (Mo/Day/Yr)</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" id="lastLiveBirth" name="lastLiveBirth" value="0001-01-01">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Number Of Other Pregnancy Outcomes</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.otherBirthOutcomes, new { htmlAttributes = new { @class = "form-control", @id = "otherBirthOutcomes", title= "Spontaneous Or Induced Losses Or Ectopic Pregnancies", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.otherBirthOutcomes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="lastOtherOutcome">Date of Last Pregnancy With Other Outcome (Mo/Day/Yr)</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" id="lastOtherOutcome" name="lastOtherOutcome" value="0001-01-01">
+                        </div>
+                    </div>
+                    <br /><br />
+                    <h4>Cigarette smoking before and during pregnancy for each time period, enter either the average number of cigarettes or the average number of packs of cigarettes smoked. If none, enter A0".</h4>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-2 col-md-offset-4"># Cigarettes</label>
+                        <label class="col-md-2"># Packs</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 text-right">Three Months Before Pregnancy</label>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.cigThreeBefore, new { htmlAttributes = new { @class = "form-control", @id = "cigThreeBefore", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.cigThreeBefore, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.packThreeBefore, new { htmlAttributes = new { @class = "form-control", @id = "packThreeBefore", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.packThreeBefore, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 text-right">First Three Months of Pregnancy</label>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.cigFirstThree, new { htmlAttributes = new { @class = "form-control", @id = "cigFirstThree", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.cigFirstThree, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.packFirstThree, new { htmlAttributes = new { @class = "form-control", @id = "packFirstThree", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.packFirstThree, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 text-right">Second Three Months of Pregnancy</label>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.cigSecondThree, new { htmlAttributes = new { @class = "form-control", @id = "cigSecondThree", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.cigSecondThree, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.packSecondThree, new { htmlAttributes = new { @class = "form-control", @id = "packSecondThree", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.packSecondThree, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 text-right">Third Trimester of Pregnancy</label>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.cigThirdTri, new { htmlAttributes = new { @class = "form-control", @id = "cigThirdTri", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.cigThirdTri, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.packThirdTri, new { htmlAttributes = new { @class = "form-control", @id = "packThirdTri", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.packThirdTri, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="paymentList">Principal Source Of Payment For This Delivery</label>
+                        <div class="col-md-12">
+                            <select id="paymentList" class="form-control" name="paymentList">
+                                <option value="Private Insurance">Private Insurance</option>
+                                <option value="Medicaid">Medicaid</option>
+                                <option value="Self-pay">Self-pay</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="paymentOtherDiv" hidden="hidden">
+                        <label class="col-md-12">(Specify)</label>
+                        <div class="col-md-12">
+                            @Html.TextBox("paymentOther", null, new { @class = "form-control", title="Please Specify"})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="dateLastMenses">Date Last Normal Menses Began (Mo/Day/Yr)</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control" name="dateLastMenses" required="required" value="0001-01-01">
+                        </div>
+                    </div>
+                    <input type="button" class="btn btn-primary col-md-12" id="button8" value="Next">
+                </div>
+
+                <div id="medical" class="tabcontent">
+                    <br />
+                    <h4>Risk Factors in this Pregnancy</h4>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.diabetesPrepregnancy)
+                                @Html.ValidationMessageFor(model => model.diabetesPrepregnancy, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.diabetesPrepregnancy, "Diabetes - Prepregnancy (Diagnosis prior to this pregnancy)", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.diabetesGestational)
+                            @Html.ValidationMessageFor(model => model.diabetesGestational, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.diabetesGestational, "Diabetes - Gestational (Diagnosis in this pregnancy)", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.hyperTensionPrepregnancy)
+                            @Html.ValidationMessageFor(model => model.hyperTensionPrepregnancy, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.hyperTensionPrepregnancy, "Hypertension - Prepregnancy (Chronic)", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.hyperTensionGestational)
+                            @Html.ValidationMessageFor(model => model.hyperTensionGestational, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.hyperTensionGestational, "Hypertension - Gestational (PIH, preeclampsia)", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.hyperTensionEclampsia)
+                            @Html.ValidationMessageFor(model => model.hyperTensionEclampsia, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.hyperTensionEclampsia, "Hypertension - Eclampsia", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.prePreTerm)
+                            @Html.ValidationMessageFor(model => model.prePreTerm, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.prePreTerm, "Previous preterm birth", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.prePoorOutcome)
+                            @Html.ValidationMessageFor(model => model.prePoorOutcome, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.prePoorOutcome, "Other previous poor pregnancy outcome (Includes preinatal death small-for-gestational age/intrauterine growth restricted birth)", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.resultInfertility)
+                            @Html.ValidationMessageFor(model => model.resultInfertility, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.resultInfertility, "Pregnancy resulted from infertility treatment-If yes, check all that apply:", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-1">
+                            @Html.EditorFor(model => model.fertilityDrug)
+                            @Html.ValidationMessageFor(model => model.fertilityDrug, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.fertilityDrug, "Fertility-enhancing drugs, Artificial insemination or Intrauterine insemination", htmlAttributes: new { @class = "col-md-9"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-1">
+                                @Html.EditorFor(model => model.assistedTech)
+                                @Html.ValidationMessageFor(model => model.assistedTech, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.assistedTech, "Assisted reproductive technology (e.g., in vitro fertilization(IVF), gamete intrafallopian transfer(GIFT))", htmlAttributes: new { @class = "col-md-9"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.previousCesarean, new { htmlAttributes = new { @id = "previousCesarean" } })
+                            @Html.ValidationMessageFor(model => model.previousCesarean, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.previousCesarean, "Mother had a previous cesarean delivery", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group" id="cesareanAmount" hidden="hidden">
+                        <label>If yes, how many</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.previousCesareanAmount, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.previousCesareanAmount, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4>Infections Present and/or Treated During This Pregnancy</h4>
+                    <label>(Check all that apply)</label>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.gonorrhea)
+                            @Html.ValidationMessageFor(model => model.gonorrhea, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.gonorrhea, "Gonorrhea", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.syphilis)
+                            @Html.ValidationMessageFor(model => model.syphilis, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.syphilis, "Syphilis", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            @Html.EditorFor(model => model.chlamydia)
+                            @Html.ValidationMessageFor(model => model.chlamydia, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.chlamydia, "Chlamydia", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.hepB)
+                                @Html.ValidationMessageFor(model => model.hepB, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.hepB, "Hepatitis B", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.hepC)
+                                @Html.ValidationMessageFor(model => model.hepC, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.hepC, "Hepatitis C", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <br />
+                    <br />
+                    <h4>Obstetric Procedures</h4>
+                    <label>(Check all that apply)</label>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.cervicalCerclage)
+                                @Html.ValidationMessageFor(model => model.cervicalCerclage, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.cervicalCerclage, "Cervical cerclage", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.tocolysis)
+                                @Html.ValidationMessageFor(model => model.tocolysis, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.tocolysis, "Tocolysis", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.externalCephalic)
+                                @Html.ValidationMessageFor(model => model.externalCephalic, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.externalCephalic, "External cephalic version successful?", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <br />
+                    <br />
+                    <h4>Onset of Labor</h4>
+                    <label>(Check all that apply)</label>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.preRuptureMembrane)
+                                @Html.ValidationMessageFor(model => model.preRuptureMembrane, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.preRuptureMembrane, "Premature Rupture of the Membranes (prolonged, >12 hrs.)", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.preLabor)
+                                @Html.ValidationMessageFor(model => model.preLabor, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.preLabor, "Precipitous Labor (<3 hrs.)", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.proLabor)
+                                @Html.ValidationMessageFor(model => model.proLabor, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.proLabor, "Prolonged Labor (>20 hrs.)", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <br />
+                    <br />
+                    <h4>Characteristics of labor and delivery</h4>
+                    <label>(Check all that apply)</label>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.inductionLabor)
+                                @Html.ValidationMessageFor(model => model.inductionLabor, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.inductionLabor, "Induction of labor", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.augmentationLabor)
+                                @Html.ValidationMessageFor(model => model.augmentationLabor, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.augmentationLabor, "Augmentation of labor", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.nonvertex)
+                                @Html.ValidationMessageFor(model => model.nonvertex, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.nonvertex, "Non-vertex presentation", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.steroids)
+                                @Html.ValidationMessageFor(model => model.steroids, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.steroids, "Steroids (glucocorticoids) for fetal lung maturation received by the mother prior to delivery", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.antibotics)
+                                @Html.ValidationMessageFor(model => model.antibotics, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.antibotics, "Antibiotics received by the mother during labor", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.chorioamnionitis)
+                                @Html.ValidationMessageFor(model => model.chorioamnionitis, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.chorioamnionitis, "Clinical chorioamnionitis diagnosed during labor or maternal temperature > 38°C(100.4°F)", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.meconium)
+                                @Html.ValidationMessageFor(model => model.meconium, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.meconium, "Moderate/heavy meconium staining of the amniotic fluid", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.fetalIntolerance)
+                                @Html.ValidationMessageFor(model => model.fetalIntolerance, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.fetalIntolerance, "Fetal intolerance of labor such that one or more of the following actions was taken: in-utero resuscitative measures, further fetal assessment, or operative delivery", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.epidural)
+                                @Html.ValidationMessageFor(model => model.epidural, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.epidural, "Epidural or spinal anesthesia during labor", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <br />
+                    <br />
+                    <h4>Method of Delivery</h4>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.unsuccessfulForceps)
+                                @Html.ValidationMessageFor(model => model.unsuccessfulForceps, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.unsuccessfulForceps, "Was delivery with forceps attempted but unsuccessful?", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.unsuccessfulVacuum)
+                                @Html.ValidationMessageFor(model => model.unsuccessfulVacuum, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.unsuccessfulVacuum, "Was delivery with vacuum extraction attempted but unsuccessful?", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <label>Fetal presentation at birth</label>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.cephalic)
+                                @Html.ValidationMessageFor(model => model.cephalic, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.cephalic, "Cephalic", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.breech)
+                                @Html.ValidationMessageFor(model => model.breech, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.breech, "Breech", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.otherFetalPresentation)
+                                @Html.ValidationMessageFor(model => model.otherFetalPresentation, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.otherFetalPresentation, "Other", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <label>Final route and method of delivery (Check one)</label>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.finalSpontaneous)
+                                @Html.ValidationMessageFor(model => model.finalSpontaneous, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.finalSpontaneous, "Vaginal/Spontaneous", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.finalForceps)
+                                @Html.ValidationMessageFor(model => model.finalForceps, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.finalForceps, "Vaginal/Forceps", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.finalVacuum)
+                                @Html.ValidationMessageFor(model => model.finalVacuum, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.finalVacuum, "Vaginal/Vacuum", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.finalCesarean, new { htmlAttributes = new { @id="TrialOfLabor" } })
+                                @Html.ValidationMessageFor(model => model.finalCesarean, "", new { @class = "text-danger" })
+                        </div> 
+                        @Html.LabelFor(model => model.finalCesarean, "Cesarean", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group" id="ifTrialOfLabor" hidden="hidden">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.finalTrialOfLabor)
+                                @Html.ValidationMessageFor(model => model.finalTrialOfLabor, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.finalTrialOfLabor, "If cesarean, was a trial of labor attempted?", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <br />
+                    <br />
+                    <h4>Maternal morbidity (Check all that apply) (Complications associated with labor and delivery)</h4>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.maternalTransfusion)
+                                @Html.ValidationMessageFor(model => model.maternalTransfusion, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.maternalTransfusion, "Maternal transfusion", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.perinealLaceration)
+                                @Html.ValidationMessageFor(model => model.perinealLaceration, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.perinealLaceration, "Third or fourth degree perineal laceration", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.rupturedUterus)
+                                @Html.ValidationMessageFor(model => model.rupturedUterus, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.rupturedUterus, "Ruptured uterus", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.hysterectomy)
+                                @Html.ValidationMessageFor(model => model.hysterectomy, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.hysterectomy, "Unplanned hysterectomy", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.admitICU)
+                                @Html.ValidationMessageFor(model => model.admitICU, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.admitICU, "Admission to intensive care unit", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.unplannedOperating)
+                                @Html.ValidationMessageFor(model => model.unplannedOperating, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.unplannedOperating, "Unplanned operating room procedure following delivery", htmlAttributes: new { @class = "col-md-10"})
+                    </div>
+                    <br>
+                    <br>
+                    <input type="button" class="btn btn-primary col-md-12" id="button9" value="Next">
+                </div>
+
+                <div id="newborn" class="tabcontent">
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-12">Birthweight</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.birthWeight, new { htmlAttributes = new { @class = "form-control", @id = "birthWeight", title="Please use grams.", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.birthWeight, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Obstetric Estimate of Gestation (In Weeks)</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.estimateGestation, new { htmlAttributes = new { @class = "form-control", @id = "estimateGestation", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.estimateGestation, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Agpar Score at 5 minutes</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.fiveMinAgpar, new { htmlAttributes = new { @class = "form-control", @id = "fiveMinAgpar", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.fiveMinAgpar, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Agpar Score at 10 minutes</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.tenMinAgpar, new { htmlAttributes = new { @class = "form-control", @id = "tenMinAgpar", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.tenMinAgpar, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Plurality - Single, Twin, Triple, etc</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.plurality, new { htmlAttributes = new { @class = "form-control", @id = "plurality", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.plurality, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">If not single birth - Born  First, Second, Third, etc (Specify)</label>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.birthOrder, new { htmlAttributes = new { @class = "form-control"} })
+                            @Html.ValidationMessageFor(model => model.birthOrder, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <h4>Abnormal Conditions of the Newborn (Check all that apply)</h4>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.ventImmedite)
+                                @Html.ValidationMessageFor(model => model.ventImmedite, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.ventImmedite, "Assisted ventilation required immediately following delivery", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.ventSixHours)
+                                @Html.ValidationMessageFor(model => model.ventSixHours, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.ventSixHours, "Assisted ventilation required for more than six hours", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.nicu)
+                                @Html.ValidationMessageFor(model => model.nicu, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.nicu, "NICU admission", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.surfactant)
+                                @Html.ValidationMessageFor(model => model.surfactant, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.surfactant, "Newborn given surfactant replacement therapy", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.neoNatalAntibotics)
+                                @Html.ValidationMessageFor(model => model.neoNatalAntibotics, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.neoNatalAntibotics, "Antibiotics received by the newborn for suspected neonatal sepsis", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.seizureDysfunction)
+                                @Html.ValidationMessageFor(model => model.seizureDysfunction, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.seizureDysfunction, "Seizure or serious neurologic dysfunction", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.birthInjury)
+                                @Html.ValidationMessageFor(model => model.birthInjury, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.birthInjury, "Significant birth injury (skeletal fractures(s), peripheral nerve injury, and/or soft tissue/solid organ hemorrhage which requires intervention)", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <br />
+                    <h4>Congenital Anomalies of the Newborn</h4>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.anencephaly)
+                                @Html.ValidationMessageFor(model => model.anencephaly, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.anencephaly, "Anencephaly", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.meningomyelocele)
+                                @Html.ValidationMessageFor(model => model.meningomyelocele, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.meningomyelocele, "Meningomyelocele/Spina bifida", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.cyanotic)
+                                @Html.ValidationMessageFor(model => model.cyanotic, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.cyanotic, "Cyanotic congenital heart disease", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.cogenital)
+                                @Html.ValidationMessageFor(model => model.cogenital, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.cogenital, "Cogenital diaphragmatic hernia", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.omphalocele)
+                                @Html.ValidationMessageFor(model => model.omphalocele, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.omphalocele, "Omphalocele", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.gastroschisis)
+                                @Html.ValidationMessageFor(model => model.gastroschisis, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.gastroschisis, "Gastroschisis", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.limbReduction)
+                                @Html.ValidationMessageFor(model => model.limbReduction, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.limbReduction, "Limb reduction defect (excluding congenital amputation and dwarfing syndromes)", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.cleftLip)
+                                @Html.ValidationMessageFor(model => model.cleftLip, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.cleftLip, "Cleft Lip with or without Cleft Palate", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.cleftPalate)
+                                @Html.ValidationMessageFor(model => model.cleftPalate, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.cleftPalate, "Cleft Palate alone", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.downSyndrome)
+                                @Html.ValidationMessageFor(model => model.downSyndrome, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.downSyndrome, "Down Syndrome", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-1">
+                                @Html.EditorFor(model => model.downConfirmed)
+                                @Html.ValidationMessageFor(model => model.downConfirmed, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.downConfirmed, "Karyotype confirmed", htmlAttributes: new { @class = "control-label col-md-9", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-1">
+                                @Html.EditorFor(model => model.downPending)
+                                @Html.ValidationMessageFor(model => model.downPending, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.downPending, "Karyotype pending", htmlAttributes: new { @class = "control-label col-md-9", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.suspectedDisorder)
+                                @Html.ValidationMessageFor(model => model.suspectedDisorder, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.suspectedDisorder, "Suspected chromosomal disorder", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-1">
+                                @Html.EditorFor(model => model.suspectedConfirmed)
+                                @Html.ValidationMessageFor(model => model.suspectedConfirmed, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.suspectedConfirmed, "Karyotype confirmed", htmlAttributes: new { @class = "control-label col-md-9", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-1">
+                                @Html.EditorFor(model => model.suspectedPending)
+                                @Html.ValidationMessageFor(model => model.suspectedPending, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.suspectedPending, "Karyotype pending", htmlAttributes: new { @class = "control-label col-md-9", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                                @Html.EditorFor(model => model.hypospadias)
+                                @Html.ValidationMessageFor(model => model.hypospadias, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.hypospadias, "Hypospadias", htmlAttributes: new { @class = "control-label col-md-10", Style = "text-align:left" })
+                    </div>
+                    <br /><br />
+                    <div class="form-group">
+                        <div class="col-md-1">
+                                @Html.EditorFor(model => model.infantTransferred, new { htmlAttributes = new { @id = "infantTransferred" } })
+                                @Html.ValidationMessageFor(model => model.infantTransferred, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.infantTransferred, "Was the infant transferred within 24 hours of delivery?", htmlAttributes: new { @class = "control-label col-md-11", Style = "text-align:left" })
+                    </div>
+                    <div class="form-group" id="infantTransferYes" hidden="hidden">
+                        @Html.LabelFor(model => model.infantTransferFacility, "If yes, name of facility infant transferred to", htmlAttributes: new { @class = "col-md-12" })
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.infantTransferFacility, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.infantTransferFacility, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="infantLiving">Is infant living at time of report?</label>
+                        <div class="col-md-12">
+                            <select id="infantLiving" class="form-control" name="infantLiving">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Infant transferred, status unknown">Infant transferred, status unknown</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-1">
+                                @Html.EditorFor(model => model.breastFed)
+                                @Html.ValidationMessageFor(model => model.breastFed, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.breastFed, "Is the infant being breastfed at discharge?", htmlAttributes: new { @class = "col-md-10" })
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary col-md-12" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.are-you-sure.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#birthForm :input").tooltip({
+
+            // place tooltip on the right edge
+            position: "center right",
+
+            // a little tweaking of the position
+            offset: [-2, 10],
+
+            // use the built-in fadeIn/fadeOut effect
+            effect: "fade",
+
+            // custom opacity setting
+            opacity: 0.7
+
+        });
+
+        $("#birthForm :input").each(function () {
+            //Add question mark if it has a tooltip.
+            console.log($(this).attr('data-original-title'));
+            if ($(this).attr("data-original-title").length >= 1) {
+                var label = $(this).closest('.form-group').find('label:eq(0)');
+                if (label.children('.fa-question-circle').length == 0) {
+                    label.append('&nbsp; <i class="fa fa-question-circle" aria-hidden="true"></i>');
+                }
+            }
+
+            //Make field red if required
+            if ($(this).prop('required')) {
+                $(this).css('border', "1px solid red");
+            }
+        });
+
+        $.validator.addMethod("dashesValidate", function (value, element) {
+            return this.optional(element) || /^[0-9\-\s]+$/i.test(value);
+        }, "Must contain only numbers or dashes.");
+
+        $('#birthForm').areYouSure();
+        $("#birthForm").validate({
+            rules: {
+                childFirstName: {
+                    required: true
+                },
+                childLastName: {
+                    required: true
+                },
+                facilityName: {
+                    required: true
+                },
+                childBirthCounty: {
+                    required: true
+                },
+                motherFirstName: {
+                    required: true
+                },
+                motherLastName: {
+                    required: true
+                },
+                motherBirthplace: {
+                    required: true
+                },
+                motherCountry: {
+                    required: true
+                },
+                motherCity: {
+                    required: true
+                },
+                motherAddress: {
+                    required: true
+                },
+                motherZip: {
+                    required: true,
+                    dashesValidate: true,
+                    minlength: 5,
+                    maxlength: 10
+                },
+                motherMailingZip: {
+                    dashesValidate: true,
+                    minlength: 5,
+                    maxlength: 10
+                },
+                certifierName: {
+                    required: true
+                },
+                facilityId: {
+                    required: true,
+                    digits: true,
+                    minlength: 10,
+                    maxlength: 10
+                },
+                motherSSN: {
+                    required: true,
+                    dashesValidate: true,
+                    minlength: 11,
+                    maxlength: 11
+                },
+                fatherSSN: {
+                    dashesValidate: true,
+                    minlength: 11,
+                    maxlength: 11
+                },
+                attendantName: {
+                    required: true
+                },
+                attendantNpi: {
+                    required: true,
+                    digits: true,
+                    minlength: 10,
+                    maxlength: 10
+                },
+                totalPrenatal: {
+                    required: true,
+                    digits: true
+                },
+                motherHeight: {
+                    required: true,
+                    digits: true
+                },
+                motherPreWeight: {
+                    required: true,
+                    digits: true
+                },
+                motherDeliveryWeight: {
+                    required: true,
+                    digits: true
+                },
+                previousBirthLiving: {
+                    required: true
+                },
+                previousBirthDead: {
+                    required: true,
+                    digits: true
+                },
+                otherBirthOutcomes: {
+                    required: true,
+                    digits: true
+                },
+                cigThreeBefore: {
+                    required: true,
+                    digits: true
+                },
+                packThreeBefore: {
+                    required: true,
+                    digits: true
+                },
+                cigFirstThree: {
+                    required: true,
+                    digits: true
+                },
+                packFirstThree: {
+                    required: true,
+                    digits: true
+                },
+                cigSecondThree: {
+                    required: true,
+                    digits: true
+                },
+                packSecondThree: {
+                    required: true,
+                    digits: true
+                },
+                cigThirdTri: {
+                    required: true,
+                    digits: true
+                },
+                packThirdTri: {
+                    required: true,
+                    digits: true
+                },
+                birthWeight: {
+                    required: true,
+                    digits: true
+                },
+                estimateGestation: {
+                    required: true,
+                    digits: true
+                },
+                fiveMinAgpar: {
+                    required: true,
+                    digits: true
+                },
+                tenMinAgpar: {
+                    required: true,
+                    digits: true
+                },
+                plurality: {
+                    required: true
+                }
+            }
+        });
+        openSection(null, 'child');
+        $("#childTab").addClass("active");
+        $("#button1").click(function () {
+            if ($("#childFirstName").valid() && $("#childLastName").valid() && $("#facilityName").valid()
+                && $("#childBirthCounty").valid()) {
+                openSection(null, 'mother1');
+                $("#motherTab").addClass("active").prop('disabled', false);
+            };
+        });
+        $("#button2").click(function () {
+            if ($("#motherFirstName").valid() && $("#motherLastName").valid() && $("#motherBirthplace").valid() && $("#motherCountry").valid() && $("#motherCity").valid()
+                && $("#motherAddress").valid() && $("#motherZip").valid()) {
+                openSection(null, 'father');
+                $("#fatherTab").addClass("active").prop('disabled', false);
+            };
+        });
+        $("#button3").click(function () {
+            $("#certifierTab").addClass("active").prop('disabled', false);
+        });
+        $("#button4").click(function () {
+            if ($("#certifierName").valid()) {
+                openSection(null, 'mother2');
+                $("#mother2Tab").addClass("active").prop('disabled', false);
+            };
+        });
+        $("#button5").click(function () {
+            if ($("#facilityId").valid() && $("#motherSSN").valid()) {
+                openSection(null, 'mother3');
+                $("#mother3Tab").addClass("active").prop('disabled', false);
+            };
+        });
+        $("#button6").click(function () {
+            openSection(null, 'father2');
+            $("#father2Tab").addClass("active").prop('disabled', false);
+        });
+        $("#button7").click(function () {
+            if ($("#attendantName").valid() && $("#attendantNpi").valid())
+            {
+                openSection(null, 'mother4');
+                $("#mother4Tab").addClass("active").prop('disabled', false);
+            }
+            
+        });
+        $("#button8").click(function () {
+            if ($("#totalPrenatal").valid() && $("#motherHeight").valid() && $("#motherPreWeight").valid()
+                && $("#motherDeliveryWeight").valid() && $("#previousBirthLiving").valid() && $("#previousBirthDead").valid()
+                && $("#otherBirthOutcomes").valid() && $("#cigThreeBefore").valid() && $("#packThreeBefore").valid()
+                && $("#cigFirstThree").valid() && $("#packFirstThree").valid() && $("#cigSecondThree").valid()
+                && $("#packSecondThree").valid() && $("#cigThirdTri").valid() && $("#packThirdTri").valid())
+            {
+                openSection(null, 'medical');
+                $("#medicalTab").addClass("active").prop('disabled', false);
+            }
+            
+        });
+        $("#button9").click(function () {
+            openSection(null, 'newborn')
+            $("#newbornTab").addClass("active").prop('disabled', false);
+        });
+        //$("#hasFather").click(function () {
+        //    $("#hasFather").addClass("hidden");
+        //    $("#fatherFirstName").removeClass("hidden");
+        //});
+    });
+
+    function openSection(evt, cityName) {
+        // Declare all variables
+        $(window).scrollTop(0);
+        var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    if (evt != null)
+    {
+        evt.currentTarget.className += " active";
+    }
+
+    $("#sameAsHome").change(function () {
+        if ($(this).val() == "Y") {
+            $("#stateList").val($("#state").val());
+            $("#motherMailingCity").val($("#motherCity").val());
+            $("#motherMailingAddress").val($("#motherAddress").val());
+            $("#motherMailingAptNo").val($("#motherAptNo").val());
+            $("#motherMailingZip").val($("#motherZip").val());
+        }
+        else {
+            $("#stateList").val("AL");
+            $("#motherMailingCity").val("");
+            $("#motherMailingAddress").val("");
+            $("#motherMailingAptNo").val("");
+            $("#motherMailingZip").val("");
+        }
+    });
+    
+    
+    $("#motherHispanic").change(function () {
+        if ($(this).val() == "Yes, other Spanish/Hispanic/Latina") {
+            $("#motherOtherHispanic").show();
+        }
+        else {
+            $("#motherOtherHispanic").hide();
+        }
+    });
+
+    $("#motherHasTribe").change(function () {
+        if (this.checked) {
+            $("#motherTribeDiv").show();
+        }
+        else {
+            $("#motherTribeDiv").hide();
+        }
+    });
+
+    $("#motherIsAsian").change(function () {
+        if (this.checked) {
+            $("#motherAsianDiv").show();
+        }
+        else {
+            $("#motherAsianDiv").hide();
+        }
+    });
+
+    $("#motherIsIslander").change(function () {
+        if (this.checked) {
+            $("#motherIslanderDiv").show();
+        }
+        else {
+            $("#motherIslanderDiv").hide();
+        }
+    });
+
+    $("#motherIsOther").change(function () {
+        if (this.checked) {
+            $("#motherOtherDiv").show();
+        }
+        else {
+            $("#motherOtherDiv").hide();
+        }
+    });
+
+    $("#fatherHispanic").change(function () {
+        if ($(this).val() == "Yes, other Spanish/Hispanic/Latina") {
+            $("#fatherOtherHispanic").show();
+        }
+        else {
+            $("#fatherOtherHispanic").hide();
+        }
+    });
+
+    $("#fatherHasTribe").change(function () {
+        if (this.checked) {
+            $("#fatherTribeDiv").show();
+        }
+        else {
+            $("#fatherTribeDiv").hide();
+        }
+    });
+
+    $("#fatherIsAsian").change(function () {
+        if (this.checked) {
+            $("#fatherAsianDiv").show();
+        }
+        else {
+            $("#fatherAsianDiv").hide();
+        }
+    });
+
+    $("#fatherIsIslander").change(function () {
+        if (this.checked) {
+            $("#fatherIslanderDiv").show();
+        }
+        else {
+            $("#fatherIslanderDiv").hide();
+        }
+    });
+
+    $("#fatherIsOther").change(function () {
+        if (this.checked) {
+            $("#fatherOtherDiv").show();
+        }
+        else {
+            $("#fatherOtherDiv").hide();
+        }
+    });
+
+
+    $("#certifierTitleList").change(function () {
+        if ($(this).val() == "Other") {
+            $("#certifierTitleOtherDiv").show();
+        }
+        else {
+            $("#certifierTitleOtherDiv").hide();
+        }
+    });
+
+    $("#attendantTitleList").change(function () {
+        if ($(this).val() == "Other") {
+            $("#attendantOther").show();
+        }
+        else {
+            $("#attendantOther").hide();
+        }
+    });
+
+    $("#birthOccuredPlace").change(function () {
+        if ($(this).val() == "Home Birth") {
+            $("#plannedAtHome").show();
+            $("#birthPlaceDiv").hide();
+        }
+        else if ($(this).val() == "Other") {
+            $("#plannedAtHome").hide();
+            $("#birthPlaceDiv").show();
+        }
+        else
+        {
+            $("#plannedAtHome").hide();
+            $("#birthPlaceDiv").hide();
+        }
+    });
+
+    $("#isMarried").change(function () {
+        if (this.checked) {
+            $("#paternityAckDiv").hide();
+        }
+        else {
+            $("#paternityAckDiv").show();
+        }
+    });
+
+    $("#infantTransferred").change(function () {
+        if (this.checked) {
+            $("#infantTransferYes").show();
+        }
+        else {
+            $("#infantTransferYes").hide();
+        }
+    });
+
+    $("#motherTransferred").change(function () {
+        if (this.checked) {
+            $("#motherTransferredDiv").show();
+        }
+        else {
+            $("#motherTransferredDiv").hide();
+        }
+    });
+
+    $("#previousCesarean").change(function () {
+        if (this.checked) {
+            $("#cesareanAmount").show();
+        }
+        else {
+            $("#cesareanAmount").hide();
+        }
+    });
+
+    $("#TrialOfLabor").change(function () {
+        if (this.checked) {
+            $("#ifTrialOfLabor").show();
+        }
+        else {
+            $("#ifTrialOfLabor").hide();
+        }
+    });
+
+
+    $("#noPrenatal").change(function () {
+        if (this.checked) {
+            $("#firstPrenatal").hide();
+            $("#lastPrenatal").hide();
+            $("#totalPrenatalDiv").hide();
+            $("#totalPrenatal").val("0");
+        }
+        else {
+            $("#firstPrenatal").show();
+            $("#lastPrenatal").show();
+            $("#totalPrenatalDiv").show();
+            $("#totalPrenatal").val("");
+        }
+    });
+
+    $("#paymentList").change(function () {
+        if ($(this).val() == "Other") {
+            $("#paymentOtherDiv").show();
+        }
+        else {
+            $("#paymentOtherDiv").hide();
+        }
+    });
+
+    $("#motherSSN").keypress(function () {
+        if ($(this).val().length == 3 || $(this).val().length == 6) {
+            $(this).val($(this).val() + "-");
+        }
+    });
+    $("#fatherSSN").keypress(function () {
+        if ($(this).val().length == 3 || $(this).val().length == 6) {
+            $(this).val($(this).val() + "-");
+        }
+    });
+
+    $("#motherZip").keypress(function () {
+        if ($(this).val().length == 5) {
+            $(this).val($(this).val() + "-");
+        }
+    });
+    
+}
+</script>

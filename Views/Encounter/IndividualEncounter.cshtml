@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "IndividualEncounter";
+    ispProject.Models.AdminModel am = new ispProject.Models.AdminModel();
+    ispProject.Models.patient patient = am.getPatientByMRN(ViewBag.patientMRN);
+    List
+<ispProject.Models.patient_name> names = am.getPatientNamesById(patient.patient_id);
+    ispProject.Models.patient_name patientPrimary = am.getPatientPrimaryName(names);
+    am.setMRN(patient.medical_record_number);
+    am.setPatientLName(patientPrimary.last_name);
+    am.setPatientFName(patientPrimary.first_name);
+
+}
+@model PagedList.IPagedList
+<ispProject.Models.PCADetail>
+    @using PagedList.Mvc;
+
+
+    <h2 style="padding-top: 50px;">Encounter @ViewBag.encounterID</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">Patient Information</div>
+        <div class="panel-body">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="mrn">MRN</label>
+                    @if (am.getMRN().Equals(""))
+                    {
+
+                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                    }
+                    else
+                    {
+
+                        <input type="text" class="form-control" name="mrn" value="@am.getMRN()" readonly>
+                    }
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    @if (am.getLName().Equals(""))
+                    {
+
+                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                    }
+                    else
+                    {
+
+                        <input type="text" class="form-control" value="@am.getLName()" disabled>
+                    }
+
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    @if (am.getFName().Equals(""))
+                    {
+
+                        <input type="text" class="form-control" value="Patient Was Not Set" disabled>
+                    }
+                    else
+                    {
+
+                        <input type="text" class="form-control" value="@am.getFName()" disabled>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Encounter Information</div>
+        <div class="panel-body">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="mrn">Admission Date</label>
+                    <input type="text" class="form-control" name="mrn" value="@ViewBag.admissionDate" readonly>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="mrn">Discharge Date</label>
+                    <input type="text" class="form-control" name="mrn" value="@ViewBag.dischargeDate" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+        <div class="underline-Heading">
+            <h2>PCA(Patient Care Assessment) Record</h2>
+        </div>
+        <br />
+        <br />
+        <div>
+            @*
+                <button type="button" class="btn btn-default">@Html.ActionLink("Create New", "CreateVital", new { id = de.encounterId })</button>*@
+
+            <a href="../CreateVital/@ViewBag.encounter_data_id"> Create New </a>
+        </div>
+        <br />
+        <br />
+        <!--Table of content-->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <th>PCA #</th>
+                    <th>Date Added</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>@item.pcaId</td>
+                        <td>@item.datetime</td>
+                        <td>@Html.ActionLink("Edit", "UpdateVital", new { id = item.pcaId })</td>
+                        <td>@Html.ActionLink("Detail", "ViewVitalDetail", new { id = item.pcaId })</td>
+                        <td>@Html.ActionLink("Show History of Edits", "ListOfHistoryRecords", new { id = item.pcaId })</td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("IndividualEncounter", new { page }))
+
+    </div>

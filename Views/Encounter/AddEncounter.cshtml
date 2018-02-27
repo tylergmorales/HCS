@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "AddEncounter";
+    ispProject.Models.AdminModel am = new ispProject.Models.AdminModel();
+
+}
+
+
+<h2>AddEncounter</h2>
+<form method="POST" action="">
+    <div class="panel panel-default">
+        <div class="panel-heading">Other Identifiers</div>
+        <div class="panel-body">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="chiefComplaint">Chief Complaint</label>
+                    <input type="text" class="form-control" id="chiefComplaint" name="chiefComplaint" value="">
+                    <input type="hidden" id="patientid" name="patientid" value="@ViewBag.id">
+                    <div class="form-group">
+                        <label>Insurance to Use</label>
+                        <select class="form-control form-control-sm" name="insurance">
+
+                            @foreach (ispProject.Models.patient_insurance pInsurance in am.getPatientInsurance(ViewBag.id))
+                            {
+                                string insuranceName = am.getCompanyName(pInsurance.insurance_id);
+
+                                <option value="@pInsurance.individual_insurance_id">@insuranceName - @pInsurance.individual_insurance_id</option>
+                            }
+
+                            <option value="0">Out Of Pocket</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-sm-4">
+                <div class="form-group">
+                    <label>Admission Type</label>
+                    <select class="form-control form-control-sm" name="aType">
+                        @foreach (ispProject.Models.aadmin_data_admission_type admissionType in am.getAdmissionType())
+                        {
+
+                            <option value="@admissionType.admission_type_id">@admissionType.description</option>
+                        }
+
+                    </select>
+                </div>
+            </div>
+            <div class="form-group col-sm-4">
+                <p>*** Once Doctor is tied to department, this list can change based on department selected ***</p>
+                <div class="form-group">
+                    <label>Department</label>
+                    <select class="form-control form-control-sm" name="facility">
+                        @foreach (ispProject.Models.hospital_facility facility in am.getFacility())
+                        {
+
+                            <option value="@facility.facility_id">@facility.description</option>
+                        }
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Doctors</label>
+                    <select class="form-control form-control-sm" name="doctor">
+                        @foreach (ispProject.Models.hospital_doctor doctor in am.getDoctors())
+                        {
+
+                            <option value="@doctor.doctor_id">@doctor.doctor_name</option>
+                        }
+
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Encounter</button>
+</form>

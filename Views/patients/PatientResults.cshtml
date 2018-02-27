@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ispProject.Models.patient_general_info>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <h2>@ViewBag.searchQuery</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    MRN
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Date Of Birth
+                </th>
+                <th>Actions</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.medical_record_number)
+                    </td>
+                    <td>
+                        @if (item.first_name == null)
+                        {
+                            <span>Name Not on File</span>
+                        }
+                        else {@Html.DisplayFor(modelItem => item.first_name) }
+                        @if (item.middle_name == null) { }
+                        else {
+                         @Html.DisplayFor(modelItem => item.middle_name) }
+                        @if (item.last_name == null) { }
+                        else {@Html.DisplayFor(modelItem => item.last_name)}
+                    </td>
+                    <td>
+                        @if (item.birth_date == null)
+                        {
+                            <span>Birthdate Not on File</span>
+
+                        }
+                        else {
+                        @item.birth_date.Value.ToString("MM/dd/yyyy")}
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Edit", "Edit", new { id=item.patientId }) |*@
+                        @Html.ActionLink("Details", "Details", new { id = item.medical_record_number }) |
+                        @Html.ActionLink("Encounters", "PatientEncounters", new { mrn = item.medical_record_number }) @*|
+                        @Html.ActionLink("Delete", "Delete", new { id=item.patientId })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+</div>

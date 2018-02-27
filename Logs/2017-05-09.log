@@ -1,0 +1,10 @@
+2017-05-09 08:30:52.0387 INFO Error in userAccount/Users table 4
+2017-05-09 08:30:58.7268 INFO User PWND <script>alert(XSS);</script> deleted user 5 4
+2017-05-09 08:31:00.7505 INFO Error in userAccount/Users table 4
+2017-05-09 08:31:08.7851 INFO User PWND <script>alert(XSS);</script> deleted user 45 4
+2017-05-09 08:31:12.5793 INFO Error in userAccount/Users table 4
+2017-05-09 08:44:14.4528 INFO Error in userAccount/Users table 4
+2017-05-09 08:53:04.3400 INFO User PWND Haydon edited details of 4 4
+2017-05-09 08:53:06.8450 INFO Error in userAccount/Users table 4
+2017-05-09 08:53:21.1833 INFO User PWND Haydon edited details of 6 4
+2017-05-09 08:53:23.1940 INFO Error in userAccount/Users table 4

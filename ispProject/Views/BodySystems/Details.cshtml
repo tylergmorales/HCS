@@ -1,0 +1,117 @@
+﻿@model ispProject.Models.nursing_care_system_assessment
+@using ispProject.Models
+@{
+    ViewBag.Title = ViewBag.CareSystemTypeName;
+}
+<div class="panel col-sm-3 tableOfContents">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h4>Table of Contents</h4>
+        </div>
+        <ul>
+            <li>
+                @Html.ActionLink("Vitals", "../Encounter/ViewVitalDetail", new { id = Model.pca_id })
+            </li>
+            @foreach (var item in ViewBag.CareSystems) {
+                if (item.care_system_assessment_type_id != 1) {
+                    <li>
+                        <a href='@Url.Action("Details", "BodySystems", new { pcaID = Model.pca_id, typeID = item.care_system_assessment_type_id })'>@item.care_system_assessment_type_name</a>
+                    </li>
+                }
+            }
+            <li>
+                <a href='@Url.Action("HealthcareProviderContact", "PCAForms")'>Healthcare Provider Contact</a>
+            </li>
+            <li>
+                <a href='@Url.Action("PriorityNursingDiagnosis", "PCAForms")'>Priority Nursing Diagnosis</a>
+            </li>
+            <li>
+                <a href='@Url.Action("PatientFamilyTeachingDone", "PCAForms")'>Patient/Family Teaching Done</a>
+            </li>
+            <li>
+                <a href='@Url.Action("SummaryNote", "PCAForms")'>Summary Note</a>
+            </li>
+        </ul>
+</div>
+</div>
+<div class="panel col-sm-8">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>@ViewBag.CareSystemTypeName Body System</h2>
+        </div>
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @if (Model.wdl_ex != null) {
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="datetime">Date & Time</label>
+                        <div class="col-sm-7">
+                            @*<input type="datetime-local" class="form-control" name="datetime" disabled="disabled" required>*@
+                            @Html.DisplayFor(modelItem => modelItem.date_care_system_added)
+                        </div>
+                    </div>
+                    <fieldset class="form-group">
+                            @if ((bool)Model.wdl_ex) {
+                                <div class="form-check col-sm-offset-3">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="wdlRadios" id="wdl" value="wdl" disabled="disabled">
+                                        WDL
+                                    </label>
+                                </div>
+                                <div class="form-check col-sm-offset-3">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="wdlRadios" id="wdlEx" value="wdlEx" disabled="disabled" checked>
+                                        WDL Ex
+                                    </label>
+                                </div>
+                            }
+                            else {
+                                <div class="form-check col-sm-offset-3">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="wdlRadios" id="wdl" value="wdl" disabled="disabled" checked>
+                                        WDL
+                                    </label>
+                                </div>
+                                <div class="form-check col-sm-offset-3">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="wdlRadios" id="wdlEx" value="wdlEx" disabled="disabled">
+                                        WDL Ex
+                                    </label>
+                                </div>
+                            }
+                    </fieldset>
+
+                    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#wdlPainDefinitionsModal">
+                        <span class="glyphicon glyphicon-info-sign"></span> WDL Definitions
+                    </button>
+                    <div id="wdlPainDefinitionsModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">WDL Definitions</h4>
+                                </div>
+                                <div class="modal-body">
+                                    @Html.DisplayFor(modelItem => modelItem.nursing_care_system_assessment_type.wdl_description)
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br /><br />
+                    <div class="form-group">
+                        <label class="control-label" for="wdlExceptionInfo">Comment</label>
+                        <textarea class="form-control col-sm-8" name="wdlExceptionInfo" readonly>@Model.care_system_comment</textarea>
+                    </div>
+                }
+                else {
+                    <h2>No Body System Found</h2><br /><br />
+                }
+                <button type="button" class="btn btn-default">@Html.ActionLink("Exit", "IndividualEncounter", "Encounter", new { id = ViewBag.EncounterID }, null)</button>
+            </div>
+        }
+    </div>
+</div>

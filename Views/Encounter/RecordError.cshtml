@@ -1,0 +1,9 @@
+﻿@{ ViewBag.Title = "RecordError"; }
+
+<!--insert button back to list-->
+<br />
+<div class="jumbotron" style="margin-top: 50px;">
+    <h2 style="color:red; font-size: 30px; text-align:center">RecordError</h2>
+    <h3 style="color:red; font-size: 30px; text-align:center">Sorry, this history record does not exist!  </h3>
+    <button type="button" class="btn btn-default">@Html.ActionLink("Back To PcaList", "IndividualEncounter", new { id = ViewBag.encounterId })</button>
+</div>

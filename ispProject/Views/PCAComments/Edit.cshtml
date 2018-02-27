@@ -1,0 +1,63 @@
+﻿@model ispProject.Models.nursing_pca_comment
+@using ispProject.Models
+@{
+    ViewBag.Title = ViewBag.CommentTypeName;
+}
+<div class="panel col-sm-3 tableOfContents">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h4>Table of Contents</h4>
+        </div>
+        <ul>
+            <li>
+                @Html.ActionLink("Vitals", "../Encounter/UpdateVital", new { id = Model.pca_id })
+            </li>
+            @foreach (var item in ViewBag.CareSystems) {
+                if (item.care_system_assessment_type_id != 1) {
+                    <li>
+                        <a href='@Url.Action("CreateOrEdit", "BodySystems", new { pcaID = Model.pca_id, typeID = item.care_system_assessment_type_id })'>@item.care_system_assessment_type_name</a>
+                    </li>
+                }
+            }
+            @foreach (var item in ViewBag.PCAComments) {
+                if (item.pca_comment_type_id != 1) {
+                    <li>
+                        <a href='@Url.Action("CreateOrEdit", "PCAComments", new { pcaID = ViewBag.pcaID, typeID = item.pca_comment_type_id })'>@item.pca_comment_type_name</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+<div class="panel col-sm-8">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>@Html.DisplayFor(modelItem => modelItem.nursing_pca_comment_type.pca_comment_type_name)</h2>
+        </div>
+        @using (Html.BeginForm("Edit", "PCAComments", FormMethod.Post)) {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.pca_comment_id)
+
+            <div class="form-horizontal">
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="datetime">Date & Time</label>
+                    <div class="col-sm-7">
+                        @Html.DisplayFor(modelItem => modelItem.date_comment_added)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="commentData">Edit comment</label>
+                    <textarea class="form-control col-sm-8" name="commentData">@Model.pca_comment</textarea>
+                </div>
+                
+                <button class="btn btn-success" type="submit" name="formButton" value="SaveList">Save And Go Back to List</button>
+                <button class="btn btn-primary" type="submit" name="formButton" value="SaveContinue">Save and Continue</button>
+                <button class="btn btn-danger" type="submit" name="formButton" value="Exit">Exit Without Saving</button>
+
+            </div>
+        }
+    </div>
+</div>

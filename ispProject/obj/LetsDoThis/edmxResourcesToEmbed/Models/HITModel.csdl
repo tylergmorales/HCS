@@ -1,0 +1,1369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HITProjectData_Fall17Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="aadmin_data_address_type">
+    <Key>
+      <PropertyRef Name="address_type_id" />
+    </Key>
+    <Property Name="address_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patient_address" Relationship="Self.FK__patient_a__addre__5F492382" FromRole="aadmin_data_address_type" ToRole="patient_address" />
+  </EntityType>
+  <EntityType Name="aadmin_data_admission_type">
+    <Key>
+      <PropertyRef Name="admission_type_id" />
+    </Key>
+    <Property Name="admission_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="encounters" Relationship="Self.FK__encounter__admis__4C0144E4" FromRole="aadmin_data_admission_type" ToRole="encounter" />
+  </EntityType>
+  <EntityType Name="aadmin_data_family_relation_type">
+    <Key>
+      <PropertyRef Name="relation_id" />
+    </Key>
+    <Property Name="relation_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patient_family" Relationship="Self.FK__patient_f__relat__477199F1" FromRole="aadmin_data_family_relation_type" ToRole="patient_family" />
+  </EntityType>
+  <EntityType Name="aadmin_data_insurance">
+    <Key>
+      <PropertyRef Name="Insurance_id" />
+    </Key>
+    <Property Name="Insurance_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="company_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone_number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="extension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="address_street_one" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address_street_two" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patient_insurance" Relationship="Self.FK__patient_i__insur__63A3C44B" FromRole="aadmin_data_insurance" ToRole="patient_insurance" />
+  </EntityType>
+  <EntityType Name="aadmin_data_marital_status">
+    <Key>
+      <PropertyRef Name="marital_status_id" />
+    </Key>
+    <Property Name="marital_status_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patients" Relationship="Self.FK__patient__marital__2704CA5F" FromRole="aadmin_data_marital_status" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="aadmin_data_patient_ethnicity">
+    <Key>
+      <PropertyRef Name="patient_ethnicity_id" />
+    </Key>
+    <Property Name="patient_ethnicity_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patients" Relationship="Self.FK__patient__patient__28ED12D1" FromRole="aadmin_data_patient_ethnicity" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="aadmin_data_patient_gender">
+    <Key>
+      <PropertyRef Name="gender_id" />
+    </Key>
+    <Property Name="gender_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patients" Relationship="Self.FK__patient__gender___2610A626" FromRole="aadmin_data_patient_gender" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="aadmin_data_patient_name_type">
+    <Key>
+      <PropertyRef Name="patient_name_type_id" />
+    </Key>
+    <Property Name="patient_name_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patient_name" Relationship="Self.FK__patient_n__patie__2DB1C7EE" FromRole="aadmin_data_patient_name_type" ToRole="patient_name" />
+  </EntityType>
+  <EntityType Name="aadmin_data_patient_race">
+    <Key>
+      <PropertyRef Name="patient_race_id" />
+    </Key>
+    <Property Name="patient_race_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patients" Relationship="Self.FK__patient__patient__27F8EE98" FromRole="aadmin_data_patient_race" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="encounter">
+    <Key>
+      <PropertyRef Name="encounter_data_id" />
+    </Key>
+    <Property Name="encounter_data_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="encounter_id" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="attending_doctor_id" Type="Int32" />
+    <Property Name="facility_id" Type="Int32" />
+    <Property Name="chief_complaint" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="admission_type_id" Type="Int32" />
+    <Property Name="patient_insurance_id" Type="Int32" />
+    <Property Name="admission_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="discharge_date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="aadmin_data_admission_type" Relationship="Self.FK__encounter__admis__4C0144E4" FromRole="encounter" ToRole="aadmin_data_admission_type" />
+    <NavigationProperty Name="hospital_facility" Relationship="Self.FK__encounter__facil__4CF5691D" FromRole="encounter" ToRole="hospital_facility" />
+    <NavigationProperty Name="patient_insurance" Relationship="Self.FK__encounter__patie__4DE98D56" FromRole="encounter" ToRole="patient_insurance" />
+    <NavigationProperty Name="nursing_pca_record" Relationship="Self.FK__nursing_p__encou__4242D080" FromRole="encounter" ToRole="nursing_pca_record" />
+  </EntityType>
+  <EntityType Name="hospital">
+    <Key>
+      <PropertyRef Name="hospital_id" />
+    </Key>
+    <Property Name="hospital_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="hospital_doctor" Relationship="Self.FK__hospital___hospi__60C757A0" FromRole="hospital" ToRole="hospital_doctor" />
+    <NavigationProperty Name="users" Relationship="Self.FK__users__hospitalI__0E04126B" FromRole="hospital" ToRole="users" />
+  </EntityType>
+  <EntityType Name="hospital_doctor">
+    <Key>
+      <PropertyRef Name="doctor_id" />
+    </Key>
+    <Property Name="doctor_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doctor_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hospital_id" Type="Int32" />
+    <NavigationProperty Name="hospital" Relationship="Self.FK__hospital___hospi__60C757A0" FromRole="hospital_doctor" ToRole="hospital" />
+  </EntityType>
+  <EntityType Name="hospital_facility">
+    <Key>
+      <PropertyRef Name="facility_id" />
+    </Key>
+    <Property Name="facility_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_updated" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="encounters" Relationship="Self.FK__encounter__facil__4CF5691D" FromRole="hospital_facility" ToRole="encounter" />
+  </EntityType>
+  <EntityType Name="nursing_care_system_assessment">
+    <Key>
+      <PropertyRef Name="care_system_assessment_id" />
+      <PropertyRef Name="pca_id" />
+    </Key>
+    <Property Name="care_system_assessment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="care_system_assessment_type_id" Type="Int32" />
+    <Property Name="pca_id" Type="Int32" Nullable="false" />
+    <Property Name="wdl_ex" Type="Boolean" />
+    <Property Name="care_system_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date_care_system_added" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="nursing_care_system_assessment_type" Relationship="Self.FK__nursing_c__care___546180BB" FromRole="nursing_care_system_assessment" ToRole="nursing_care_system_assessment_type" />
+    <NavigationProperty Name="nursing_pca_record" Relationship="Self.FK__nursing_c__pca_i__5555A4F4" FromRole="nursing_care_system_assessment" ToRole="nursing_pca_record" />
+  </EntityType>
+  <EntityType Name="nursing_care_system_assessment_history">
+    <Key>
+      <PropertyRef Name="care_system_assessment_history_id" />
+      <PropertyRef Name="care_system_assessment_id" />
+      <PropertyRef Name="pca_id" />
+    </Key>
+    <Property Name="care_system_assessment_history_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="care_system_assessment_id" Type="Int32" Nullable="false" />
+    <Property Name="care_system_assessment_type_id" Type="Int32" />
+    <Property Name="pca_id" Type="Int32" Nullable="false" />
+    <Property Name="wdl_ex" Type="Boolean" />
+    <Property Name="care_system_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date_pca_record_added" Type="DateTime" Precision="3" />
+    <Property Name="date_care_system_added" Type="DateTime" Precision="3" />
+    <Property Name="date_care_system_modified" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="nursing_care_system_assessment_type">
+    <Key>
+      <PropertyRef Name="care_system_assessment_type_id" />
+    </Key>
+    <Property Name="care_system_assessment_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="care_system_assessment_type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="wdl_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="nursing_care_system_assessment" Relationship="Self.FK__nursing_c__care___546180BB" FromRole="nursing_care_system_assessment_type" ToRole="nursing_care_system_assessment" />
+  </EntityType>
+  <EntityType Name="nursing_o_two_delivery_type">
+    <Key>
+      <PropertyRef Name="o_two_delivery_type_id" />
+    </Key>
+    <Property Name="o_two_delivery_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="o_two_delivery_type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="nursing_pca_record" Relationship="Self.FK__nursing_p__o_two__451F3D2B" FromRole="nursing_o_two_delivery_type" ToRole="nursing_pca_record" />
+  </EntityType>
+  <EntityType Name="nursing_pain_scale_type">
+    <Key>
+      <PropertyRef Name="pain_scale_type_id" />
+    </Key>
+    <Property Name="pain_scale_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pain_scale_type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="nursing_pca_record" Relationship="Self.FK__nursing_p__pain___46136164" FromRole="nursing_pain_scale_type" ToRole="nursing_pca_record" />
+  </EntityType>
+  <EntityType Name="nursing_pca_comment">
+    <Key>
+      <PropertyRef Name="pca_comment_id" />
+      <PropertyRef Name="pca_id" />
+    </Key>
+    <Property Name="pca_comment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pca_comment_type_id" Type="Int32" />
+    <Property Name="pca_id" Type="Int32" Nullable="false" />
+    <Property Name="pca_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date_comment_added" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="nursing_pca_comment_type" Relationship="Self.FK__nursing_p__pca_c__5832119F" FromRole="nursing_pca_comment" ToRole="nursing_pca_comment_type" />
+    <NavigationProperty Name="nursing_pca_record" Relationship="Self.FK__nursing_p__pca_i__592635D8" FromRole="nursing_pca_comment" ToRole="nursing_pca_record" />
+  </EntityType>
+  <EntityType Name="nursing_pca_comment_type">
+    <Key>
+      <PropertyRef Name="pca_comment_type_id" />
+    </Key>
+    <Property Name="pca_comment_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pca_comment_type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="nursing_pca_comment" Relationship="Self.FK__nursing_p__pca_c__5832119F" FromRole="nursing_pca_comment_type" ToRole="nursing_pca_comment" />
+  </EntityType>
+  <EntityType Name="nursing_pca_record">
+    <Key>
+      <PropertyRef Name="pca_id" />
+    </Key>
+    <Property Name="pca_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="encounter_id" Type="Int32" />
+    <Property Name="temp_route_type_id" Type="Int32" />
+    <Property Name="pulse_route_type_id" Type="Int32" />
+    <Property Name="o_two_delivery_type_id" Type="Int32" />
+    <Property Name="pain_scale_type_id" Type="Int32" />
+    <Property Name="temperature" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="pulse" Type="Byte" />
+    <Property Name="respiration" Type="Byte" />
+    <Property Name="systolic_blood_pressure" Type="Byte" />
+    <Property Name="diastolic_blood_pressure" Type="Byte" />
+    <Property Name="pulse_oximetry" Type="Byte" />
+    <Property Name="oxygen_flow" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pain_level_goal" Type="Byte" />
+    <Property Name="pain_level_actual" Type="Byte" />
+    <Property Name="date_vitals_added" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="encounter" Relationship="Self.FK__nursing_p__encou__4242D080" FromRole="nursing_pca_record" ToRole="encounter" />
+    <NavigationProperty Name="nursing_care_system_assessment" Relationship="Self.FK__nursing_c__pca_i__5555A4F4" FromRole="nursing_pca_record" ToRole="nursing_care_system_assessment" />
+    <NavigationProperty Name="nursing_o_two_delivery_type" Relationship="Self.FK__nursing_p__o_two__451F3D2B" FromRole="nursing_pca_record" ToRole="nursing_o_two_delivery_type" />
+    <NavigationProperty Name="nursing_pain_scale_type" Relationship="Self.FK__nursing_p__pain___46136164" FromRole="nursing_pca_record" ToRole="nursing_pain_scale_type" />
+    <NavigationProperty Name="nursing_pca_comment" Relationship="Self.FK__nursing_p__pca_i__592635D8" FromRole="nursing_pca_record" ToRole="nursing_pca_comment" />
+    <NavigationProperty Name="nursing_pulse_route_type" Relationship="Self.FK__nursing_p__pulse__442B18F2" FromRole="nursing_pca_record" ToRole="nursing_pulse_route_type" />
+    <NavigationProperty Name="nursing_temp_route_type" Relationship="Self.FK__nursing_p__temp___4336F4B9" FromRole="nursing_pca_record" ToRole="nursing_temp_route_type" />
+  </EntityType>
+  <EntityType Name="nursing_pca_record_history">
+    <Key>
+      <PropertyRef Name="pca_record_history_id" />
+      <PropertyRef Name="pca_id" />
+      <PropertyRef Name="encounter_id" />
+    </Key>
+    <Property Name="pca_record_history_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pca_id" Type="Int32" Nullable="false" />
+    <Property Name="encounter_id" Type="Int32" Nullable="false" />
+    <Property Name="temp_route_type_id" Type="Int32" />
+    <Property Name="pulse_route_type_id" Type="Int32" />
+    <Property Name="o_two_delivery_type_id" Type="Int32" />
+    <Property Name="pain_scale_type_id" Type="Int32" />
+    <Property Name="temperature" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="pulse" Type="Byte" />
+    <Property Name="respiration" Type="Byte" />
+    <Property Name="systolic_blood_pressure" Type="Byte" />
+    <Property Name="diastolic_blood_pressure" Type="Byte" />
+    <Property Name="pulse_oximetry" Type="Byte" />
+    <Property Name="oxygen_flow" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pain_level_goal" Type="Byte" />
+    <Property Name="pain_level_actual" Type="Byte" />
+    <Property Name="date_vitals_added" Type="DateTime" Precision="3" />
+    <Property Name="date_pca_record_modified" Type="DateTime" Precision="3" />
+    <Property Name="date_pca_record_orginal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="nursing_pulse_route_type">
+    <Key>
+      <PropertyRef Name="pulse_route_type_id" />
+    </Key>
+    <Property Name="pulse_route_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pulse_route_type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="nursing_pca_record" Relationship="Self.FK__nursing_p__pulse__442B18F2" FromRole="nursing_pulse_route_type" ToRole="nursing_pca_record" />
+  </EntityType>
+  <EntityType Name="nursing_temp_route_type">
+    <Key>
+      <PropertyRef Name="temp_route_type_id" />
+    </Key>
+    <Property Name="temp_route_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="temp_route_type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="nursing_pca_record" Relationship="Self.FK__nursing_p__temp___4336F4B9" FromRole="nursing_temp_route_type" ToRole="nursing_pca_record" />
+  </EntityType>
+  <EntityType Name="patient">
+    <Key>
+      <PropertyRef Name="patient_id" />
+    </Key>
+    <Property Name="patient_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="medical_record_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="mother_maiden_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="gender_id" Type="Int32" />
+    <Property Name="social_security_number" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="patient_race_id" Type="Int32" />
+    <Property Name="patient_ethnicity_id" Type="Int32" />
+    <Property Name="marital_status_id" Type="Int32" />
+    <Property Name="in_city" Type="Boolean" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="aadmin_data_marital_status" Relationship="Self.FK__patient__marital__2704CA5F" FromRole="patient" ToRole="aadmin_data_marital_status" />
+    <NavigationProperty Name="aadmin_data_patient_ethnicity" Relationship="Self.FK__patient__patient__28ED12D1" FromRole="patient" ToRole="aadmin_data_patient_ethnicity" />
+    <NavigationProperty Name="aadmin_data_patient_gender" Relationship="Self.FK__patient__gender___2610A626" FromRole="patient" ToRole="aadmin_data_patient_gender" />
+    <NavigationProperty Name="aadmin_data_patient_race" Relationship="Self.FK__patient__patient__27F8EE98" FromRole="patient" ToRole="aadmin_data_patient_race" />
+    <NavigationProperty Name="patient_address" Relationship="Self.FK__patient_a__patie__61316BF4" FromRole="patient" ToRole="patient_address" />
+    <NavigationProperty Name="patient_birth_information" Relationship="Self.FK__patient_b__patie__20E1DCB5" FromRole="patient" ToRole="patient_birth_information" />
+    <NavigationProperty Name="patient_family" Relationship="Self.FK__patient_f__patie__467D75B8" FromRole="patient" ToRole="patient_family" />
+    <NavigationProperty Name="patient_insurance" Relationship="Self.FK__patient_i__patie__6497E884" FromRole="patient" ToRole="patient_insurance" />
+    <NavigationProperty Name="patient_name" Relationship="Self.FK__patient_n__patie__2CBDA3B5" FromRole="patient" ToRole="patient_name" />
+    <Property Name="allergies" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="patient_address">
+    <Key>
+      <PropertyRef Name="address_id" />
+    </Key>
+    <Property Name="address_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patient_id" Type="Int32" Nullable="false" />
+    <Property Name="street_address_one" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="street_address_two" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="address_type_id" Type="Int32" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <Property Name="address_is_valid" Type="Boolean" />
+    <NavigationProperty Name="aadmin_data_address_type" Relationship="Self.FK__patient_a__addre__5F492382" FromRole="patient_address" ToRole="aadmin_data_address_type" />
+    <NavigationProperty Name="patient" Relationship="Self.FK__patient_a__patie__61316BF4" FromRole="patient_address" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="patient_birth_information">
+    <Key>
+      <PropertyRef Name="birth_id" />
+    </Key>
+    <Property Name="birth_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patient_id" Type="Int32" Nullable="false" />
+    <Property Name="birth_date" Type="DateTime" Precision="0" />
+    <Property Name="birth_facility" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birth_city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birth_state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birth_record_id" Type="Int32" />
+    <Property Name="date_added" Type="DateTime" Precision="3" />
+    <Property Name="date_edited" Type="DateTime" Precision="3" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="patient" Relationship="Self.FK__patient_b__patie__20E1DCB5" FromRole="patient_birth_information" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="patient_family">
+    <Key>
+      <PropertyRef Name="family_id" />
+    </Key>
+    <Property Name="family_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="relation_id" Type="Int32" Nullable="false" />
+    <Property Name="patient_id" Type="Int32" Nullable="false" />
+    <Property Name="social_security_number" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address_street_one" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address_street_two" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="aadmin_data_family_relation_type" Relationship="Self.FK__patient_f__relat__477199F1" FromRole="patient_family" ToRole="aadmin_data_family_relation_type" />
+    <NavigationProperty Name="patient" Relationship="Self.FK__patient_f__patie__467D75B8" FromRole="patient_family" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="patient_insurance">
+    <Key>
+      <PropertyRef Name="patient_insurance_id" />
+    </Key>
+    <Property Name="patient_insurance_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patient_id" Type="Int32" Nullable="false" />
+    <Property Name="insurance_id" Type="Int32" Nullable="false" />
+    <Property Name="individual_insurance_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="aadmin_data_insurance" Relationship="Self.FK__patient_i__insur__63A3C44B" FromRole="patient_insurance" ToRole="aadmin_data_insurance" />
+    <NavigationProperty Name="encounters" Relationship="Self.FK__encounter__patie__4DE98D56" FromRole="patient_insurance" ToRole="encounter" />
+    <NavigationProperty Name="patient" Relationship="Self.FK__patient_i__patie__6497E884" FromRole="patient_insurance" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="patient_name">
+    <Key>
+      <PropertyRef Name="patient_name_id" />
+    </Key>
+    <Property Name="patient_name_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patient_id" Type="Int32" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="suffix" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="patient_name_type_id" Type="Int32" Nullable="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+    <NavigationProperty Name="aadmin_data_patient_name_type" Relationship="Self.FK__patient_n__patie__2DB1C7EE" FromRole="patient_name" ToRole="aadmin_data_patient_name_type" />
+    <NavigationProperty Name="patient" Relationship="Self.FK__patient_n__patie__2CBDA3B5" FromRole="patient_name" ToRole="patient" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventLevel" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MachineName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EventMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ErrorSource" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorClass" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorMethod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InnerErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="roleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dateUpdated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="editedBy" Type="Int32" />
+    <NavigationProperty Name="users" Relationship="Self.FK__users__roleId__1ED998B2" FromRole="role" ToRole="users" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="userAccount">
+    <Key>
+      <PropertyRef Name="userAccountId" />
+    </Key>
+    <Property Name="userAccountId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="userName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="passwordHash" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dateUpdated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="editedBy" Type="Int32" />
+    <Property Name="userGuid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="user" Relationship="Self.FK__userAccou__userI__1CF15040" FromRole="userAccount" ToRole="users" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hospitalId" Type="Int32" />
+    <Property Name="roleId" Type="Int32" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dateUpdated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="editedBy" Type="Int32" />
+    <NavigationProperty Name="hospital" Relationship="Self.FK__users__hospitalI__0E04126B" FromRole="users" ToRole="hospital" />
+    <NavigationProperty Name="role" Relationship="Self.FK__users__roleId__1ED998B2" FromRole="users" ToRole="role" />
+    <NavigationProperty Name="userAccounts" Relationship="Self.FK__userAccou__userI__1CF15040" FromRole="users" ToRole="userAccount" />
+  </EntityType>
+  <EntityType Name="zz_birthRecord">
+    <Key>
+      <PropertyRef Name="birthRecordId" />
+    </Key>
+    <Property Name="birthRecordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="certiferName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="certiferTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="certiferDate" Type="DateTime" Precision="0" />
+    <Property Name="filedDate" Type="DateTime" Precision="0" />
+    <Property Name="paternityAck" Type="Boolean" Nullable="false" />
+    <Property Name="ssnRequested" Type="Boolean" Nullable="false" />
+    <Property Name="facilityId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birthFacility" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="homebirth" Type="Boolean" Nullable="false" />
+    <Property Name="attendantName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="attendantNpi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="attendantTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="motherTransferred" Type="Boolean" Nullable="false" />
+    <Property Name="transferFacility" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="firstPrenatal" Type="DateTime" Precision="0" />
+    <Property Name="lastPrenatal" Type="DateTime" Precision="0" />
+    <Property Name="totalPrenatal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="motherPreWeight" Type="Int32" />
+    <Property Name="motherPostWeight" Type="Int32" />
+    <Property Name="motherDeliveryWeight" Type="Int32" />
+    <Property Name="hadWic" Type="Boolean" Nullable="false" />
+    <Property Name="previousBirthLiving" Type="Int32" />
+    <Property Name="previousBirthDead" Type="Int32" />
+    <Property Name="lastLiveBirth" Type="DateTime" Precision="0" />
+    <Property Name="otherBirthOutcomes" Type="Int32" />
+    <Property Name="lastOtherOutcome" Type="DateTime" Precision="0" />
+    <Property Name="cigThreeBefore" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="packThreeBefore" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cigFirstThree" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="packFirstThree" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cigSecondThree" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="packSecondThree" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cigThirdTri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="packThirdTri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paymentSource" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateLastMenses" Type="DateTime" Precision="0" />
+    <Property Name="diabetesPrepregnancy" Type="Boolean" Nullable="false" />
+    <Property Name="diabetesGestational" Type="Boolean" Nullable="false" />
+    <Property Name="hyperTensionPrepregnancy" Type="Boolean" Nullable="false" />
+    <Property Name="hyperTensionGestational" Type="Boolean" Nullable="false" />
+    <Property Name="hyperTensionEclampsia" Type="Boolean" Nullable="false" />
+    <Property Name="prePreTerm" Type="Boolean" Nullable="false" />
+    <Property Name="prePoorOutcome" Type="Boolean" Nullable="false" />
+    <Property Name="resultInfertility" Type="Boolean" Nullable="false" />
+    <Property Name="fertilityDrug" Type="Boolean" Nullable="false" />
+    <Property Name="assistedTech" Type="Boolean" Nullable="false" />
+    <Property Name="previousCesarean" Type="Boolean" Nullable="false" />
+    <Property Name="previousCesareanAmount" Type="Int32" />
+    <Property Name="gonorrhea" Type="Boolean" Nullable="false" />
+    <Property Name="syphilis" Type="Boolean" Nullable="false" />
+    <Property Name="chlamydia" Type="Boolean" Nullable="false" />
+    <Property Name="hepB" Type="Boolean" Nullable="false" />
+    <Property Name="hepC" Type="Boolean" Nullable="false" />
+    <Property Name="cervicalCerclage" Type="Boolean" Nullable="false" />
+    <Property Name="tocolysis" Type="Boolean" Nullable="false" />
+    <Property Name="externalCephalic" Type="Boolean" Nullable="false" />
+    <Property Name="preRuptureMembrane" Type="Boolean" Nullable="false" />
+    <Property Name="preLabor" Type="Boolean" Nullable="false" />
+    <Property Name="proLabor" Type="Boolean" Nullable="false" />
+    <Property Name="inductionLabor" Type="Boolean" Nullable="false" />
+    <Property Name="augmentationLabor" Type="Boolean" Nullable="false" />
+    <Property Name="nonvertex" Type="Boolean" Nullable="false" />
+    <Property Name="steroids" Type="Boolean" Nullable="false" />
+    <Property Name="antibotics" Type="Boolean" Nullable="false" />
+    <Property Name="chorioamnionitis" Type="Boolean" Nullable="false" />
+    <Property Name="meconium" Type="Boolean" Nullable="false" />
+    <Property Name="fetalIntolerance" Type="Boolean" Nullable="false" />
+    <Property Name="epidural" Type="Boolean" Nullable="false" />
+    <Property Name="unsuccessfulForceps" Type="Boolean" Nullable="false" />
+    <Property Name="unsuccessfulVacuum" Type="Boolean" Nullable="false" />
+    <Property Name="cephalic" Type="Boolean" Nullable="false" />
+    <Property Name="breech" Type="Boolean" Nullable="false" />
+    <Property Name="otherFetalPresentation" Type="Boolean" Nullable="false" />
+    <Property Name="finalSpontaneous" Type="Boolean" Nullable="false" />
+    <Property Name="finalForceps" Type="Boolean" Nullable="false" />
+    <Property Name="finalVacuum" Type="Boolean" Nullable="false" />
+    <Property Name="finalCesarean" Type="Boolean" Nullable="false" />
+    <Property Name="finalTrialOfLabor" Type="Boolean" Nullable="false" />
+    <Property Name="maternalTransfusion" Type="Boolean" Nullable="false" />
+    <Property Name="perinealLaceration" Type="Boolean" Nullable="false" />
+    <Property Name="rupturedUterus" Type="Boolean" Nullable="false" />
+    <Property Name="hysterectomy" Type="Boolean" Nullable="false" />
+    <Property Name="admitICU" Type="Boolean" Nullable="false" />
+    <Property Name="unplannedOperating" Type="Boolean" Nullable="false" />
+    <Property Name="fiveMinAgpar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tenMinAgpar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="plurality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birthOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ventImmedite" Type="Boolean" Nullable="false" />
+    <Property Name="ventSixHours" Type="Boolean" Nullable="false" />
+    <Property Name="nicu" Type="Boolean" Nullable="false" />
+    <Property Name="surfactant" Type="Boolean" Nullable="false" />
+    <Property Name="neoNatalAntibotics" Type="Boolean" Nullable="false" />
+    <Property Name="seizureDysfunction" Type="Boolean" Nullable="false" />
+    <Property Name="birthInjury" Type="Boolean" Nullable="false" />
+    <Property Name="anencephaly" Type="Boolean" Nullable="false" />
+    <Property Name="meningomyelocele" Type="Boolean" Nullable="false" />
+    <Property Name="cyanotic" Type="Boolean" Nullable="false" />
+    <Property Name="cogenital" Type="Boolean" Nullable="false" />
+    <Property Name="omphalocele" Type="Boolean" Nullable="false" />
+    <Property Name="gastroschisis" Type="Boolean" Nullable="false" />
+    <Property Name="limbReduction" Type="Boolean" Nullable="false" />
+    <Property Name="cleftLip" Type="Boolean" Nullable="false" />
+    <Property Name="cleftPalate" Type="Boolean" Nullable="false" />
+    <Property Name="downConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="downPending" Type="Boolean" Nullable="false" />
+    <Property Name="suspectedConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="suspectedPending" Type="Boolean" Nullable="false" />
+    <Property Name="hypospadias" Type="Boolean" Nullable="false" />
+    <Property Name="infantTransferred" Type="Boolean" Nullable="false" />
+    <Property Name="infantLiving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="breastFed" Type="Boolean" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dateEdited" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="editedBy" Type="Int32" />
+    <Property Name="estimateGestation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birthWeight" Type="Int32" />
+    <Property Name="downSyndrome" Type="Boolean" Nullable="false" />
+    <Property Name="suspectedDisorder" Type="Boolean" Nullable="false" />
+    <Property Name="infantTransferFacility" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="noPrenatal" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="zz_record" Relationship="Self.FK__record__birthRec__30F848ED" FromRole="zz_birthRecord" ToRole="zz_record" />
+  </EntityType>
+  <EntityType Name="zz_hospital">
+    <Key>
+      <PropertyRef Name="hospitalId" />
+    </Key>
+    <Property Name="hospitalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dateUpdated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="editedBy" Type="Int32" />
+    <NavigationProperty Name="zz_record" Relationship="Self.FK__record__hospital__2D27B809" FromRole="zz_hospital" ToRole="zz_record" />
+  </EntityType>
+  <EntityType Name="zz_patient">
+    <Key>
+      <PropertyRef Name="patientId" />
+    </Key>
+    <Property Name="patientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="medicalRecordNumber" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="middleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="suffix" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="maidenName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="residenceStreetAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="residenceAptNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="residenceCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="residenceState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="residenceZip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="mailingStreetAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mailingAptNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="mailingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mailingState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mailingZip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SSN" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="motherSSN" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="fatherSSN" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="birthDate" Type="DateTime" Precision="0" />
+    <Property Name="birthTime" Type="Time" Precision="7" />
+    <Property Name="educationEarned" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="hispanic" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="height" Type="Int32" />
+    <Property Name="weight" Type="Int32" />
+    <Property Name="isMarried" Type="Boolean" Nullable="false" />
+    <Property Name="birthState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birthCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birthFacility" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="priorFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="priorMiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="priorLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="priorSuffix" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="inCity" Type="Boolean" Nullable="false" />
+    <Property Name="dateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dateUpdated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="editedBy" Type="Int32" />
+    <Property Name="birthCounty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="residenceCounty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="birthWeight" Type="Int32" />
+    <NavigationProperty Name="zz_patientRace" Relationship="Self.FK__patientRa__patie__1B0907CE" FromRole="zz_patient" ToRole="zz_patientRace" />
+    <NavigationProperty Name="zz_record" Relationship="Self.FK__record__patientI__2C3393D0" FromRole="zz_patient" ToRole="zz_record" />
+  </EntityType>
+  <EntityType Name="zz_patientRace">
+    <Key>
+      <PropertyRef Name="patientRaceId" />
+    </Key>
+    <Property Name="patientId" Type="Int32" />
+    <Property Name="patientRaceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="white" Type="Boolean" Nullable="false" />
+    <Property Name="black" Type="Boolean" Nullable="false" />
+    <Property Name="indian" Type="Boolean" Nullable="false" />
+    <Property Name="tribe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="asianIndian" Type="Boolean" Nullable="false" />
+    <Property Name="chinese" Type="Boolean" Nullable="false" />
+    <Property Name="flipino" Type="Boolean" Nullable="false" />
+    <Property Name="japanese" Type="Boolean" Nullable="false" />
+    <Property Name="korean" Type="Boolean" Nullable="false" />
+    <Property Name="vietnamese" Type="Boolean" Nullable="false" />
+    <Property Name="otherAsian" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hawaiian" Type="Boolean" Nullable="false" />
+    <Property Name="guamanian" Type="Boolean" Nullable="false" />
+    <Property Name="samoan" Type="Boolean" Nullable="false" />
+    <Property Name="pacificIslander" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="other" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="zz_patient" Relationship="Self.FK__patientRa__patie__1B0907CE" FromRole="zz_patientRace" ToRole="zz_patient" />
+  </EntityType>
+  <EntityType Name="zz_record">
+    <Key>
+      <PropertyRef Name="entryId" />
+    </Key>
+    <Property Name="entryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patientId" Type="Int32" />
+    <Property Name="hospitalId" Type="Int32" />
+    <Property Name="birthRecordId" Type="Int32" />
+    <NavigationProperty Name="zz_birthRecord" Relationship="Self.FK__record__birthRec__30F848ED" FromRole="zz_record" ToRole="zz_birthRecord" />
+    <NavigationProperty Name="zz_hospital" Relationship="Self.FK__record__hospital__2D27B809" FromRole="zz_record" ToRole="zz_hospital" />
+    <NavigationProperty Name="zz_patient" Relationship="Self.FK__record__patientI__2C3393D0" FromRole="zz_record" ToRole="zz_patient" />
+  </EntityType>
+  <EntityType Name="encounter_main">
+    <Key>
+      <PropertyRef Name="encounter_id" />
+      <PropertyRef Name="admission_date" />
+    </Key>
+    <Property Name="encounter_id" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="medical_record_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="hospital_facility" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="chief_complaint" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="admission_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="individual_insurance_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="admission_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="discharge_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="patient_family_list">
+    <Key>
+      <PropertyRef Name="medical_record_number" />
+      <PropertyRef Name="social_security_number" />
+    </Key>
+    <Property Name="medical_record_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="social_security_number" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="relation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address_street_one" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address_street_two" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="patient_general_info">
+    <Key>
+      <PropertyRef Name="medical_record_number" />
+      <PropertyRef Name="date_created" />
+    </Key>
+    <Property Name="medical_record_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mother_maiden_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="social_security_number" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="birth_date" Type="DateTime" Precision="0" />
+    <Property Name="race" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ethnicity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="marital_status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="in_city" Type="Boolean" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+  </EntityType>
+  <EntityType Name="patient_name_list">
+    <Key>
+      <PropertyRef Name="patient_name_id" />
+      <PropertyRef Name="medical_record_number" />
+      <PropertyRef Name="date_added" />
+    </Key>
+    <Property Name="patient_name_id" Type="Int32" Nullable="false" />
+    <Property Name="medical_record_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="suffix" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="name_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_edited" Type="DateTime" Precision="0" />
+    <Property Name="edited_by" Type="Int32" />
+  </EntityType>
+  <Association Name="FK__patient_a__addre__5F492382">
+    <End Role="aadmin_data_address_type" Type="Self.aadmin_data_address_type" Multiplicity="0..1" />
+    <End Role="patient_address" Type="Self.patient_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_address_type">
+        <PropertyRef Name="address_type_id" />
+      </Principal>
+      <Dependent Role="patient_address">
+        <PropertyRef Name="address_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__encounter__admis__4C0144E4">
+    <End Role="aadmin_data_admission_type" Type="Self.aadmin_data_admission_type" Multiplicity="0..1" />
+    <End Role="encounter" Type="Self.encounter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_admission_type">
+        <PropertyRef Name="admission_type_id" />
+      </Principal>
+      <Dependent Role="encounter">
+        <PropertyRef Name="admission_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient_f__relat__477199F1">
+    <End Role="aadmin_data_family_relation_type" Type="Self.aadmin_data_family_relation_type" Multiplicity="1" />
+    <End Role="patient_family" Type="Self.patient_family" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_family_relation_type">
+        <PropertyRef Name="relation_id" />
+      </Principal>
+      <Dependent Role="patient_family">
+        <PropertyRef Name="relation_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient_i__insur__63A3C44B">
+    <End Role="aadmin_data_insurance" Type="Self.aadmin_data_insurance" Multiplicity="1" />
+    <End Role="patient_insurance" Type="Self.patient_insurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_insurance">
+        <PropertyRef Name="Insurance_id" />
+      </Principal>
+      <Dependent Role="patient_insurance">
+        <PropertyRef Name="insurance_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient__marital__2704CA5F">
+    <End Role="aadmin_data_marital_status" Type="Self.aadmin_data_marital_status" Multiplicity="0..1" />
+    <End Role="patient" Type="Self.patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_marital_status">
+        <PropertyRef Name="marital_status_id" />
+      </Principal>
+      <Dependent Role="patient">
+        <PropertyRef Name="marital_status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient__patient__28ED12D1">
+    <End Role="aadmin_data_patient_ethnicity" Type="Self.aadmin_data_patient_ethnicity" Multiplicity="0..1" />
+    <End Role="patient" Type="Self.patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_patient_ethnicity">
+        <PropertyRef Name="patient_ethnicity_id" />
+      </Principal>
+      <Dependent Role="patient">
+        <PropertyRef Name="patient_ethnicity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient__gender___2610A626">
+    <End Role="aadmin_data_patient_gender" Type="Self.aadmin_data_patient_gender" Multiplicity="0..1" />
+    <End Role="patient" Type="Self.patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_patient_gender">
+        <PropertyRef Name="gender_id" />
+      </Principal>
+      <Dependent Role="patient">
+        <PropertyRef Name="gender_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient_n__patie__2DB1C7EE">
+    <End Role="aadmin_data_patient_name_type" Type="Self.aadmin_data_patient_name_type" Multiplicity="1" />
+    <End Role="patient_name" Type="Self.patient_name" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_patient_name_type">
+        <PropertyRef Name="patient_name_type_id" />
+      </Principal>
+      <Dependent Role="patient_name">
+        <PropertyRef Name="patient_name_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient__patient__27F8EE98">
+    <End Role="aadmin_data_patient_race" Type="Self.aadmin_data_patient_race" Multiplicity="0..1" />
+    <End Role="patient" Type="Self.patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aadmin_data_patient_race">
+        <PropertyRef Name="patient_race_id" />
+      </Principal>
+      <Dependent Role="patient">
+        <PropertyRef Name="patient_race_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__encounter__facil__4CF5691D">
+    <End Role="hospital_facility" Type="Self.hospital_facility" Multiplicity="0..1" />
+    <End Role="encounter" Type="Self.encounter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hospital_facility">
+        <PropertyRef Name="facility_id" />
+      </Principal>
+      <Dependent Role="encounter">
+        <PropertyRef Name="facility_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__encounter__patie__4DE98D56">
+    <End Role="patient_insurance" Type="Self.patient_insurance" Multiplicity="0..1" />
+    <End Role="encounter" Type="Self.encounter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="patient_insurance">
+        <PropertyRef Name="patient_insurance_id" />
+      </Principal>
+      <Dependent Role="encounter">
+        <PropertyRef Name="patient_insurance_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_p__encou__4242D080">
+    <End Role="encounter" Type="Self.encounter" Multiplicity="0..1" />
+    <End Role="nursing_pca_record" Type="Self.nursing_pca_record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="encounter">
+        <PropertyRef Name="encounter_data_id" />
+      </Principal>
+      <Dependent Role="nursing_pca_record">
+        <PropertyRef Name="encounter_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__hospital___hospi__60C757A0">
+    <End Role="hospital" Type="Self.hospital" Multiplicity="0..1" />
+    <End Role="hospital_doctor" Type="Self.hospital_doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hospital">
+        <PropertyRef Name="hospital_id" />
+      </Principal>
+      <Dependent Role="hospital_doctor">
+        <PropertyRef Name="hospital_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__hospitalI__0E04126B">
+    <End Role="hospital" Type="Self.hospital" Multiplicity="0..1" />
+    <End Role="users" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hospital">
+        <PropertyRef Name="hospital_id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="hospitalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_c__care___546180BB">
+    <End Role="nursing_care_system_assessment_type" Type="Self.nursing_care_system_assessment_type" Multiplicity="0..1" />
+    <End Role="nursing_care_system_assessment" Type="Self.nursing_care_system_assessment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nursing_care_system_assessment_type">
+        <PropertyRef Name="care_system_assessment_type_id" />
+      </Principal>
+      <Dependent Role="nursing_care_system_assessment">
+        <PropertyRef Name="care_system_assessment_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_c__pca_i__5555A4F4">
+    <End Role="nursing_pca_record" Type="Self.nursing_pca_record" Multiplicity="1" />
+    <End Role="nursing_care_system_assessment" Type="Self.nursing_care_system_assessment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nursing_pca_record">
+        <PropertyRef Name="pca_id" />
+      </Principal>
+      <Dependent Role="nursing_care_system_assessment">
+        <PropertyRef Name="pca_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_p__o_two__451F3D2B">
+    <End Role="nursing_o_two_delivery_type" Type="Self.nursing_o_two_delivery_type" Multiplicity="0..1" />
+    <End Role="nursing_pca_record" Type="Self.nursing_pca_record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nursing_o_two_delivery_type">
+        <PropertyRef Name="o_two_delivery_type_id" />
+      </Principal>
+      <Dependent Role="nursing_pca_record">
+        <PropertyRef Name="o_two_delivery_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_p__pain___46136164">
+    <End Role="nursing_pain_scale_type" Type="Self.nursing_pain_scale_type" Multiplicity="0..1" />
+    <End Role="nursing_pca_record" Type="Self.nursing_pca_record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nursing_pain_scale_type">
+        <PropertyRef Name="pain_scale_type_id" />
+      </Principal>
+      <Dependent Role="nursing_pca_record">
+        <PropertyRef Name="pain_scale_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_p__pca_c__5832119F">
+    <End Role="nursing_pca_comment_type" Type="Self.nursing_pca_comment_type" Multiplicity="0..1" />
+    <End Role="nursing_pca_comment" Type="Self.nursing_pca_comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nursing_pca_comment_type">
+        <PropertyRef Name="pca_comment_type_id" />
+      </Principal>
+      <Dependent Role="nursing_pca_comment">
+        <PropertyRef Name="pca_comment_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_p__pca_i__592635D8">
+    <End Role="nursing_pca_record" Type="Self.nursing_pca_record" Multiplicity="1" />
+    <End Role="nursing_pca_comment" Type="Self.nursing_pca_comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nursing_pca_record">
+        <PropertyRef Name="pca_id" />
+      </Principal>
+      <Dependent Role="nursing_pca_comment">
+        <PropertyRef Name="pca_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_p__pulse__442B18F2">
+    <End Role="nursing_pulse_route_type" Type="Self.nursing_pulse_route_type" Multiplicity="0..1" />
+    <End Role="nursing_pca_record" Type="Self.nursing_pca_record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nursing_pulse_route_type">
+        <PropertyRef Name="pulse_route_type_id" />
+      </Principal>
+      <Dependent Role="nursing_pca_record">
+        <PropertyRef Name="pulse_route_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__nursing_p__temp___4336F4B9">
+    <End Role="nursing_temp_route_type" Type="Self.nursing_temp_route_type" Multiplicity="0..1" />
+    <End Role="nursing_pca_record" Type="Self.nursing_pca_record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nursing_temp_route_type">
+        <PropertyRef Name="temp_route_type_id" />
+      </Principal>
+      <Dependent Role="nursing_pca_record">
+        <PropertyRef Name="temp_route_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient_a__patie__61316BF4">
+    <End Role="patient" Type="Self.patient" Multiplicity="1" />
+    <End Role="patient_address" Type="Self.patient_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="patient">
+        <PropertyRef Name="patient_id" />
+      </Principal>
+      <Dependent Role="patient_address">
+        <PropertyRef Name="patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient_b__patie__20E1DCB5">
+    <End Role="patient" Type="Self.patient" Multiplicity="1" />
+    <End Role="patient_birth_information" Type="Self.patient_birth_information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="patient">
+        <PropertyRef Name="patient_id" />
+      </Principal>
+      <Dependent Role="patient_birth_information">
+        <PropertyRef Name="patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient_f__patie__467D75B8">
+    <End Role="patient" Type="Self.patient" Multiplicity="1" />
+    <End Role="patient_family" Type="Self.patient_family" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="patient">
+        <PropertyRef Name="patient_id" />
+      </Principal>
+      <Dependent Role="patient_family">
+        <PropertyRef Name="patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient_i__patie__6497E884">
+    <End Role="patient" Type="Self.patient" Multiplicity="1" />
+    <End Role="patient_insurance" Type="Self.patient_insurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="patient">
+        <PropertyRef Name="patient_id" />
+      </Principal>
+      <Dependent Role="patient_insurance">
+        <PropertyRef Name="patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patient_n__patie__2CBDA3B5">
+    <End Role="patient" Type="Self.patient" Multiplicity="1" />
+    <End Role="patient_name" Type="Self.patient_name" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="patient">
+        <PropertyRef Name="patient_id" />
+      </Principal>
+      <Dependent Role="patient_name">
+        <PropertyRef Name="patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__roleId__1ED998B2">
+    <End Role="role" Type="Self.role" Multiplicity="0..1" />
+    <End Role="users" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="roleId" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="roleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__userAccou__userI__1CF15040">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="userAccount" Type="Self.userAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="userAccount">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__record__birthRec__30F848ED">
+    <End Role="zz_birthRecord" Type="Self.zz_birthRecord" Multiplicity="0..1" />
+    <End Role="zz_record" Type="Self.zz_record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zz_birthRecord">
+        <PropertyRef Name="birthRecordId" />
+      </Principal>
+      <Dependent Role="zz_record">
+        <PropertyRef Name="birthRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__record__hospital__2D27B809">
+    <End Role="zz_hospital" Type="Self.zz_hospital" Multiplicity="0..1" />
+    <End Role="zz_record" Type="Self.zz_record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zz_hospital">
+        <PropertyRef Name="hospitalId" />
+      </Principal>
+      <Dependent Role="zz_record">
+        <PropertyRef Name="hospitalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__patientRa__patie__1B0907CE">
+    <End Role="zz_patient" Type="Self.zz_patient" Multiplicity="0..1" />
+    <End Role="zz_patientRace" Type="Self.zz_patientRace" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zz_patient">
+        <PropertyRef Name="patientId" />
+      </Principal>
+      <Dependent Role="zz_patientRace">
+        <PropertyRef Name="patientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__record__patientI__2C3393D0">
+    <End Role="zz_patient" Type="Self.zz_patient" Multiplicity="0..1" />
+    <End Role="zz_record" Type="Self.zz_record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zz_patient">
+        <PropertyRef Name="patientId" />
+      </Principal>
+      <Dependent Role="zz_record">
+        <PropertyRef Name="patientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HITProjectData_Fall17Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aadmin_data_address_type" EntityType="Self.aadmin_data_address_type" />
+    <EntitySet Name="aadmin_data_admission_type" EntityType="Self.aadmin_data_admission_type" />
+    <EntitySet Name="aadmin_data_family_relation_type" EntityType="Self.aadmin_data_family_relation_type" />
+    <EntitySet Name="aadmin_data_insurance" EntityType="Self.aadmin_data_insurance" />
+    <EntitySet Name="aadmin_data_marital_status" EntityType="Self.aadmin_data_marital_status" />
+    <EntitySet Name="aadmin_data_patient_ethnicity" EntityType="Self.aadmin_data_patient_ethnicity" />
+    <EntitySet Name="aadmin_data_patient_gender" EntityType="Self.aadmin_data_patient_gender" />
+    <EntitySet Name="aadmin_data_patient_name_type" EntityType="Self.aadmin_data_patient_name_type" />
+    <EntitySet Name="aadmin_data_patient_race" EntityType="Self.aadmin_data_patient_race" />
+    <EntitySet Name="encounters" EntityType="Self.encounter" />
+    <EntitySet Name="hospitals" EntityType="Self.hospital" />
+    <EntitySet Name="hospital_doctor" EntityType="Self.hospital_doctor" />
+    <EntitySet Name="hospital_facility" EntityType="Self.hospital_facility" />
+    <EntitySet Name="nursing_care_system_assessment" EntityType="Self.nursing_care_system_assessment" />
+    <EntitySet Name="nursing_care_system_assessment_history" EntityType="Self.nursing_care_system_assessment_history" />
+    <EntitySet Name="nursing_care_system_assessment_type" EntityType="Self.nursing_care_system_assessment_type" />
+    <EntitySet Name="nursing_o_two_delivery_type" EntityType="Self.nursing_o_two_delivery_type" />
+    <EntitySet Name="nursing_pain_scale_type" EntityType="Self.nursing_pain_scale_type" />
+    <EntitySet Name="nursing_pca_comment" EntityType="Self.nursing_pca_comment" />
+    <EntitySet Name="nursing_pca_comment_type" EntityType="Self.nursing_pca_comment_type" />
+    <EntitySet Name="nursing_pca_record" EntityType="Self.nursing_pca_record" />
+    <EntitySet Name="nursing_pca_record_history" EntityType="Self.nursing_pca_record_history" />
+    <EntitySet Name="nursing_pulse_route_type" EntityType="Self.nursing_pulse_route_type" />
+    <EntitySet Name="nursing_temp_route_type" EntityType="Self.nursing_temp_route_type" />
+    <EntitySet Name="patients" EntityType="Self.patient" />
+    <EntitySet Name="patient_address" EntityType="Self.patient_address" />
+    <EntitySet Name="patient_birth_information" EntityType="Self.patient_birth_information" />
+    <EntitySet Name="patient_family" EntityType="Self.patient_family" />
+    <EntitySet Name="patient_insurance" EntityType="Self.patient_insurance" />
+    <EntitySet Name="patient_name" EntityType="Self.patient_name" />
+    <EntitySet Name="Logs" EntityType="Self.Log" />
+    <EntitySet Name="roles" EntityType="Self.role" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="userAccounts" EntityType="Self.userAccount" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="zz_birthRecord" EntityType="Self.zz_birthRecord" />
+    <EntitySet Name="zz_hospital" EntityType="Self.zz_hospital" />
+    <EntitySet Name="zz_patient" EntityType="Self.zz_patient" />
+    <EntitySet Name="zz_patientRace" EntityType="Self.zz_patientRace" />
+    <EntitySet Name="zz_record" EntityType="Self.zz_record" />
+    <EntitySet Name="encounter_main" EntityType="Self.encounter_main" />
+    <EntitySet Name="patient_family_list" EntityType="Self.patient_family_list" />
+    <EntitySet Name="patient_general_info" EntityType="Self.patient_general_info" />
+    <EntitySet Name="patient_name_list" EntityType="Self.patient_name_list" />
+    <AssociationSet Name="FK__patient_a__addre__5F492382" Association="Self.FK__patient_a__addre__5F492382">
+      <End Role="aadmin_data_address_type" EntitySet="aadmin_data_address_type" />
+      <End Role="patient_address" EntitySet="patient_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK__encounter__admis__4C0144E4" Association="Self.FK__encounter__admis__4C0144E4">
+      <End Role="aadmin_data_admission_type" EntitySet="aadmin_data_admission_type" />
+      <End Role="encounter" EntitySet="encounters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient_f__relat__477199F1" Association="Self.FK__patient_f__relat__477199F1">
+      <End Role="aadmin_data_family_relation_type" EntitySet="aadmin_data_family_relation_type" />
+      <End Role="patient_family" EntitySet="patient_family" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient_i__insur__63A3C44B" Association="Self.FK__patient_i__insur__63A3C44B">
+      <End Role="aadmin_data_insurance" EntitySet="aadmin_data_insurance" />
+      <End Role="patient_insurance" EntitySet="patient_insurance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient__marital__2704CA5F" Association="Self.FK__patient__marital__2704CA5F">
+      <End Role="aadmin_data_marital_status" EntitySet="aadmin_data_marital_status" />
+      <End Role="patient" EntitySet="patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient__patient__28ED12D1" Association="Self.FK__patient__patient__28ED12D1">
+      <End Role="aadmin_data_patient_ethnicity" EntitySet="aadmin_data_patient_ethnicity" />
+      <End Role="patient" EntitySet="patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient__gender___2610A626" Association="Self.FK__patient__gender___2610A626">
+      <End Role="aadmin_data_patient_gender" EntitySet="aadmin_data_patient_gender" />
+      <End Role="patient" EntitySet="patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient_n__patie__2DB1C7EE" Association="Self.FK__patient_n__patie__2DB1C7EE">
+      <End Role="aadmin_data_patient_name_type" EntitySet="aadmin_data_patient_name_type" />
+      <End Role="patient_name" EntitySet="patient_name" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient__patient__27F8EE98" Association="Self.FK__patient__patient__27F8EE98">
+      <End Role="aadmin_data_patient_race" EntitySet="aadmin_data_patient_race" />
+      <End Role="patient" EntitySet="patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__encounter__facil__4CF5691D" Association="Self.FK__encounter__facil__4CF5691D">
+      <End Role="hospital_facility" EntitySet="hospital_facility" />
+      <End Role="encounter" EntitySet="encounters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__encounter__patie__4DE98D56" Association="Self.FK__encounter__patie__4DE98D56">
+      <End Role="patient_insurance" EntitySet="patient_insurance" />
+      <End Role="encounter" EntitySet="encounters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_p__encou__4242D080" Association="Self.FK__nursing_p__encou__4242D080">
+      <End Role="encounter" EntitySet="encounters" />
+      <End Role="nursing_pca_record" EntitySet="nursing_pca_record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__hospital___hospi__60C757A0" Association="Self.FK__hospital___hospi__60C757A0">
+      <End Role="hospital" EntitySet="hospitals" />
+      <End Role="hospital_doctor" EntitySet="hospital_doctor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__hospitalI__0E04126B" Association="Self.FK__users__hospitalI__0E04126B">
+      <End Role="hospital" EntitySet="hospitals" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_c__care___546180BB" Association="Self.FK__nursing_c__care___546180BB">
+      <End Role="nursing_care_system_assessment_type" EntitySet="nursing_care_system_assessment_type" />
+      <End Role="nursing_care_system_assessment" EntitySet="nursing_care_system_assessment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_c__pca_i__5555A4F4" Association="Self.FK__nursing_c__pca_i__5555A4F4">
+      <End Role="nursing_pca_record" EntitySet="nursing_pca_record" />
+      <End Role="nursing_care_system_assessment" EntitySet="nursing_care_system_assessment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_p__o_two__451F3D2B" Association="Self.FK__nursing_p__o_two__451F3D2B">
+      <End Role="nursing_o_two_delivery_type" EntitySet="nursing_o_two_delivery_type" />
+      <End Role="nursing_pca_record" EntitySet="nursing_pca_record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_p__pain___46136164" Association="Self.FK__nursing_p__pain___46136164">
+      <End Role="nursing_pain_scale_type" EntitySet="nursing_pain_scale_type" />
+      <End Role="nursing_pca_record" EntitySet="nursing_pca_record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_p__pca_c__5832119F" Association="Self.FK__nursing_p__pca_c__5832119F">
+      <End Role="nursing_pca_comment_type" EntitySet="nursing_pca_comment_type" />
+      <End Role="nursing_pca_comment" EntitySet="nursing_pca_comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_p__pca_i__592635D8" Association="Self.FK__nursing_p__pca_i__592635D8">
+      <End Role="nursing_pca_record" EntitySet="nursing_pca_record" />
+      <End Role="nursing_pca_comment" EntitySet="nursing_pca_comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_p__pulse__442B18F2" Association="Self.FK__nursing_p__pulse__442B18F2">
+      <End Role="nursing_pulse_route_type" EntitySet="nursing_pulse_route_type" />
+      <End Role="nursing_pca_record" EntitySet="nursing_pca_record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__nursing_p__temp___4336F4B9" Association="Self.FK__nursing_p__temp___4336F4B9">
+      <End Role="nursing_temp_route_type" EntitySet="nursing_temp_route_type" />
+      <End Role="nursing_pca_record" EntitySet="nursing_pca_record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient_a__patie__61316BF4" Association="Self.FK__patient_a__patie__61316BF4">
+      <End Role="patient" EntitySet="patients" />
+      <End Role="patient_address" EntitySet="patient_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient_b__patie__20E1DCB5" Association="Self.FK__patient_b__patie__20E1DCB5">
+      <End Role="patient" EntitySet="patients" />
+      <End Role="patient_birth_information" EntitySet="patient_birth_information" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient_f__patie__467D75B8" Association="Self.FK__patient_f__patie__467D75B8">
+      <End Role="patient" EntitySet="patients" />
+      <End Role="patient_family" EntitySet="patient_family" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient_i__patie__6497E884" Association="Self.FK__patient_i__patie__6497E884">
+      <End Role="patient" EntitySet="patients" />
+      <End Role="patient_insurance" EntitySet="patient_insurance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patient_n__patie__2CBDA3B5" Association="Self.FK__patient_n__patie__2CBDA3B5">
+      <End Role="patient" EntitySet="patients" />
+      <End Role="patient_name" EntitySet="patient_name" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__roleId__1ED998B2" Association="Self.FK__users__roleId__1ED998B2">
+      <End Role="role" EntitySet="roles" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__userAccou__userI__1CF15040" Association="Self.FK__userAccou__userI__1CF15040">
+      <End Role="users" EntitySet="users" />
+      <End Role="userAccount" EntitySet="userAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__record__birthRec__30F848ED" Association="Self.FK__record__birthRec__30F848ED">
+      <End Role="zz_birthRecord" EntitySet="zz_birthRecord" />
+      <End Role="zz_record" EntitySet="zz_record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__record__hospital__2D27B809" Association="Self.FK__record__hospital__2D27B809">
+      <End Role="zz_hospital" EntitySet="zz_hospital" />
+      <End Role="zz_record" EntitySet="zz_record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__patientRa__patie__1B0907CE" Association="Self.FK__patientRa__patie__1B0907CE">
+      <End Role="zz_patient" EntitySet="zz_patient" />
+      <End Role="zz_patientRace" EntitySet="zz_patientRace" />
+    </AssociationSet>
+    <AssociationSet Name="FK__record__patientI__2C3393D0" Association="Self.FK__record__patientI__2C3393D0">
+      <End Role="zz_patient" EntitySet="zz_patient" />
+      <End Role="zz_record" EntitySet="zz_record" />
+    </AssociationSet>
+    <EntitySet Name="nursing_pca_comment_history" EntityType="HITProjectData_Fall17Model.nursing_pca_comment_history" />
+  </EntityContainer>
+  <EntityType Name="nursing_pca_comment_history">
+    <Key>
+      <PropertyRef Name="pca_comment_history_id" />
+    </Key>
+    <Property Name="pca_comment_history_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pca_comment_id" Type="Int32" />
+    <Property Name="pca_comment_type_id" Type="Int32" />
+    <Property Name="pca_id" Type="Int32" />
+    <Property Name="pca_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date_comment_original" Type="DateTime" Precision="3" />
+    <Property Name="date_comment_modified" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

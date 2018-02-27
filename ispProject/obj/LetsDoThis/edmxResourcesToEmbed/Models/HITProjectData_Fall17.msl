@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HITProjectData_Fall17ModelStoreContainer" CdmEntityContainer="HITProjectData_Fall17Entities1">
+    <EntitySetMapping Name="aadmin_data_address_type">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_address_type">
+        <MappingFragment StoreEntitySet="aadmin_data_address_type">
+          <ScalarProperty Name="address_type_id" ColumnName="address_type_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aadmin_data_admission_type">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_admission_type">
+        <MappingFragment StoreEntitySet="aadmin_data_admission_type">
+          <ScalarProperty Name="admission_type_id" ColumnName="admission_type_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aadmin_data_family_relation_type">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_family_relation_type">
+        <MappingFragment StoreEntitySet="aadmin_data_family_relation_type">
+          <ScalarProperty Name="relation_id" ColumnName="relation_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aadmin_data_insurance">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_insurance">
+        <MappingFragment StoreEntitySet="aadmin_data_insurance">
+          <ScalarProperty Name="Insurance_id" ColumnName="Insurance_id" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="extension" ColumnName="extension" />
+          <ScalarProperty Name="address_street_one" ColumnName="address_street_one" />
+          <ScalarProperty Name="address_street_two" ColumnName="address_street_two" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aadmin_data_marital_status">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_marital_status">
+        <MappingFragment StoreEntitySet="aadmin_data_marital_status">
+          <ScalarProperty Name="marital_status_id" ColumnName="marital_status_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aadmin_data_patient_ethnicity">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_patient_ethnicity">
+        <MappingFragment StoreEntitySet="aadmin_data_patient_ethnicity">
+          <ScalarProperty Name="patient_ethnicity_id" ColumnName="patient_ethnicity_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aadmin_data_patient_gender">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_patient_gender">
+        <MappingFragment StoreEntitySet="aadmin_data_patient_gender">
+          <ScalarProperty Name="gender_id" ColumnName="gender_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aadmin_data_patient_name_type">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_patient_name_type">
+        <MappingFragment StoreEntitySet="aadmin_data_patient_name_type">
+          <ScalarProperty Name="patient_name_type_id" ColumnName="patient_name_type_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aadmin_data_patient_race">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.aadmin_data_patient_race">
+        <MappingFragment StoreEntitySet="aadmin_data_patient_race">
+          <ScalarProperty Name="patient_race_id" ColumnName="patient_race_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="encounters">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.encounter">
+        <MappingFragment StoreEntitySet="encounter">
+          <ScalarProperty Name="encounter_data_id" ColumnName="encounter_data_id" />
+          <ScalarProperty Name="encounter_id" ColumnName="encounter_id" />
+          <ScalarProperty Name="attending_doctor_id" ColumnName="attending_doctor_id" />
+          <ScalarProperty Name="facility_id" ColumnName="facility_id" />
+          <ScalarProperty Name="chief_complaint" ColumnName="chief_complaint" />
+          <ScalarProperty Name="admission_type_id" ColumnName="admission_type_id" />
+          <ScalarProperty Name="patient_insurance_id" ColumnName="patient_insurance_id" />
+          <ScalarProperty Name="admission_date" ColumnName="admission_date" />
+          <ScalarProperty Name="discharge_date" ColumnName="discharge_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hospitals">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.hospital">
+        <MappingFragment StoreEntitySet="hospital">
+          <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hospital_facility">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.hospital_facility">
+        <MappingFragment StoreEntitySet="hospital_facility">
+          <ScalarProperty Name="facility_id" ColumnName="facility_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_updated" ColumnName="date_updated" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nursing_body_system">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.nursing_body_system">
+        <MappingFragment StoreEntitySet="nursing_body_system">
+          <ScalarProperty Name="body_sys_id" ColumnName="body_sys_id" />
+          <ScalarProperty Name="body_system_type_id" ColumnName="body_system_type_id" />
+          <ScalarProperty Name="pca_id" ColumnName="pca_id" />
+          <ScalarProperty Name="wld_ex" ColumnName="wld_ex" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="date_time_add_body_sys" ColumnName="date_time_add_body_sys" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nursing_body_system_type">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.nursing_body_system_type">
+        <MappingFragment StoreEntitySet="nursing_body_system_type">
+          <ScalarProperty Name="body_sys_type_id" ColumnName="body_sys_type_id" />
+          <ScalarProperty Name="body_sys_history_id" ColumnName="body_sys_history_id" />
+          <ScalarProperty Name="body_sys_type_name" ColumnName="body_sys_type_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nursing_pca_comment_type">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.nursing_pca_comment_type">
+        <MappingFragment StoreEntitySet="nursing_pca_comment_type">
+          <ScalarProperty Name="comment_type_id" ColumnName="comment_type_id" />
+          <ScalarProperty Name="pca_id" ColumnName="pca_id" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+          <ScalarProperty Name="date_time_add_comment" ColumnName="date_time_add_comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nursing_pca_record">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.nursing_pca_record">
+        <MappingFragment StoreEntitySet="nursing_pca_record">
+          <ScalarProperty Name="pca_id" ColumnName="pca_id" />
+          <ScalarProperty Name="encounter_id" ColumnName="encounter_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nursing_vital_record">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.nursing_vital_record">
+        <MappingFragment StoreEntitySet="nursing_vital_record">
+          <ScalarProperty Name="vital_id" ColumnName="vital_id" />
+          <ScalarProperty Name="pca_id" ColumnName="pca_id" />
+          <ScalarProperty Name="date_time_add_vitals" ColumnName="date_time_add_vitals" />
+          <ScalarProperty Name="pain" ColumnName="pain" />
+          <ScalarProperty Name="wdl_ex" ColumnName="wdl_ex" />
+          <ScalarProperty Name="vitals_comment" ColumnName="vitals_comment" />
+          <ScalarProperty Name="pain_comments" ColumnName="pain_comments" />
+          <ScalarProperty Name="temperature" ColumnName="temperature" />
+          <ScalarProperty Name="temp_route" ColumnName="temp_route" />
+          <ScalarProperty Name="pulse" ColumnName="pulse" />
+          <ScalarProperty Name="pulse_route" ColumnName="pulse_route" />
+          <ScalarProperty Name="respiration" ColumnName="respiration" />
+          <ScalarProperty Name="systolic_b_pressure" ColumnName="systolic_b_pressure" />
+          <ScalarProperty Name="diastolic_b_pressure" ColumnName="diastolic_b_pressure" />
+          <ScalarProperty Name="pulse_oximetry" ColumnName="pulse_oximetry" />
+          <ScalarProperty Name="oxygen_flow" ColumnName="oxygen_flow" />
+          <ScalarProperty Name="otwo_delivery_method" ColumnName="otwo_delivery_method" />
+          <ScalarProperty Name="pain_scale_used" ColumnName="pain_scale_used" />
+          <ScalarProperty Name="pain_scale_goal" ColumnName="pain_scale_goal" />
+          <ScalarProperty Name="pain_level_actual" ColumnName="pain_level_actual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patients">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient">
+        <MappingFragment StoreEntitySet="patient">
+          <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+          <ScalarProperty Name="medical_record_number" ColumnName="medical_record_number" />
+          <ScalarProperty Name="mother_maiden_name" ColumnName="mother_maiden_name" />
+          <ScalarProperty Name="gender_id" ColumnName="gender_id" />
+          <ScalarProperty Name="social_security_number" ColumnName="social_security_number" />
+          <ScalarProperty Name="patient_race_id" ColumnName="patient_race_id" />
+          <ScalarProperty Name="patient_ethnicity_id" ColumnName="patient_ethnicity_id" />
+          <ScalarProperty Name="marital_status_id" ColumnName="marital_status_id" />
+          <ScalarProperty Name="in_city" ColumnName="in_city" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_address">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient_address">
+        <MappingFragment StoreEntitySet="patient_address">
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+          <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+          <ScalarProperty Name="street_address_one" ColumnName="street_address_one" />
+          <ScalarProperty Name="street_address_two" ColumnName="street_address_two" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="address_type_id" ColumnName="address_type_id" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+          <ScalarProperty Name="address_is_valid" ColumnName="address_is_valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_birth_information">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient_birth_information">
+        <MappingFragment StoreEntitySet="patient_birth_information">
+          <ScalarProperty Name="birth_id" ColumnName="birth_id" />
+          <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+          <ScalarProperty Name="birth_facility" ColumnName="birth_facility" />
+          <ScalarProperty Name="birth_city" ColumnName="birth_city" />
+          <ScalarProperty Name="birth_state" ColumnName="birth_state" />
+          <ScalarProperty Name="birth_record_id" ColumnName="birth_record_id" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_family">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient_family">
+        <MappingFragment StoreEntitySet="patient_family">
+          <ScalarProperty Name="family_id" ColumnName="family_id" />
+          <ScalarProperty Name="relation_id" ColumnName="relation_id" />
+          <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+          <ScalarProperty Name="social_security_number" ColumnName="social_security_number" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="address_street_one" ColumnName="address_street_one" />
+          <ScalarProperty Name="address_street_two" ColumnName="address_street_two" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_insurance">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient_insurance">
+        <MappingFragment StoreEntitySet="patient_insurance">
+          <ScalarProperty Name="patient_insurance_id" ColumnName="patient_insurance_id" />
+          <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+          <ScalarProperty Name="insurance_id" ColumnName="insurance_id" />
+          <ScalarProperty Name="individual_insurance_id" ColumnName="individual_insurance_id" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_name">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient_name">
+        <MappingFragment StoreEntitySet="patient_name">
+          <ScalarProperty Name="patient_name_id" ColumnName="patient_name_id" />
+          <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="suffix" ColumnName="suffix" />
+          <ScalarProperty Name="patient_name_type_id" ColumnName="patient_name_type_id" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.Log">
+        <MappingFragment StoreEntitySet="Logs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="EventLevel" ColumnName="EventLevel" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="EventMessage" ColumnName="EventMessage" />
+          <ScalarProperty Name="ErrorSource" ColumnName="ErrorSource" />
+          <ScalarProperty Name="ErrorClass" ColumnName="ErrorClass" />
+          <ScalarProperty Name="ErrorMethod" ColumnName="ErrorMethod" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="InnerErrorMessage" ColumnName="InnerErrorMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="dateUpdated" ColumnName="dateUpdated" />
+          <ScalarProperty Name="editedBy" ColumnName="editedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userAccounts">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.userAccount">
+        <MappingFragment StoreEntitySet="userAccount">
+          <ScalarProperty Name="userAccountId" ColumnName="userAccountId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="passwordHash" ColumnName="passwordHash" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="dateUpdated" ColumnName="dateUpdated" />
+          <ScalarProperty Name="editedBy" ColumnName="editedBy" />
+          <ScalarProperty Name="userGuid" ColumnName="userGuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="hospitalId" ColumnName="hospitalId" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="dateUpdated" ColumnName="dateUpdated" />
+          <ScalarProperty Name="editedBy" ColumnName="editedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zz_birthRecord">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.zz_birthRecord">
+        <MappingFragment StoreEntitySet="zz_birthRecord">
+          <ScalarProperty Name="birthRecordId" ColumnName="birthRecordId" />
+          <ScalarProperty Name="certiferName" ColumnName="certiferName" />
+          <ScalarProperty Name="certiferTitle" ColumnName="certiferTitle" />
+          <ScalarProperty Name="certiferDate" ColumnName="certiferDate" />
+          <ScalarProperty Name="filedDate" ColumnName="filedDate" />
+          <ScalarProperty Name="paternityAck" ColumnName="paternityAck" />
+          <ScalarProperty Name="ssnRequested" ColumnName="ssnRequested" />
+          <ScalarProperty Name="facilityId" ColumnName="facilityId" />
+          <ScalarProperty Name="birthFacility" ColumnName="birthFacility" />
+          <ScalarProperty Name="homebirth" ColumnName="homebirth" />
+          <ScalarProperty Name="attendantName" ColumnName="attendantName" />
+          <ScalarProperty Name="attendantNpi" ColumnName="attendantNpi" />
+          <ScalarProperty Name="attendantTitle" ColumnName="attendantTitle" />
+          <ScalarProperty Name="motherTransferred" ColumnName="motherTransferred" />
+          <ScalarProperty Name="transferFacility" ColumnName="transferFacility" />
+          <ScalarProperty Name="firstPrenatal" ColumnName="firstPrenatal" />
+          <ScalarProperty Name="lastPrenatal" ColumnName="lastPrenatal" />
+          <ScalarProperty Name="totalPrenatal" ColumnName="totalPrenatal" />
+          <ScalarProperty Name="motherPreWeight" ColumnName="motherPreWeight" />
+          <ScalarProperty Name="motherPostWeight" ColumnName="motherPostWeight" />
+          <ScalarProperty Name="motherDeliveryWeight" ColumnName="motherDeliveryWeight" />
+          <ScalarProperty Name="hadWic" ColumnName="hadWic" />
+          <ScalarProperty Name="previousBirthLiving" ColumnName="previousBirthLiving" />
+          <ScalarProperty Name="previousBirthDead" ColumnName="previousBirthDead" />
+          <ScalarProperty Name="lastLiveBirth" ColumnName="lastLiveBirth" />
+          <ScalarProperty Name="otherBirthOutcomes" ColumnName="otherBirthOutcomes" />
+          <ScalarProperty Name="lastOtherOutcome" ColumnName="lastOtherOutcome" />
+          <ScalarProperty Name="cigThreeBefore" ColumnName="cigThreeBefore" />
+          <ScalarProperty Name="packThreeBefore" ColumnName="packThreeBefore" />
+          <ScalarProperty Name="cigFirstThree" ColumnName="cigFirstThree" />
+          <ScalarProperty Name="packFirstThree" ColumnName="packFirstThree" />
+          <ScalarProperty Name="cigSecondThree" ColumnName="cigSecondThree" />
+          <ScalarProperty Name="packSecondThree" ColumnName="packSecondThree" />
+          <ScalarProperty Name="cigThirdTri" ColumnName="cigThirdTri" />
+          <ScalarProperty Name="packThirdTri" ColumnName="packThirdTri" />
+          <ScalarProperty Name="paymentSource" ColumnName="paymentSource" />
+          <ScalarProperty Name="dateLastMenses" ColumnName="dateLastMenses" />
+          <ScalarProperty Name="diabetesPrepregnancy" ColumnName="diabetesPrepregnancy" />
+          <ScalarProperty Name="diabetesGestational" ColumnName="diabetesGestational" />
+          <ScalarProperty Name="hyperTensionPrepregnancy" ColumnName="hyperTensionPrepregnancy" />
+          <ScalarProperty Name="hyperTensionGestational" ColumnName="hyperTensionGestational" />
+          <ScalarProperty Name="hyperTensionEclampsia" ColumnName="hyperTensionEclampsia" />
+          <ScalarProperty Name="prePreTerm" ColumnName="prePreTerm" />
+          <ScalarProperty Name="prePoorOutcome" ColumnName="prePoorOutcome" />
+          <ScalarProperty Name="resultInfertility" ColumnName="resultInfertility" />
+          <ScalarProperty Name="fertilityDrug" ColumnName="fertilityDrug" />
+          <ScalarProperty Name="assistedTech" ColumnName="assistedTech" />
+          <ScalarProperty Name="previousCesarean" ColumnName="previousCesarean" />
+          <ScalarProperty Name="previousCesareanAmount" ColumnName="previousCesareanAmount" />
+          <ScalarProperty Name="gonorrhea" ColumnName="gonorrhea" />
+          <ScalarProperty Name="syphilis" ColumnName="syphilis" />
+          <ScalarProperty Name="chlamydia" ColumnName="chlamydia" />
+          <ScalarProperty Name="hepB" ColumnName="hepB" />
+          <ScalarProperty Name="hepC" ColumnName="hepC" />
+          <ScalarProperty Name="cervicalCerclage" ColumnName="cervicalCerclage" />
+          <ScalarProperty Name="tocolysis" ColumnName="tocolysis" />
+          <ScalarProperty Name="externalCephalic" ColumnName="externalCephalic" />
+          <ScalarProperty Name="preRuptureMembrane" ColumnName="preRuptureMembrane" />
+          <ScalarProperty Name="preLabor" ColumnName="preLabor" />
+          <ScalarProperty Name="proLabor" ColumnName="proLabor" />
+          <ScalarProperty Name="inductionLabor" ColumnName="inductionLabor" />
+          <ScalarProperty Name="augmentationLabor" ColumnName="augmentationLabor" />
+          <ScalarProperty Name="nonvertex" ColumnName="nonvertex" />
+          <ScalarProperty Name="steroids" ColumnName="steroids" />
+          <ScalarProperty Name="antibotics" ColumnName="antibotics" />
+          <ScalarProperty Name="chorioamnionitis" ColumnName="chorioamnionitis" />
+          <ScalarProperty Name="meconium" ColumnName="meconium" />
+          <ScalarProperty Name="fetalIntolerance" ColumnName="fetalIntolerance" />
+          <ScalarProperty Name="epidural" ColumnName="epidural" />
+          <ScalarProperty Name="unsuccessfulForceps" ColumnName="unsuccessfulForceps" />
+          <ScalarProperty Name="unsuccessfulVacuum" ColumnName="unsuccessfulVacuum" />
+          <ScalarProperty Name="cephalic" ColumnName="cephalic" />
+          <ScalarProperty Name="breech" ColumnName="breech" />
+          <ScalarProperty Name="otherFetalPresentation" ColumnName="otherFetalPresentation" />
+          <ScalarProperty Name="finalSpontaneous" ColumnName="finalSpontaneous" />
+          <ScalarProperty Name="finalForceps" ColumnName="finalForceps" />
+          <ScalarProperty Name="finalVacuum" ColumnName="finalVacuum" />
+          <ScalarProperty Name="finalCesarean" ColumnName="finalCesarean" />
+          <ScalarProperty Name="finalTrialOfLabor" ColumnName="finalTrialOfLabor" />
+          <ScalarProperty Name="maternalTransfusion" ColumnName="maternalTransfusion" />
+          <ScalarProperty Name="perinealLaceration" ColumnName="perinealLaceration" />
+          <ScalarProperty Name="rupturedUterus" ColumnName="rupturedUterus" />
+          <ScalarProperty Name="hysterectomy" ColumnName="hysterectomy" />
+          <ScalarProperty Name="admitICU" ColumnName="admitICU" />
+          <ScalarProperty Name="unplannedOperating" ColumnName="unplannedOperating" />
+          <ScalarProperty Name="fiveMinAgpar" ColumnName="fiveMinAgpar" />
+          <ScalarProperty Name="tenMinAgpar" ColumnName="tenMinAgpar" />
+          <ScalarProperty Name="plurality" ColumnName="plurality" />
+          <ScalarProperty Name="birthOrder" ColumnName="birthOrder" />
+          <ScalarProperty Name="ventImmedite" ColumnName="ventImmedite" />
+          <ScalarProperty Name="ventSixHours" ColumnName="ventSixHours" />
+          <ScalarProperty Name="nicu" ColumnName="nicu" />
+          <ScalarProperty Name="surfactant" ColumnName="surfactant" />
+          <ScalarProperty Name="neoNatalAntibotics" ColumnName="neoNatalAntibotics" />
+          <ScalarProperty Name="seizureDysfunction" ColumnName="seizureDysfunction" />
+          <ScalarProperty Name="birthInjury" ColumnName="birthInjury" />
+          <ScalarProperty Name="anencephaly" ColumnName="anencephaly" />
+          <ScalarProperty Name="meningomyelocele" ColumnName="meningomyelocele" />
+          <ScalarProperty Name="cyanotic" ColumnName="cyanotic" />
+          <ScalarProperty Name="cogenital" ColumnName="cogenital" />
+          <ScalarProperty Name="omphalocele" ColumnName="omphalocele" />
+          <ScalarProperty Name="gastroschisis" ColumnName="gastroschisis" />
+          <ScalarProperty Name="limbReduction" ColumnName="limbReduction" />
+          <ScalarProperty Name="cleftLip" ColumnName="cleftLip" />
+          <ScalarProperty Name="cleftPalate" ColumnName="cleftPalate" />
+          <ScalarProperty Name="downConfirmed" ColumnName="downConfirmed" />
+          <ScalarProperty Name="downPending" ColumnName="downPending" />
+          <ScalarProperty Name="suspectedConfirmed" ColumnName="suspectedConfirmed" />
+          <ScalarProperty Name="suspectedPending" ColumnName="suspectedPending" />
+          <ScalarProperty Name="hypospadias" ColumnName="hypospadias" />
+          <ScalarProperty Name="infantTransferred" ColumnName="infantTransferred" />
+          <ScalarProperty Name="infantLiving" ColumnName="infantLiving" />
+          <ScalarProperty Name="breastFed" ColumnName="breastFed" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="dateEdited" ColumnName="dateEdited" />
+          <ScalarProperty Name="editedBy" ColumnName="editedBy" />
+          <ScalarProperty Name="estimateGestation" ColumnName="estimateGestation" />
+          <ScalarProperty Name="birthWeight" ColumnName="birthWeight" />
+          <ScalarProperty Name="downSyndrome" ColumnName="downSyndrome" />
+          <ScalarProperty Name="suspectedDisorder" ColumnName="suspectedDisorder" />
+          <ScalarProperty Name="infantTransferFacility" ColumnName="infantTransferFacility" />
+          <ScalarProperty Name="noPrenatal" ColumnName="noPrenatal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zz_hospital">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.zz_hospital">
+        <MappingFragment StoreEntitySet="zz_hospital">
+          <ScalarProperty Name="hospitalId" ColumnName="hospitalId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="dateUpdated" ColumnName="dateUpdated" />
+          <ScalarProperty Name="editedBy" ColumnName="editedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zz_patient">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.zz_patient">
+        <MappingFragment StoreEntitySet="zz_patient">
+          <ScalarProperty Name="patientId" ColumnName="patientId" />
+          <ScalarProperty Name="medicalRecordNumber" ColumnName="medicalRecordNumber" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="middleName" ColumnName="middleName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="suffix" ColumnName="suffix" />
+          <ScalarProperty Name="maidenName" ColumnName="maidenName" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="residenceStreetAddress" ColumnName="residenceStreetAddress" />
+          <ScalarProperty Name="residenceAptNo" ColumnName="residenceAptNo" />
+          <ScalarProperty Name="residenceCity" ColumnName="residenceCity" />
+          <ScalarProperty Name="residenceState" ColumnName="residenceState" />
+          <ScalarProperty Name="residenceZip" ColumnName="residenceZip" />
+          <ScalarProperty Name="mailingStreetAddress" ColumnName="mailingStreetAddress" />
+          <ScalarProperty Name="mailingAptNo" ColumnName="mailingAptNo" />
+          <ScalarProperty Name="mailingCity" ColumnName="mailingCity" />
+          <ScalarProperty Name="mailingState" ColumnName="mailingState" />
+          <ScalarProperty Name="mailingZip" ColumnName="mailingZip" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="motherSSN" ColumnName="motherSSN" />
+          <ScalarProperty Name="fatherSSN" ColumnName="fatherSSN" />
+          <ScalarProperty Name="birthDate" ColumnName="birthDate" />
+          <ScalarProperty Name="birthTime" ColumnName="birthTime" />
+          <ScalarProperty Name="educationEarned" ColumnName="educationEarned" />
+          <ScalarProperty Name="hispanic" ColumnName="hispanic" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="isMarried" ColumnName="isMarried" />
+          <ScalarProperty Name="birthState" ColumnName="birthState" />
+          <ScalarProperty Name="birthCity" ColumnName="birthCity" />
+          <ScalarProperty Name="birthFacility" ColumnName="birthFacility" />
+          <ScalarProperty Name="priorFirstName" ColumnName="priorFirstName" />
+          <ScalarProperty Name="priorMiddleName" ColumnName="priorMiddleName" />
+          <ScalarProperty Name="priorLastName" ColumnName="priorLastName" />
+          <ScalarProperty Name="priorSuffix" ColumnName="priorSuffix" />
+          <ScalarProperty Name="inCity" ColumnName="inCity" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="dateUpdated" ColumnName="dateUpdated" />
+          <ScalarProperty Name="editedBy" ColumnName="editedBy" />
+          <ScalarProperty Name="birthCounty" ColumnName="birthCounty" />
+          <ScalarProperty Name="residenceCounty" ColumnName="residenceCounty" />
+          <ScalarProperty Name="birthWeight" ColumnName="birthWeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zz_patientRace">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.zz_patientRace">
+        <MappingFragment StoreEntitySet="zz_patientRace">
+          <ScalarProperty Name="patientId" ColumnName="patientId" />
+          <ScalarProperty Name="patientRaceId" ColumnName="patientRaceId" />
+          <ScalarProperty Name="white" ColumnName="white" />
+          <ScalarProperty Name="black" ColumnName="black" />
+          <ScalarProperty Name="indian" ColumnName="indian" />
+          <ScalarProperty Name="tribe" ColumnName="tribe" />
+          <ScalarProperty Name="asianIndian" ColumnName="asianIndian" />
+          <ScalarProperty Name="chinese" ColumnName="chinese" />
+          <ScalarProperty Name="flipino" ColumnName="flipino" />
+          <ScalarProperty Name="japanese" ColumnName="japanese" />
+          <ScalarProperty Name="korean" ColumnName="korean" />
+          <ScalarProperty Name="vietnamese" ColumnName="vietnamese" />
+          <ScalarProperty Name="otherAsian" ColumnName="otherAsian" />
+          <ScalarProperty Name="hawaiian" ColumnName="hawaiian" />
+          <ScalarProperty Name="guamanian" ColumnName="guamanian" />
+          <ScalarProperty Name="samoan" ColumnName="samoan" />
+          <ScalarProperty Name="pacificIslander" ColumnName="pacificIslander" />
+          <ScalarProperty Name="other" ColumnName="other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zz_record">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.zz_record">
+        <MappingFragment StoreEntitySet="zz_record">
+          <ScalarProperty Name="entryId" ColumnName="entryId" />
+          <ScalarProperty Name="patientId" ColumnName="patientId" />
+          <ScalarProperty Name="hospitalId" ColumnName="hospitalId" />
+          <ScalarProperty Name="birthRecordId" ColumnName="birthRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="encounter_main">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.encounter_main">
+        <MappingFragment StoreEntitySet="encounter_main">
+          <ScalarProperty Name="encounter_id" ColumnName="encounter_id" />
+          <ScalarProperty Name="attending_doctor" ColumnName="attending_doctor" />
+          <ScalarProperty Name="hospital_facility" ColumnName="hospital_facility" />
+          <ScalarProperty Name="chief_complaint" ColumnName="chief_complaint" />
+          <ScalarProperty Name="admission_type" ColumnName="admission_type" />
+          <ScalarProperty Name="individual_insurance_id" ColumnName="individual_insurance_id" />
+          <ScalarProperty Name="admission_date" ColumnName="admission_date" />
+          <ScalarProperty Name="discharge_date" ColumnName="discharge_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_family_list">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient_family_list">
+        <MappingFragment StoreEntitySet="patient_family_list">
+          <ScalarProperty Name="medical_record_number" ColumnName="medical_record_number" />
+          <ScalarProperty Name="social_security_number" ColumnName="social_security_number" />
+          <ScalarProperty Name="relation" ColumnName="relation" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="address_street_one" ColumnName="address_street_one" />
+          <ScalarProperty Name="address_street_two" ColumnName="address_street_two" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_general_info">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient_general_info">
+        <MappingFragment StoreEntitySet="patient_general_info">
+          <ScalarProperty Name="medical_record_number" ColumnName="medical_record_number" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="mother_maiden_name" ColumnName="mother_maiden_name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="social_security_number" ColumnName="social_security_number" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+          <ScalarProperty Name="race" ColumnName="race" />
+          <ScalarProperty Name="ethnicity" ColumnName="ethnicity" />
+          <ScalarProperty Name="marital_status" ColumnName="marital_status" />
+          <ScalarProperty Name="in_city" ColumnName="in_city" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_name_list">
+      <EntityTypeMapping TypeName="HITProjectData_Fall17Model.patient_name_list">
+        <MappingFragment StoreEntitySet="patient_name_list">
+          <ScalarProperty Name="patient_name_id" ColumnName="patient_name_id" />
+          <ScalarProperty Name="medical_record_number" ColumnName="medical_record_number" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="suffix" ColumnName="suffix" />
+          <ScalarProperty Name="name_type" ColumnName="name_type" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_edited" ColumnName="date_edited" />
+          <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

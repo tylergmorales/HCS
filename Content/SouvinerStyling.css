@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media all {
+    #lower_right {
+    width: 100px;
+    height: 100px;
+    bottom: 225pt;
+    right: 125pt;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+}
+
+@media print {
+    @page {
+        size: landscape;
+    }
+
+    #lower_right {
+    width: 100px;
+    height: 100px;
+    bottom: 40pt;
+    right: 25pt;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+}
+
+body {
+    background-color: white;
+    border: 5px double;
+    height: 6.5in;
+}
+
+h1 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 64pt;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 36pt;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36pt;
+    text-align: center;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24pt;
+    text-align: center;
+}
+
+
+#certificate {
+    position: absolute;
+    top: 25pt;
+    left: 180pt;
+}
+
+
+footer {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
+
+
+#upper_left {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+#upper_right {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+}

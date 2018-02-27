@@ -1,0 +1,56 @@
+﻿@model ispProject.Models.nursing_pca_comment_type
+@using ispProject.Models
+@{
+    ViewBag.Title = Model.pca_comment_type_name;
+}
+<div class="panel col-sm-3 tableOfContents">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h4>Table of Contents</h4>
+        </div>
+        <ul>
+            <li>
+                @Html.ActionLink("Vitals", "../Encounter/UpdateVital", new { id = ViewBag.pcaID })
+            </li>
+            @foreach (var item in ViewBag.CareSystems) {
+                if (item.care_system_assessment_type_id != 1) {
+                    <li>
+                        <a href='@Url.Action("CreateOrEdit", "BodySystems", new { pcaID = ViewBag.pcaID, typeID = item.care_system_assessment_type_id })'>@item.care_system_assessment_type_name</a>
+                    </li>
+                }
+            }
+            @foreach (var item in ViewBag.PCAComments) {
+                if (item.pca_comment_type_id != 1) {
+                    <li>
+                        <a href='@Url.Action("CreateOrEdit", "PCAComments", new { pcaID = ViewBag.pcaID, typeID = item.pca_comment_type_id })'>@item.pca_comment_type_name</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+<div class="panel col-sm-8">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>@Html.DisplayFor(modelItem => modelItem.pca_comment_type_name)</h2>
+        </div>
+        @using (Html.BeginForm("Create", "Comments", FormMethod.Post)) {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.pca_comment_type_id)
+            @Html.Hidden("pcaID", (int)ViewBag.pcaID)
+
+            <div class="form-horizontal">
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+               
+                <div class="form-group">
+                    <label class="control-label" for="commentData">Add comment</label>
+                    <textarea class="form-control col-sm-8" name="commentData" placeholder="Enter comment here..."></textarea>
+                </div>
+                <button class="btn btn-success" type="submit" name="formButton" value="SaveList">Save And Go Back to List</button>
+                <button class="btn btn-primary" type="submit" name="formButton" value="SaveContinue">Save and Continue</button>
+                <button class="btn btn-danger" type="submit" name="formButton" value="Exit">Exit Without Saving</button>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,73 @@
+﻿@model ispProject.Models.user
+@using ispProject.Models
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>Details</h2>
+        </div>
+
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    Name
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.firstName) @Html.DisplayFor(model => model.lastName)
+                </dd>
+
+                <dt>
+                    Email Address
+                </dt>
+
+                <dd>
+                    @using (HITProjectData_Fall17Entities1 db = new HITProjectData_Fall17Entities1())
+                    {
+                        try
+                        {
+                            userAccount u = db.userAccounts.Where(i => i.userId == Model.userId).First();
+                            @u.userName
+                        }
+                        catch (Exception e)
+                        {
+                            @Model.userId
+                        }
+                    }
+                </dd>
+
+                <dt>
+                    Date Account Opened
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.dateCreated)
+                </dd>
+                
+                <dt>
+                    Hospital Assignment
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.hospital.name)
+                </dd>
+
+                <dt>
+                    Role
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.role.title)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.userId })
+        </p>
+    </div>
+</div>

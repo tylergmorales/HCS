@@ -1,0 +1,243 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #dddbe9;
+    margin-bottom: 6em;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.underline-Heading {
+    border-bottom: 2px solid midnightblue;
+    text-align: center;
+}
+
+#registerLink, #loginLink, #logoutForm {
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+}
+
+.fa {
+    color: midnightblue;
+}
+
+#input-SignIn-UserName {
+    display: inline-block;
+    float: left;
+}
+
+#input-SignIn-UserName-icon {
+    display: inline-block;
+    float: left;
+    margin-left: 1em;
+}
+
+#pw {
+    display: inline-block;
+    float: left;
+}
+
+#fa {
+    display: inline-block;
+    float: left;
+    margin-left: .5em;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+.body-content {
+    padding-top: 7.5em;
+}
+
+.mainPanels:hover {
+    background-color: #FFCC66;
+}
+
+.mainPanels {
+    height: 20em;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    background-color: #dfdff8;
+}
+
+.panel {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    background-color: #dfdff8;
+}
+
+.centerText {
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.navbar {
+    border: none;
+    box-shadow: 0px 2px 10px #888888;
+    background-image: -webkit-linear-gradient(top, #336699 0%, midnightblue 100%);
+    background-image: -o-linear-gradient(top, #336699 0%, midnightblue 100%);
+    background-image: linear-gradient(to bottom, #336699 0%, midnightblue 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff004400', endColorstr='#ff009900', GradientType=0);
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-brand {
+    padding-top: 4px !important;
+    padding-bottom: 0px !important;
+    color: burlywood;
+    height: 100%;
+    line-height: 5.5em;
+}
+
+/*.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}*/
+
+
+
+#createPatient-btn {
+    background-color: #efddb9;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: midnightblue;
+    font-size: large;
+}
+
+#submit-CreatePatient {
+    background-color: burlywood;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 600;
+    color: midnightblue;
+    font-size: medium;
+    float: right;
+    margin-right: 3em;
+}
+
+#btnUserSignIn {
+    background-color: burlywood;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 600;
+    color: midnightblue;
+    font-size: medium;
+}
+
+h4, h3, h2 {
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    color: midnightblue;
+}
+
+#welcomeMsgUserLogin {
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    color: midnightblue;
+    text-align: center;
+}
+
+/* Style the tab */
+div.tab {
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: #dfdff8;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2em;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #FFCC66;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #FFCC66;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    width: 80%;
+    border-left: none;
+    min-height: 48em;
+}
+
+
+.checkbox-custom, .radio-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.col-md-2{
+
+color: midnightblue; 
+}
+.col-md-3{
+
+color: midnightblue; 
+}
+
+label.error { 
+    display: block; 
+    float: none; 
+    color: red; 
+    vertical-align: top; 
+}
+
+.tooltip {
+    background-color: #000;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    width: 200px;
+    display: none;
+    color: #fff;
+    text-align: left;
+    font-size: 12px;
+    
+    /* outline radius for mozilla/firefox only */
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow: 0 0 10px #000;
+}

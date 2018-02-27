@@ -1,0 +1,98 @@
+﻿@model ispProject.Models.Log
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Log</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MachineName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MachineName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventMessage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ErrorSource)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ErrorSource)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ErrorClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ErrorClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ErrorMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ErrorMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ErrorMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ErrorMessage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InnerErrorMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InnerErrorMessage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

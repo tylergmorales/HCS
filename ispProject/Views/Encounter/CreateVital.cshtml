@@ -1,0 +1,348 @@
+﻿@model ispProject.Models.CreateVitals 
+@{ ViewBag.Title = "Create"; }
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/mobiscroll.jquery.min.css" rel="stylesheet" type="text/css" />
+<link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+
+<div class="panel col-md-10 col-md-offset-1">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>Patient Care Assessment</h2>
+        </div>
+        <div>
+            <h4><i>Create New Vitals Record</i></h4>
+        </div>
+        @using (Html.BeginForm("CreateVital", "Encounter", FormMethod.Post))
+        {@Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <br /> @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="datetime">Date & Time</label>
+                <div class="col-sm-4">
+                    <input class="form-control" name="datetime" id="datetime" placeholder="Please Select Date&Time">
+                    <!--type="datetime-local"-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="temperature">Temperature (&#8451;)</label>
+                <div class="col-sm-6">
+                    @Html.TextBoxFor(x => x.temperature, new { @class = "form-control", placeholder = "", name = "temperature" }) @*
+                        <input class="form-control text-box single-line" id="temperature" name="temperature" type="text">*@
+                </div>
+
+            </div>
+            <fieldset class="form-group">
+                <div class="form-check">
+
+                    <label class="control-label col-sm-2">Route</label>
+                    <label class="form-check-label col-sm-offset-1">
+                        <input type="radio" class="form-check-input" name="temp_route_value" id="oral" value="1" unchecked>
+                        Oral
+                    </label>
+                    <label class="form-check-label col-sm-offset-1">
+                        <input type="radio" class="form-check-input" name="temp_route_value" id="oral" value="2" unchecked>
+                        Axillary
+                    </label>
+                    <label class="form-check-label col-sm-offset-1">
+                        <input type="radio" class="form-check-input" name="temp_route_value" id="oral" value="3" unchecked>
+                        Rectal
+                    </label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pulse">Pulse</label>
+                <div class="col-sm-6">
+                    @Html.TextBoxFor(x => x.pulse, new { @class = "form-control", placeholder = "", name = "pulse" }) @*
+                        <input class="form-control text-box single-line" id="pulse" name="pulse" type="text">*@
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="form-check">
+                    <label class="control-label col-sm-2">Route</label>
+                    <label class="form-check-label col-sm-3">
+
+                        <input type="radio" class="form-check-input" name="pulse_route_value" id="leftRadial" value="1" unchecked>
+                        Left Radial
+                    </label>
+                    <label class="form-check-label col-sm-3">
+                        <input type="radio" class="form-check-input" name="pulse_route_value" id="rightRadial" value="2" unchecked>
+                        Right Radial
+                    </label>
+                    <label class="form-check-label col-sm-3">
+                        <input type="radio" class="form-check-input" name="pulse_route_value" id="leftBrachial" value="3" unchecked>
+                        Left Brachial
+                    </label>
+                    <label class="form-check-label col-sm-offset-3">
+                        <input type="radio" class="form-check-input" name="pulse_route_value" id="rightBrachial" value="4" unchecked>
+                        Right Brachial
+                    </label>
+                    <label class="form-check-label col-sm-offset-1">
+                        <input type="radio" class="form-check-input" name="pulse_route_value" id="carotid" value="5" unchecked>
+                        Carotid
+                    </label>
+                    <label class="form-check-label col-sm-offset-1">
+                        <input type="radio" class="form-check-input" name="pulse_route_value" id="monitor" value="6" unchecked>
+                        Monitor
+                    </label>
+                    <label class="form-check-label col-sm-offset-1">
+                        <input type="radio" class="form-check-input" name="pulse_route_value" id="apical" value="7" unchecked>
+                        Apical
+                    </label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pulseOximetry">Pulse Oximetry</label>
+                <div class="col-sm-6">
+                    @Html.TextBoxFor(x => x.pulse_oximetry, new { @class = "form-control", placeholder = "", name = "pulse_oximetry" })
+
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="respirations">Respirations</label>
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(x => x.respirations, new { @class = "form-control", placeholder = "" })
+
+                </div>
+                <label class="control-label col-sm-2" for="oxygenFlow">Oxygen Flow</label>
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(x => x.oxygen_flow, new { @class = "form-control", placeholder = "" })
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="form-check">
+                    <label class="control-label col-sm-3">O2 Delivery Method</label>
+                    <label class="form-check-label col-sm-2">
+
+                        <input type="radio" class="form-check-input" name="o2_dev_method" value="1" unchecked>
+                        Room Air
+                    </label>
+                    <label class="form-check-label col-sm-3">
+                        <input type="radio" class="form-check-input" name="o2_dev_method" value="2" unchecked>
+                        Nasal Cannula
+                    </label>
+                    <label class="form-check-label col-sm-4">
+                        <input type="radio" class="form-check-input" name="o2_dev_method" value="3" unchecked>
+                        Non-rebreather Mask
+                    </label>
+                    <label class="form-check-label col-sm-offset-4">
+                        <input type="radio" class="form-check-input" name="o2_dev_method" value="4" unchecked>
+                        Oxygen Mask
+                    </label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label class="control-label col-sm-offset-1">Blood Pressure</label>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="systolicBloodPressure">Systolic</label>
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(x => x.systolic_b_pressure, new { @class = "form-control", placeholder = "", name = "systolicBloodPressure" }) @*
+
+                        <input class="form-control text-box single-line" id="systolicBloodPressure" name="systolicBloodPressure" type="text">*@
+                </div>
+                <label class="control-label col-sm-2" for="diastolicBloodPressure">Diastolic</label>
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(x => x.diastolic_b_pressure, new { @class = "form-control", placeholder = "", name = "diastolicBloodPressure" }) @*
+
+                        <input class="form-control text-box single-line" id="diastolicBloodPressure" name="diastolicBloodPressure" type="text">*@
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="comment">Add Comments</label> @Html.TextAreaFor(x => x.comment, new { @class = "form-control col-sm-8", placeholder = "Enter comment here..." })
+            </div>
+            <fieldset class="form-group">
+                <div class="form-check">
+                    <label class="control-label col-sm-3">Pain/Comfort/Coping:</label>
+                    <label class="form-check-label col-sm-offset-1">
+                        @Html.RadioButtonFor(model => model.wdl_ex, "true") WDL
+                    </label>
+                    <label class="form-check-label col-sm-offset-1">
+                        @Html.RadioButtonFor(model => model.wdl_ex, "false") WDL Ex
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="control-label col-sm-3" for="pain_scale">Pain Scale Type:</label>
+
+                <select id="pain_scale_dropdown" class="col-sm-6" name="pain_scale_value">
+                    <option>Select pain scale type</option>
+                    <option value="1">ZeroToTenPainScale</option>
+                    <option value="2">WongBakerFacesScale</option>
+                </select>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="form-check">
+                    <label class="control-label col-sm-3"> Pain Level Actual: </label>
+                    <label class="col-md-6 col-md-offset-1" id="pain_scale_level" style='display:none;'>
+                        <img src="~/Content/images/faces.png" alt="wong-baker-faces" />
+                        <br /><br />
+                        <input id="ex13" name="pain_level_actual" type="text" data-slider-ticks="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" data-slider-ticks-snap-bounds="50" />
+                    </label>
+                    <label class="col-md-6 col-md-offset-1" id="pain_scale_level1" style='display:none;'>
+                        <input id="ex14" name="pain_level_actual" type="text" data-slider-ticks="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" data-slider-ticks-snap-bounds="50" data-slider-ticks-labels='["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]' />
+
+                    </label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="painGoal">Pain Level Goal</label>
+                <div class="col-sm-4">
+
+                    @Html.TextBoxFor(x => x.pain_level__goal, new { @class = "form-control", placeholder = "" }) @*
+                        <input class="form-control text-box single-line" id="painGoal" name="painGoal" type="text">*@
+                </div>
+            </div>
+            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#wdlPainDefinitionsModal">
+                <span class="glyphicon glyphicon-info-sign"></span> WDL Definitions
+            </button>
+            <div id="wdlPainDefinitionsModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">WDL Definitions</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p><b>WDL:</b> no Pain (score of 0 on pain scale or no non-verbal pain behaviors noted), able to sleep/rest; verbalizes/demonstrates emotional comfort/well-being and/or effectively manages stressors (mood, affect and emotion).</p>
+                            <p><b>Pediatric:</b> rests within adult arms and self pacifies (pacifier, appropriate play).</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div><br /><br />
+            <div class="form-group">
+                <label class="control-label" for="wdlExceptionInfo">Add comment</label> @Html.TextAreaFor(x => x.care_comment, new { @class = "form-control col-sm-8", placeholder = "Enter comment here..." })
+            </div>
+            <button class="btn btn-success" type="submit" name="formButton" value="SaveList">Save And Go Back to List</button>
+            <button class="btn btn-primary" type="submit" name="formButton" value="SaveContinue">Save and Continue</button>
+            <button class="btn btn-danger" type="button" value="Exit" onclick="location.href='@Url.Action(" IndividualEncounter ", "Encounter ", new { id = ViewBag.encounterdataid })';">Exit Without Saving</button>
+
+        </div>
+    }
+
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="~/Scripts/mobiscroll.jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        // add code here
+        //   ////validation
+        //   $("#pcaForm").validate({
+        //       errorClass: "message",
+        //       rules: {
+        //           datetime: "required",
+        //           pulse: {
+        //               required: true,
+        //               number: true,
+        //               min: 30,
+        //               max: 250
+        //           },
+        //           pulse_route_value: "required",
+        //           systolicBloodPressure: {
+        //               required: true,
+        //               number: true,
+        //               min: 20,
+        //               max: 250
+        //           },
+        //           diastolicBloodPressure: {
+        //               required: true,
+        //               number: true,
+        //               min: 20,
+        //               max: 150
+        //           },
+        //           pulse_oximetry: {
+        //               number: true,
+        //               min: 50,
+        //               max: 100
+        //           },
+        //           temperature: {
+        //               number: true,
+        //               min: 90,
+        //               max: 110
+        //           }
+
+        //       },
+        //       messages: {
+        //           datetime: "Please Enter Date&Time",
+        //           pulse: "Pulse Value Is Invalid",
+        //           pulse_route_value: "Please Select Pulse Route Type",
+        //           systolicBloodPressure: "Systolic Blood Pressure Is Invalid",
+        //           diastolicBloodPressure: "Diastolic Blood Pressure Is Invalid",
+        //           pulse_oximetry: "Pulse Oximetry Is Invalid",
+        //           temperature: "Temperature Is Invalid"
+        //       },
+        //       submitHandler: function (form) {
+        //           form.submit();
+        //       }
+        //   });
+        ////end vlidation
+
+
+        var slider = new Slider("#ex13");
+        var slider1 = new Slider("#ex14");
+
+
+        $("#ex7-enabled").click(function () {
+            if (this.checked) {
+                // With JQuery
+                $("#ex13").slider("enable");
+
+                // Without JQuery
+                slider.enable();
+            }
+            else {
+                // With JQuery
+                $("#ex13").slider("disable");
+
+                // Without JQuery
+                slider.disable();
+            }
+        });
+        $("#ex7-enabled").click(function () {
+            if (this.checked) {
+                // With JQuery
+                $("#ex14").slider("enable");
+
+                // Without JQuery
+                slider.enable();
+            }
+            else {
+                // With JQuery
+                $("#ex14").slider("disable");
+
+                // Without JQuery
+                slider.disable();
+            }
+        });
+        $("#pain_scale_dropdown").on('change', function () {
+            if (this.value == '1') {
+                $("#pain_scale_level1").show();
+                $("#pain_scale_level").hide();
+            } else if (this.value == '2') {
+                $("#pain_scale_level").show();
+                $("#pain_scale_level1").hide();
+            } else {
+                $("#pain_scale_level1").hide();
+                $("#pain_scale_level").hide();
+            }
+
+
+        });
+        $('#datetime').mobiscroll().datetime({ theme: 'jqm' });
+    });
+</script>

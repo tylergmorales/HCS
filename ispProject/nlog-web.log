@@ -1,0 +1,718 @@
+2017-05-07 22:21:34.6163 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-07 22:21:34.6303 Trace ParseNLogElement
+2017-05-07 22:22:57.3041 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-07 22:22:57.3172 Trace ParseNLogElement
+2017-05-07 22:28:17.0212 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-07 22:28:17.0382 Trace ParseNLogElement
+2017-05-07 22:30:32.8353 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-07 22:30:32.8538 Trace ParseNLogElement
+2017-05-08 08:35:57.1307 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-08 08:35:57.1607 Trace ParseNLogElement
+2017-05-08 08:42:18.4651 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-08 08:42:18.5081 Trace ParseNLogElement
+2017-05-08 10:37:35.8588 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-08 10:37:35.8778 Trace ParseNLogElement
+2017-05-08 20:25:14.8117 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 20:25:14.8247 Trace ParseNLogElement
+2017-05-08 20:37:30.9191 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 20:37:30.9331 Trace ParseNLogElement
+2017-05-08 20:41:40.3089 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 20:41:40.3259 Trace ParseNLogElement
+2017-05-08 20:43:06.3089 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 20:43:06.3279 Trace ParseNLogElement
+2017-05-08 20:45:21.1147 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 20:45:21.1267 Trace ParseNLogElement
+2017-05-08 20:50:57.3901 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 20:50:57.4051 Trace ParseNLogElement
+2017-05-08 21:15:30.2630 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 21:15:30.2753 Trace ParseNLogElement
+2017-05-08 21:46:54.9077 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 21:46:54.9077 Trace ParseNLogElement
+2017-05-08 22:34:04.8722 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 22:34:04.8852 Trace ParseNLogElement
+2017-05-08 22:58:10.5817 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 22:58:10.5948 Trace ParseNLogElement
+2017-05-08 23:39:24.9891 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-08 23:39:25.0712 Trace ParseNLogElement
+2017-05-09 08:30:35.8058 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-09 08:30:35.8418 Trace ParseNLogElement
+2017-05-09 08:44:02.1219 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-09 08:44:02.1469 Trace ParseNLogElement
+2017-05-09 08:52:54.5882 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-09 08:52:54.6263 Trace ParseNLogElement
+2017-05-10 08:12:32.7317 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 08:12:32.7713 Trace ParseNLogElement
+2017-05-10 08:15:07.0689 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 08:15:07.0899 Trace ParseNLogElement
+2017-05-10 08:24:08.8315 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 08:24:08.8485 Trace ParseNLogElement
+2017-05-10 09:10:30.0043 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 09:10:30.0453 Trace ParseNLogElement
+2017-05-10 10:54:50.8794 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 10:54:50.9094 Trace ParseNLogElement
+2017-05-10 10:56:01.9422 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 10:56:01.9572 Trace ParseNLogElement
+2017-05-10 11:01:23.1957 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 11:01:23.2127 Trace ParseNLogElement
+2017-05-10 11:35:11.2587 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 11:35:11.2767 Trace ParseNLogElement
+2017-05-10 11:52:06.7364 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 11:52:06.7554 Trace ParseNLogElement
+2017-05-10 12:05:55.8374 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 12:05:55.8564 Trace ParseNLogElement
+2017-05-10 12:42:25.4532 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 12:42:25.4702 Trace ParseNLogElement
+2017-05-10 18:39:34.8133 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 18:39:34.8483 Trace ParseNLogElement
+2017-05-10 18:57:23.9274 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 18:57:23.9444 Trace ParseNLogElement
+2017-05-10 18:59:14.9571 Debug Loading config from C:\Users\Mike\Documents\Visual Studio 2015\Projects\HIT-Project\ispProject\NLog.config
+2017-05-10 18:59:14.9741 Trace ParseNLogElement
+2017-05-10 22:25:31.0732 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-10 22:25:31.0902 Trace ParseNLogElement
+2017-05-10 22:46:49.4546 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-10 22:46:49.4706 Trace ParseNLogElement
+2017-05-10 23:03:03.8110 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-10 23:03:03.8220 Trace ParseNLogElement
+2017-05-10 23:15:49.2886 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-10 23:15:49.3047 Trace ParseNLogElement
+2017-05-10 23:48:19.5070 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-10 23:48:19.5070 Trace ParseNLogElement
+2017-05-11 00:28:37.3121 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-11 00:28:37.3121 Trace ParseNLogElement
+2017-05-11 00:47:44.9009 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-11 00:47:44.9049 Trace ParseNLogElement
+2017-05-11 01:31:58.7497 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-11 01:31:58.7667 Trace ParseNLogElement
+2017-05-11 01:47:03.3545 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-11 01:47:03.3685 Trace ParseNLogElement
+2017-05-11 01:48:42.3367 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-11 01:48:42.3512 Trace ParseNLogElement
+2017-05-11 01:51:09.0665 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-11 01:51:09.0800 Trace ParseNLogElement
+2017-05-11 01:59:01.9499 Debug Loading config from c:\users\mike\documents\visual studio 2015\Projects\ispProject\ispProject\NLog.config
+2017-05-11 01:59:01.9630 Trace ParseNLogElement
+2017-10-13 19:55:00.4348 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 19:55:00.4944 Trace ParseNLogElement
+2017-10-13 20:10:04.3762 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 20:10:04.3762 Trace ParseNLogElement
+2017-10-13 20:14:39.6453 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 20:14:39.6453 Trace ParseNLogElement
+2017-10-13 20:23:07.9637 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 20:23:07.9837 Trace ParseNLogElement
+2017-10-13 20:33:45.2793 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 20:33:45.2793 Trace ParseNLogElement
+2017-10-13 20:35:18.3775 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 20:35:18.3895 Trace ParseNLogElement
+2017-10-13 20:38:07.9305 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 20:38:07.9470 Trace ParseNLogElement
+2017-10-13 20:44:35.4485 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 20:44:35.4645 Trace ParseNLogElement
+2017-10-13 20:46:52.0102 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 20:46:52.0242 Trace ParseNLogElement
+2017-10-13 21:00:35.6900 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 21:00:35.7030 Trace ParseNLogElement
+2017-10-13 21:15:51.8687 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 21:15:51.8687 Trace ParseNLogElement
+2017-10-13 21:19:45.0370 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 21:19:45.0370 Trace ParseNLogElement
+2017-10-13 21:21:29.3122 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 21:21:29.3272 Trace ParseNLogElement
+2017-10-13 21:25:39.6972 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 21:25:39.7142 Trace ParseNLogElement
+2017-10-13 21:31:42.8842 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-13 21:31:42.9012 Trace ParseNLogElement
+2017-10-14 09:20:53.5695 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 09:20:53.5755 Trace ParseNLogElement
+2017-10-14 10:55:57.3868 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 10:55:57.4019 Trace ParseNLogElement
+2017-10-14 14:21:56.0661 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:21:56.0949 Trace ParseNLogElement
+2017-10-14 14:23:36.5246 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:23:36.5451 Trace ParseNLogElement
+2017-10-14 14:24:40.0182 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:24:40.0312 Trace ParseNLogElement
+2017-10-14 14:26:01.2930 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:26:01.3090 Trace ParseNLogElement
+2017-10-14 14:26:49.9310 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:26:49.9470 Trace ParseNLogElement
+2017-10-14 14:27:54.0641 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:27:54.0782 Trace ParseNLogElement
+2017-10-14 14:35:04.1521 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:35:04.1651 Trace ParseNLogElement
+2017-10-14 14:45:15.5667 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:45:15.5787 Trace ParseNLogElement
+2017-10-14 14:47:33.9740 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:47:33.9855 Trace ParseNLogElement
+2017-10-14 14:53:12.1241 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:53:12.1371 Trace ParseNLogElement
+2017-10-14 14:53:35.2812 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 14:53:35.2992 Trace ParseNLogElement
+2017-10-14 15:01:45.5863 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-14 15:01:45.5863 Trace ParseNLogElement
+2017-10-16 18:56:11.0370 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 18:56:11.0611 Trace ParseNLogElement
+2017-10-16 19:39:25.3203 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 19:39:25.3343 Trace ParseNLogElement
+2017-10-16 20:25:20.5212 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 20:25:20.5352 Trace ParseNLogElement
+2017-10-16 20:31:41.0748 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 20:31:41.0877 Trace ParseNLogElement
+2017-10-16 20:33:54.3305 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 20:33:54.3435 Trace ParseNLogElement
+2017-10-16 20:35:56.9328 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 20:35:56.9448 Trace ParseNLogElement
+2017-10-16 20:36:05.3804 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 20:36:05.3964 Trace ParseNLogElement
+2017-10-16 20:39:06.7958 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 20:39:06.7958 Trace ParseNLogElement
+2017-10-16 20:43:43.6165 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 20:43:43.6543 Trace ParseNLogElement
+2017-10-16 21:01:34.3894 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 21:01:34.3894 Trace ParseNLogElement
+2017-10-16 21:09:48.4042 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 21:09:48.4222 Trace ParseNLogElement
+2017-10-16 21:15:44.4773 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 21:15:44.4903 Trace ParseNLogElement
+2017-10-16 21:37:58.6707 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 21:37:58.6707 Trace ParseNLogElement
+2017-10-16 21:55:15.1477 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 21:55:15.1627 Trace ParseNLogElement
+2017-10-16 22:00:16.2856 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:00:16.3016 Trace ParseNLogElement
+2017-10-16 22:02:30.3869 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:02:30.3999 Trace ParseNLogElement
+2017-10-16 22:08:03.6825 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:08:03.6935 Trace ParseNLogElement
+2017-10-16 22:09:42.1208 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:09:42.1333 Trace ParseNLogElement
+2017-10-16 22:22:25.0142 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:22:25.0302 Trace ParseNLogElement
+2017-10-16 22:26:19.4878 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:26:19.5028 Trace ParseNLogElement
+2017-10-16 22:43:34.8925 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:43:34.9095 Trace ParseNLogElement
+2017-10-16 22:48:04.1798 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:48:04.1978 Trace ParseNLogElement
+2017-10-16 22:52:35.1247 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:52:35.1377 Trace ParseNLogElement
+2017-10-16 22:58:37.3006 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 22:58:37.3006 Trace ParseNLogElement
+2017-10-16 23:00:24.3517 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:00:24.3637 Trace ParseNLogElement
+2017-10-16 23:03:35.5350 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:03:35.5488 Trace ParseNLogElement
+2017-10-16 23:10:53.9806 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:10:53.9986 Trace ParseNLogElement
+2017-10-16 23:12:59.4634 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:12:59.4754 Trace ParseNLogElement
+2017-10-16 23:23:06.5437 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:23:06.5577 Trace ParseNLogElement
+2017-10-16 23:24:49.4311 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:24:49.4482 Trace ParseNLogElement
+2017-10-16 23:26:00.0610 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:26:00.0740 Trace ParseNLogElement
+2017-10-16 23:30:43.3350 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:30:43.3480 Trace ParseNLogElement
+2017-10-16 23:34:42.0752 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:34:42.0752 Trace ParseNLogElement
+2017-10-16 23:36:02.4858 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:36:02.5058 Trace ParseNLogElement
+2017-10-16 23:38:46.4739 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:38:46.4879 Trace ParseNLogElement
+2017-10-16 23:40:32.5394 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:40:32.5514 Trace ParseNLogElement
+2017-10-16 23:42:18.6514 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:42:18.6674 Trace ParseNLogElement
+2017-10-16 23:46:57.7516 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:46:57.7646 Trace ParseNLogElement
+2017-10-16 23:48:51.7586 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:48:51.7716 Trace ParseNLogElement
+2017-10-16 23:50:20.7183 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:50:20.7383 Trace ParseNLogElement
+2017-10-16 23:52:45.9094 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:52:45.9275 Trace ParseNLogElement
+2017-10-16 23:55:11.6206 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:55:11.6336 Trace ParseNLogElement
+2017-10-16 23:58:40.0820 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-16 23:58:40.1010 Trace ParseNLogElement
+2017-10-17 00:01:19.0925 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 00:01:19.1055 Trace ParseNLogElement
+2017-10-17 00:05:28.0159 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 00:05:28.0325 Trace ParseNLogElement
+2017-10-17 00:09:52.4337 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 00:09:52.4487 Trace ParseNLogElement
+2017-10-17 00:13:42.6426 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 00:13:42.6566 Trace ParseNLogElement
+2017-10-17 00:29:39.6752 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 00:29:39.6752 Trace ParseNLogElement
+2017-10-17 00:31:28.2581 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 00:31:28.2581 Trace ParseNLogElement
+2017-10-17 00:36:39.1226 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 00:36:39.1386 Trace ParseNLogElement
+2017-10-17 09:30:59.4418 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 09:30:59.4558 Trace ParseNLogElement
+2017-10-17 12:18:43.3352 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 12:18:43.3597 Trace ParseNLogElement
+2017-10-17 12:27:24.2298 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 12:27:24.2448 Trace ParseNLogElement
+2017-10-17 13:08:40.7111 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 13:08:40.7231 Trace ParseNLogElement
+2017-10-17 13:10:03.9977 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 13:10:04.0097 Trace ParseNLogElement
+2017-10-17 13:28:22.8873 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 13:28:22.8993 Trace ParseNLogElement
+2017-10-17 13:30:29.6050 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-17 13:30:29.6170 Trace ParseNLogElement
+2017-10-28 11:26:40.5020 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 11:26:40.6472 Trace ParseNLogElement
+2017-10-28 13:26:32.1888 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 13:26:32.2058 Trace ParseNLogElement
+2017-10-28 13:28:14.1453 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 13:28:14.1634 Trace ParseNLogElement
+2017-10-28 13:30:26.1286 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 13:30:26.1396 Trace ParseNLogElement
+2017-10-28 13:32:28.4042 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 13:32:28.4042 Trace ParseNLogElement
+2017-10-28 13:37:40.6663 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 13:37:40.6663 Trace ParseNLogElement
+2017-10-28 14:05:52.4557 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 14:05:52.4557 Trace ParseNLogElement
+2017-10-28 14:12:17.6908 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 14:12:17.6908 Trace ParseNLogElement
+2017-10-28 14:13:37.5011 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 14:13:37.5171 Trace ParseNLogElement
+2017-10-28 14:18:41.1366 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 14:18:41.1506 Trace ParseNLogElement
+2017-10-28 14:49:42.4188 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 14:49:42.4388 Trace ParseNLogElement
+2017-10-28 14:52:39.8209 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 14:52:39.8349 Trace ParseNLogElement
+2017-10-28 14:55:16.8922 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 14:55:16.9073 Trace ParseNLogElement
+2017-10-28 14:56:42.5577 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 14:56:42.5697 Trace ParseNLogElement
+2017-10-28 15:02:12.6229 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 15:02:12.6359 Trace ParseNLogElement
+2017-10-28 15:09:00.0403 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 15:09:00.0553 Trace ParseNLogElement
+2017-10-28 15:14:23.5502 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 15:14:23.5642 Trace ParseNLogElement
+2017-10-28 15:42:53.5467 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 15:42:53.5607 Trace ParseNLogElement
+2017-10-28 15:58:30.2706 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 15:58:30.2836 Trace ParseNLogElement
+2017-10-28 16:48:18.1898 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 16:48:18.2028 Trace ParseNLogElement
+2017-10-28 17:26:41.3607 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 17:26:41.3747 Trace ParseNLogElement
+2017-10-28 17:30:40.5850 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 17:30:40.5970 Trace ParseNLogElement
+2017-10-28 17:31:54.2222 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 17:31:54.2382 Trace ParseNLogElement
+2017-10-28 17:36:02.6172 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 17:36:02.6402 Trace ParseNLogElement
+2017-10-28 17:48:34.8669 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 17:48:34.8810 Trace ParseNLogElement
+2017-10-28 17:58:53.1805 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 17:58:53.1935 Trace ParseNLogElement
+2017-10-28 19:16:55.6495 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 19:16:55.6665 Trace ParseNLogElement
+2017-10-28 19:33:30.9124 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 19:33:30.9234 Trace ParseNLogElement
+2017-10-28 19:51:52.9367 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 19:51:52.9537 Trace ParseNLogElement
+2017-10-28 20:02:54.2529 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 20:02:54.2689 Trace ParseNLogElement
+2017-10-28 20:07:42.7417 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 20:07:42.7647 Trace ParseNLogElement
+2017-10-28 20:09:12.8972 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 20:09:12.8972 Trace ParseNLogElement
+2017-10-28 20:12:36.6024 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 20:12:36.6174 Trace ParseNLogElement
+2017-10-28 20:49:32.6391 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 20:49:32.6561 Trace ParseNLogElement
+2017-10-28 21:40:49.5499 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 21:40:49.5649 Trace ParseNLogElement
+2017-10-28 21:44:31.6199 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 21:44:31.6199 Trace ParseNLogElement
+2017-10-28 21:50:23.8776 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 21:50:23.8916 Trace ParseNLogElement
+2017-10-28 22:09:05.9463 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 22:09:05.9603 Trace ParseNLogElement
+2017-10-28 22:31:16.4637 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 22:31:16.4767 Trace ParseNLogElement
+2017-10-28 22:33:04.6178 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 22:33:04.6378 Trace ParseNLogElement
+2017-10-28 22:49:29.8778 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 22:49:29.8898 Trace ParseNLogElement
+2017-10-28 22:52:52.7570 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 22:52:52.7710 Trace ParseNLogElement
+2017-10-28 22:57:46.9979 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 22:57:46.9979 Trace ParseNLogElement
+2017-10-28 22:59:47.4073 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 22:59:47.4213 Trace ParseNLogElement
+2017-10-28 23:07:39.2837 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:07:39.2957 Trace ParseNLogElement
+2017-10-28 23:11:32.3497 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:11:32.3617 Trace ParseNLogElement
+2017-10-28 23:14:39.8782 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:14:39.8912 Trace ParseNLogElement
+2017-10-28 23:16:16.2695 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:16:16.2815 Trace ParseNLogElement
+2017-10-28 23:22:30.8153 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:22:30.8292 Trace ParseNLogElement
+2017-10-28 23:33:32.5437 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:33:32.5557 Trace ParseNLogElement
+2017-10-28 23:35:10.9900 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:35:11.0038 Trace ParseNLogElement
+2017-10-28 23:39:42.2557 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:39:42.2707 Trace ParseNLogElement
+2017-10-28 23:44:07.6988 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-28 23:44:07.7138 Trace ParseNLogElement
+2017-10-29 00:03:30.4909 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 00:03:30.5049 Trace ParseNLogElement
+2017-10-29 09:58:28.5801 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 09:58:28.5952 Trace ParseNLogElement
+2017-10-29 09:58:58.5314 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 09:58:58.5494 Trace ParseNLogElement
+2017-10-29 10:06:50.6390 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 10:06:50.6550 Trace ParseNLogElement
+2017-10-29 10:16:31.1993 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 10:16:31.2143 Trace ParseNLogElement
+2017-10-29 10:47:04.9242 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 10:47:04.9382 Trace ParseNLogElement
+2017-10-29 10:50:40.5197 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 10:50:40.5457 Trace ParseNLogElement
+2017-10-29 10:56:45.7446 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 10:56:45.7446 Trace ParseNLogElement
+2017-10-29 10:58:13.7324 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 10:58:13.7474 Trace ParseNLogElement
+2017-10-29 11:06:51.5846 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 11:06:51.6016 Trace ParseNLogElement
+2017-10-29 14:24:10.8229 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 14:24:10.8359 Trace ParseNLogElement
+2017-10-29 14:34:05.2970 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 14:34:05.3260 Trace ParseNLogElement
+2017-10-29 14:36:53.7812 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 14:36:53.7972 Trace ParseNLogElement
+2017-10-29 14:42:46.4731 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 14:42:46.4891 Trace ParseNLogElement
+2017-10-29 14:55:49.0691 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 14:55:49.0902 Trace ParseNLogElement
+2017-10-29 15:05:21.7483 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 15:05:21.7613 Trace ParseNLogElement
+2017-10-29 15:09:31.9778 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 15:09:32.0198 Trace ParseNLogElement
+2017-10-29 15:10:03.5754 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 15:10:03.5895 Trace ParseNLogElement
+2017-10-29 18:39:56.5495 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 18:39:56.5664 Trace ParseNLogElement
+2017-10-29 18:43:37.9060 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 18:43:37.9210 Trace ParseNLogElement
+2017-10-29 19:15:26.6268 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:15:26.6389 Trace ParseNLogElement
+2017-10-29 19:29:46.8269 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:29:46.8399 Trace ParseNLogElement
+2017-10-29 19:35:50.0031 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:35:50.0161 Trace ParseNLogElement
+2017-10-29 19:38:09.9261 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:38:09.9261 Trace ParseNLogElement
+2017-10-29 19:40:05.8715 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:40:05.8835 Trace ParseNLogElement
+2017-10-29 19:44:16.1104 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:44:16.1104 Trace ParseNLogElement
+2017-10-29 19:46:10.7800 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:46:10.7920 Trace ParseNLogElement
+2017-10-29 19:51:09.8493 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:51:09.8613 Trace ParseNLogElement
+2017-10-29 19:54:50.3428 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:54:50.3548 Trace ParseNLogElement
+2017-10-29 19:56:28.2615 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:56:28.2745 Trace ParseNLogElement
+2017-10-29 19:57:30.9469 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:57:30.9609 Trace ParseNLogElement
+2017-10-29 19:59:35.5125 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 19:59:35.5255 Trace ParseNLogElement
+2017-10-29 20:02:27.9695 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 20:02:27.9826 Trace ParseNLogElement
+2017-10-29 20:04:37.8031 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 20:04:37.8161 Trace ParseNLogElement
+2017-10-29 20:08:34.3906 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 20:08:34.4056 Trace ParseNLogElement
+2017-10-29 20:16:28.2030 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 20:16:28.2160 Trace ParseNLogElement
+2017-10-29 21:16:52.7951 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 21:16:52.8072 Trace ParseNLogElement
+2017-10-29 21:27:08.2713 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 21:27:08.2843 Trace ParseNLogElement
+2017-10-29 21:38:14.8474 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 21:38:14.8605 Trace ParseNLogElement
+2017-10-29 21:53:41.9977 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 21:53:41.9977 Trace ParseNLogElement
+2017-10-29 22:00:10.0736 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 22:00:10.0856 Trace ParseNLogElement
+2017-10-29 22:02:16.7060 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 22:02:16.7200 Trace ParseNLogElement
+2017-10-29 22:10:58.4392 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 22:10:58.4522 Trace ParseNLogElement
+2017-10-29 22:19:01.0916 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 22:19:01.1066 Trace ParseNLogElement
+2017-10-29 22:27:20.5590 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 22:27:20.5740 Trace ParseNLogElement
+2017-10-29 22:36:51.6316 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-29 22:36:51.6477 Trace ParseNLogElement
+2017-10-30 16:39:10.0527 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 16:39:10.0657 Trace ParseNLogElement
+2017-10-30 16:45:58.7803 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 16:45:58.7934 Trace ParseNLogElement
+2017-10-30 16:49:23.7249 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 16:49:23.7379 Trace ParseNLogElement
+2017-10-30 16:53:05.7242 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 16:53:05.7412 Trace ParseNLogElement
+2017-10-30 16:59:22.9704 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 16:59:22.9704 Trace ParseNLogElement
+2017-10-30 17:09:34.9842 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 17:09:34.9963 Trace ParseNLogElement
+2017-10-30 17:12:33.3838 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 17:12:33.3958 Trace ParseNLogElement
+2017-10-30 18:53:15.3820 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 18:53:15.3960 Trace ParseNLogElement
+2017-10-30 18:56:34.3968 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 18:56:34.4098 Trace ParseNLogElement
+2017-10-30 19:09:49.1804 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 19:09:49.1925 Trace ParseNLogElement
+2017-10-30 20:07:12.7063 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 20:07:12.7203 Trace ParseNLogElement
+2017-10-30 20:12:18.5920 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 20:12:18.6040 Trace ParseNLogElement
+2017-10-30 20:17:32.2727 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 20:17:32.2847 Trace ParseNLogElement
+2017-10-30 20:19:50.8635 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 20:19:50.8765 Trace ParseNLogElement
+2017-10-30 20:23:37.1625 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 20:23:37.1755 Trace ParseNLogElement
+2017-10-30 20:26:00.5042 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 20:26:00.5212 Trace ParseNLogElement
+2017-10-30 20:30:15.4246 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 20:30:15.4396 Trace ParseNLogElement
+2017-10-30 20:46:33.8858 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 20:46:33.8988 Trace ParseNLogElement
+2017-10-30 22:09:38.3024 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:09:38.3154 Trace ParseNLogElement
+2017-10-30 22:22:19.4466 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:22:19.4596 Trace ParseNLogElement
+2017-10-30 22:25:57.5822 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:25:57.5822 Trace ParseNLogElement
+2017-10-30 22:27:34.5500 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:27:34.5630 Trace ParseNLogElement
+2017-10-30 22:29:53.6415 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:29:53.6537 Trace ParseNLogElement
+2017-10-30 22:49:18.3483 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:49:18.3613 Trace ParseNLogElement
+2017-10-30 22:53:16.2600 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:53:16.2600 Trace ParseNLogElement
+2017-10-30 22:56:52.7374 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:56:52.7504 Trace ParseNLogElement
+2017-10-30 22:58:01.3862 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 22:58:01.4002 Trace ParseNLogElement
+2017-10-30 23:02:18.2927 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 23:02:18.3127 Trace ParseNLogElement
+2017-10-30 23:51:01.4103 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 23:51:01.4273 Trace ParseNLogElement
+2017-10-30 23:58:53.7798 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-30 23:58:53.7939 Trace ParseNLogElement
+2017-10-31 00:01:10.0929 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-31 00:01:10.1049 Trace ParseNLogElement
+2017-10-31 00:06:32.3276 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-31 00:06:32.3407 Trace ParseNLogElement
+2017-10-31 00:09:03.8949 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-10-31 00:09:03.8949 Trace ParseNLogElement
+2017-11-10 12:38:50.1488 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 12:38:50.2484 Trace ParseNLogElement
+2017-11-10 12:40:32.3287 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 12:40:32.3287 Trace ParseNLogElement
+2017-11-10 12:46:58.5293 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 12:46:58.5293 Trace ParseNLogElement
+2017-11-10 12:48:29.0239 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 12:48:29.0439 Trace ParseNLogElement
+2017-11-10 15:17:51.3088 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 15:17:51.3268 Trace ParseNLogElement
+2017-11-10 15:30:43.9384 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 15:30:43.9514 Trace ParseNLogElement
+2017-11-10 16:12:05.8945 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 16:12:05.9075 Trace ParseNLogElement
+2017-11-10 16:15:15.9494 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 16:15:15.9614 Trace ParseNLogElement
+2017-11-10 21:25:47.7800 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 21:25:47.7975 Trace ParseNLogElement
+2017-11-10 21:37:08.1455 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 21:37:08.1615 Trace ParseNLogElement
+2017-11-10 21:43:17.3054 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 21:43:17.3054 Trace ParseNLogElement
+2017-11-10 22:11:51.6869 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 22:11:51.7010 Trace ParseNLogElement
+2017-11-10 22:15:21.0232 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 22:15:21.0392 Trace ParseNLogElement
+2017-11-10 22:20:06.3494 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 22:20:06.3494 Trace ParseNLogElement
+2017-11-10 22:26:25.8727 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 22:26:25.8857 Trace ParseNLogElement
+2017-11-10 22:32:53.2733 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 22:32:53.2923 Trace ParseNLogElement
+2017-11-10 22:59:14.9291 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 22:59:14.9491 Trace ParseNLogElement
+2017-11-10 23:36:54.3561 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 23:36:54.3691 Trace ParseNLogElement
+2017-11-10 23:44:15.2124 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 23:44:15.2274 Trace ParseNLogElement
+2017-11-10 23:46:10.3498 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 23:46:10.3633 Trace ParseNLogElement
+2017-11-10 23:51:29.1846 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-10 23:51:29.1996 Trace ParseNLogElement
+2017-11-11 00:25:28.5344 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 00:25:28.5474 Trace ParseNLogElement
+2017-11-11 00:28:06.7426 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 00:28:06.7586 Trace ParseNLogElement
+2017-11-11 00:35:40.2634 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 00:35:40.2834 Trace ParseNLogElement
+2017-11-11 09:28:14.2543 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 09:28:14.2693 Trace ParseNLogElement
+2017-11-11 09:46:57.0560 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 09:46:57.0756 Trace ParseNLogElement
+2017-11-11 10:05:37.2280 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 10:05:37.2415 Trace ParseNLogElement
+2017-11-11 13:50:25.9080 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 13:50:25.9260 Trace ParseNLogElement
+2017-11-11 15:12:57.0123 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:12:57.0283 Trace ParseNLogElement
+2017-11-11 15:23:57.2894 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:23:57.3134 Trace ParseNLogElement
+2017-11-11 15:26:10.5809 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:26:10.5924 Trace ParseNLogElement
+2017-11-11 15:49:31.8880 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:49:31.9021 Trace ParseNLogElement
+2017-11-11 15:49:47.9039 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:49:47.9179 Trace ParseNLogElement
+2017-11-11 15:53:36.2162 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:53:36.2162 Trace ParseNLogElement
+2017-11-11 15:54:53.7269 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:54:53.7419 Trace ParseNLogElement
+2017-11-11 15:56:45.6172 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:56:45.6302 Trace ParseNLogElement
+2017-11-11 15:58:03.2879 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 15:58:03.3019 Trace ParseNLogElement
+2017-11-11 16:00:53.0103 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 16:00:53.0228 Trace ParseNLogElement
+2017-11-11 16:02:52.7605 Debug Loading config from C:\Users\jerem\Documents\Visual Studio 2015\Projects\HIT-Project-master\ispProject\NLog.config
+2017-11-11 16:02:52.7745 Trace ParseNLogElement
+2017-11-14 17:12:08.7585 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 17:12:08.7715 Trace ParseNLogElement
+2017-11-14 17:17:58.5316 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 17:17:58.5316 Trace ParseNLogElement
+2017-11-14 19:10:09.5246 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 19:10:09.5436 Trace ParseNLogElement
+2017-11-14 19:30:42.1061 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 19:30:42.1271 Trace ParseNLogElement
+2017-11-14 19:47:31.1869 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 19:47:31.2019 Trace ParseNLogElement
+2017-11-14 20:00:13.3014 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 20:00:13.3014 Trace ParseNLogElement
+2017-11-14 20:03:24.1404 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 20:03:24.1584 Trace ParseNLogElement
+2017-11-14 21:50:41.4095 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 21:50:41.4095 Trace ParseNLogElement
+2017-11-14 22:34:36.0512 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-14 22:34:36.0662 Trace ParseNLogElement
+2017-11-15 00:24:57.9450 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-master\ispProject\NLog.config
+2017-11-15 00:24:57.9450 Trace ParseNLogElement
+2017-11-16 22:13:57.0220 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-16 22:13:57.0970 Trace ParseNLogElement
+2017-11-17 00:11:07.6153 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-17 00:11:07.6243 Trace ParseNLogElement
+2017-11-17 00:38:18.8145 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-17 00:38:18.8145 Trace ParseNLogElement
+2017-11-17 01:03:30.0613 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-17 01:03:30.0613 Trace ParseNLogElement
+2017-11-17 01:19:36.1011 Debug Loading config from C:\Users\Matt\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-17 01:19:36.1091 Trace ParseNLogElement
+2017-11-22 17:11:44.5554 Debug Loading config from E:\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-22 17:11:44.5554 Trace ParseNLogElement
+2017-11-22 18:52:16.9807 Debug Loading config from E:\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-22 18:52:16.9807 Trace ParseNLogElement
+2017-11-22 20:21:23.0823 Debug Loading config from E:\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-22 20:21:23.0913 Trace ParseNLogElement
+2017-11-22 20:39:23.0624 Debug Loading config from E:\Downloads\HIT-Project-Linh\ispProject\NLog.config
+2017-11-22 20:39:23.0749 Trace ParseNLogElement
+2017-11-24 20:25:07.0014 Debug Loading config from E:\WCTC\ISP\HIT-Project V8\ispProject\NLog.config
+2017-11-24 20:25:07.0014 Trace ParseNLogElement
+2017-11-25 14:44:50.8336 Debug Loading config from E:\WCTC\ISP\HIT-Project V8\ispProject\NLog.config
+2017-11-25 14:44:50.8446 Trace ParseNLogElement
+2017-11-26 12:20:41.9614 Debug Loading config from E:\WCTC\ISP\HIT-Project V8\ispProject\NLog.config
+2017-11-26 12:20:41.9694 Trace ParseNLogElement
+2017-11-26 23:09:17.6337 Debug Loading config from E:\WCTC\ISP\HIT-Project V8\ispProject\NLog.config
+2017-11-26 23:09:17.6447 Trace ParseNLogElement
+2017-11-27 01:42:53.0729 Debug Loading config from E:\WCTC\ISP\HIT-Project V8\ispProject\NLog.config
+2017-11-27 01:42:53.0729 Trace ParseNLogElement
+2017-11-27 03:14:29.9793 Debug Loading config from E:\WCTC\ISP\HIT-Project V8\ispProject\NLog.config
+2017-11-27 03:14:29.9909 Trace ParseNLogElement
+2017-11-27 04:35:49.3101 Debug Loading config from E:\WCTC\ISP\HIT-Project V8\ispProject\NLog.config
+2017-11-27 04:35:49.3201 Trace ParseNLogElement
+2017-11-27 05:19:25.1290 Debug Loading config from E:\WCTC\ISP\HIT-Project V8\ispProject\NLog.config
+2017-11-27 05:19:25.1290 Trace ParseNLogElement
+2017-11-29 01:19:17.9506 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 01:19:17.9905 Trace ParseNLogElement
+2017-11-29 01:47:12.6715 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 01:47:12.6823 Trace ParseNLogElement
+2017-11-29 03:17:22.2895 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 03:17:22.3076 Trace ParseNLogElement
+2017-11-29 04:33:25.5437 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 04:33:25.5437 Trace ParseNLogElement
+2017-11-29 04:57:33.8696 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 04:57:33.8806 Trace ParseNLogElement
+2017-11-29 05:46:57.0465 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 05:46:57.0575 Trace ParseNLogElement
+2017-11-29 08:58:52.7320 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 08:58:52.7320 Trace ParseNLogElement
+2017-11-29 09:16:37.5841 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 09:16:37.5931 Trace ParseNLogElement
+2017-11-29 09:48:00.8202 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 09:48:00.8323 Trace ParseNLogElement
+2017-11-29 10:24:47.3085 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 10:24:47.3236 Trace ParseNLogElement
+2017-11-29 10:25:18.9408 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 10:25:18.9408 Trace ParseNLogElement
+2017-11-29 10:29:25.5956 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 10:29:25.6256 Trace ParseNLogElement
+2017-11-29 10:40:47.8582 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 10:40:47.8582 Trace ParseNLogElement
+2017-11-29 12:10:12.2832 Debug Loading config from E:\WCTC\ISP\HIT-Project V9\ispProject\NLog.config
+2017-11-29 12:10:12.2832 Trace ParseNLogElement
+2017-11-30 06:55:06.6505 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V9\ispProject\NLog.config
+2017-11-30 06:55:06.6806 Trace ParseNLogElement
+2017-12-04 21:52:22.3560 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V9\ispProject\NLog.config
+2017-12-04 21:52:22.3718 Trace ParseNLogElement
+2017-12-05 05:18:52.9836 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 05:18:52.9936 Trace ParseNLogElement
+2017-12-05 05:43:41.9011 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 05:43:41.9132 Trace ParseNLogElement
+2017-12-05 05:50:52.2441 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 05:50:52.2534 Trace ParseNLogElement
+2017-12-05 06:36:46.9257 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 06:36:46.9348 Trace ParseNLogElement
+2017-12-05 06:39:13.4142 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 06:39:13.4243 Trace ParseNLogElement
+2017-12-05 07:18:05.2462 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 07:18:05.2462 Trace ParseNLogElement
+2017-12-05 07:26:07.9603 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 07:26:07.9603 Trace ParseNLogElement
+2017-12-05 09:24:47.2472 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 09:24:47.2592 Trace ParseNLogElement
+2017-12-05 09:39:16.2379 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 09:39:16.2379 Trace ParseNLogElement
+2017-12-05 09:55:22.6494 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 09:55:22.6585 Trace ParseNLogElement
+2017-12-05 10:49:49.9031 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 10:49:49.9141 Trace ParseNLogElement
+2017-12-05 11:21:09.2069 Debug Loading config from E:\WCTC\ISP\HIT-Project V10\HIT-Project V10\ispProject\NLog.config
+2017-12-05 11:21:09.2180 Trace ParseNLogElement

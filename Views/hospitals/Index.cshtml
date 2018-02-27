@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ispProject.Models.zz_hospital>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>Manage Hospitals</h2>
+        </div>
+        <br />
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Date Added</th>
+                <th>Actions</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dateCreated)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.hospitalId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.hospitalId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>

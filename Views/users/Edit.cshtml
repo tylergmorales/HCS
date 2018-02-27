@@ -1,0 +1,121 @@
+﻿@model ispProject.Models.user
+@using ispProject.Models
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<div class="panel">
+    <div class="panel-body">
+
+        @using (Html.BeginForm("Edit", "users", FormMethod.Post, new { id = "userForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.userId)
+
+                <div class="form-group">
+                    <label class="col-md-12">First Name</label>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.firstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.firstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-12">Last Name</label>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                @using (HITProjectData_Fall17Entities1 db = new HITProjectData_Fall17Entities1())
+                {
+                    try
+                    {
+                        userAccount u = db.userAccounts.Where(i => i.userId == Model.userId).First();
+                        <div class="form-group">
+                            <label class="col-md-12">Email Address</label>
+                            <div class="col-md-12">
+                                <input type="email" name="email" id="email" class="form-control" required="required" value="@u.userName" />
+                            </div>
+                        </div>
+                    }
+                    catch (Exception e)
+                    {
+                    }
+                }
+
+                <div class="form-group">
+                    <label class="col-md-12">Change Password</label>
+                    <div class="col-md-12">
+                        <input type="password" name="password" id="password" class="form-control" />
+                    </div>
+                </div>
+
+                @if (ViewBag.notHidden != null)
+                {
+                    <div class="form-group">
+                        <label class="col-md-12">Hospital Assignment</label>
+                        <div class="col-md-12">
+                            
+                            @Html.ValidationMessageFor(model => model.hospitalId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Role</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownList("roleId", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.roleId, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                }
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        </div>
+    </div>
+
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script>
+    jQuery.validator.addMethod("domain", function (value, element) {
+        return value.includes("wctc.edu");
+    }, "Sorry, you must use a WCTC provided email address.");
+
+    jQuery.validator.addMethod("pwcheck", function (value) {
+        if (value != "") {
+            return /^[A-Za-z0-9\d=!\-@@._*]*$/.test(value) // consists of only these
+                && /[A-Z]/.test(value) // has a uppercase letter
+                && /[a-z]/.test(value) // has a lowercase letter
+                && /\d/.test(value) // has a digit
+        }
+        else {
+            return true;
+        }
+    }, "Sorry, password consist of a minimum of 10 characters containing one lowercase letter, one uppercase letter, and one digit.");
+
+    $("#userForm").validate({
+        rules: {
+            email: {
+                domain: true
+            },
+            password: {
+                pwcheck: true,
+                minlength: 10
+            }
+        }
+    });
+</script>

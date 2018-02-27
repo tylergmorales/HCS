@@ -1,0 +1,52 @@
+﻿@model ispProject.Models.nursing_pca_comment
+@using ispProject.Models
+@{
+    ViewBag.Title = ViewBag.CommentTypeName;
+}
+<div class="panel col-sm-3 tableOfContents">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h4>Table of Contents</h4>
+        </div>
+        <ul>
+            <li>
+                @Html.ActionLink("Vitals", "../Encounter/ViewVitalDetail", new { id = Model.pca_id })
+            </li>
+            @foreach (var item in ViewBag.CareSystems) {
+                if (item.care_system_assessment_type_id != 1) {
+                    <li>
+                        <a href='@Url.Action("Details", "BodySystems", new { pcaID = Model.pca_id, typeID = item.care_system_assessment_type_id })'>@item.care_system_assessment_type_name</a>
+                    </li>
+                }
+            }
+            @foreach (var item in ViewBag.PCAComments) {
+                if (item.pca_comment_type_id != 1) {
+                    <li>
+                        <a href='@Url.Action("CreateOrEdit", "PCAComments", new { pcaID = ViewBag.pcaID, typeID = item.pca_comment_type_id })'>@item.pca_comment_type_name</a>
+                    </li>
+                }
+            }
+        </ul>
+</div>
+</div>
+<div class="panel col-sm-8">
+    <div class="panel-body">
+        <div class="underline-Heading">
+            <h2>@ViewBag.CommentTypeName</h2>
+        </div>
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+               
+                <div class="form-group">
+                    <label class="control-label" for="commentData">Comment</label>
+                    <textarea class="form-control col-sm-8" name="commentData" readonly>@Model.pca_comment</textarea>
+                </div>
+
+                <button type="button" class="btn btn-default">@Html.ActionLink("Exit", "IndividualEncounter", "Encounter", new { id = ViewBag.EncounterID }, null)</button>
+            </div>
+        }
+    </div>
+</div>

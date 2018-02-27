@@ -1,0 +1,329 @@
+.main {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+/*The wrapper is the piece that holds all the content together.*/
+#wrapper {
+    margin-top: 51px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 98%;
+    background-color: #FFF;
+}
+
+/*Tab Styling*/
+.tabs {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.tab-links:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.tab-links li {
+    margin: 0px 5px;
+    float: left;
+    list-style: none;
+}
+
+.tab-links a {
+    padding: 9px 15px;
+    display: inline-block;
+    border-radius: 3px 3px 0px 0px;
+    background: #7FB5DA;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4c4c4c;
+    transition: all linear 0.15s;
+}
+
+    .tab-links a:hover {
+        background: #a7cce5;
+        text-decoration: none;
+    }
+
+.tab-content {
+    margin-top: -10px;
+}
+
+.tab {
+    display: none;
+}
+
+    .tab.active {
+        display: block;
+    }
+
+*, *:before, *:after {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    font-size: 100%;
+    font: inherit;
+}
+
+
+/*Bold Styling*/
+
+strong {
+    font-weight: 700;
+}
+
+/*Link Styling*/
+
+a {
+    text-decoration: none;
+}
+
+
+input:required {
+    border: 3px red solid !important;
+}
+
+
+/*List Styling*/
+ul li {
+    margin: 10px 0px 10px 40px;
+    font-size: 0.933em;
+    line-height: 1.650em;
+}
+
+li.active a, li.active a:hover {
+    background: #fff;
+    color: #4c4c4c;
+}
+/*Form Styling*/
+label {
+    float: left;
+    display: block;
+    text-align: right;
+    padding-right: 20px;
+}
+
+    label.message {
+        color: red !important;
+    }
+
+.error {
+    color: red;
+}
+/*Bootstrap fixes*/
+.container-fluid {
+    margin-top: 90px !important;
+    margin-bottom: 145px !important;
+}
+
+.logoIMG {
+    width: 74px;
+    display: inline-block;
+    margin-top: -15px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    #wrapper {
+        min-width: 0;
+        width: auto;
+        margin: 0;
+    }
+
+    h1 {
+        background-image: url(../img/javalogomobile.gif);
+        margin: 0;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+
+    #content1 {
+        margin-left: 0;
+    }
+
+    div.tabs {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    div ul {
+        text-align: center;
+    }
+
+    div li {
+        display: inline;
+        padding: 0 0.75em;
+    }
+
+    section {
+        padding: 0;
+    }
+
+    #content ul {
+        clear: both;
+        padding-top: 1em;
+    }
+
+    #carAmount {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        margin: 0;
+    }
+
+    #wrapper {
+        width: auto;
+        min-width: 0;
+        margin: 0;
+    }
+
+    h1 {
+        background-image: url(../img/javalogomobile.gif);
+        margin: 0;
+    }
+
+    #content {
+        padding: 0.1em 1em;
+        margin: 0;
+        font-size: 90%;
+    }
+
+    #content1 {
+        padding: 0.1em 1em;
+        margin: 0;
+        font-size: 90%;
+    }
+
+    div ul {
+        padding: 0;
+    }
+
+    div li {
+        display: inline-block;
+        width: 6em;
+        font-size: 120%;
+        text-align: center;
+        box-shadow: 2px 2px 2px #330000;
+        background: #7FB5DA;
+        margin: 1%;
+        padding: 2.5%;
+    }
+
+    div a {
+        display: block;
+    }
+
+        div a:hover {
+            color: #f70202;
+        }
+
+    .tab-links a {
+        background: #7FB5DA;
+        text-align: center;
+        padding: 9px 15px;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        color: #4c4c4c;
+        transition: all linear 0.15s;
+    }
+
+    #content img {
+        float: none;
+        padding: 0;
+        margin: 0.1em;
+    }
+
+    section {
+        padding: 0;
+    }
+
+        section img {
+            display: none;
+        }
+
+    #mobile {
+        display: inline;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    label {
+        float: none;
+        text-align: left;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    #carAmount {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .modalDes {
+        width: 600px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        right: auto;
+        left: 0;
+    }
+
+    .deviceWidth {
+        height: 142px !important;
+    }
+
+    .deviceWidthInput {
+        width: 100px !important;
+    }
+
+    .deviceWidthInputLong {
+        width: 150px !important;
+    }
+
+    .deviceLabel {
+        width: 150px !important;
+    }
+
+    .deviceLabelPulse {
+        width: 80px !important;
+    }
+
+    .deviceWidthInputLonger {
+        width: 190px !important;
+    }
+
+    .deviceLabelLong {
+        width: 180px !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .deviceWidthInputShort {
+        width: 100px !important;
+    }
+}
